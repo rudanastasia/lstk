@@ -1,0 +1,75 @@
+.hero {
+    background: url(./img/header_cover.png) center top no-repeat;
+    background-color: white;
+    /*height: 100vh;*/
+    min-height: 40.625rem;
+    background-size: cover;
+
+    @include tablets {
+        background: url(./img/header_cover_mobile.png) center top no-repeat;
+        background-size: cover;
+        height: 58.5625rem;
+    }
+}
+
+.hero__title-section {
+    width: 46%;
+    margin-top: 6.6875rem;
+
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1.5rem 0 2.8125rem 0;
+}
+
+.hero__main-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: 0.9375rem;
+    text-transform: uppercase;
+    color: white;
+
+    @include tablets {
+        margin-top: 4.125rem;
+    }
+
+    @include phones {
+        font-size: 2.5rem;
+    }
+}
+
+.hero__title-description {
+    font-size: 1.3125rem;
+    margin-bottom: 3.5rem;
+    padding-right: 10%;
+    color: white;
+    margin-top: 1.625rem;
+
+    @include tablets {
+        padding: 0 23%;
+    }
+
+    @include phones {
+        padding: 0 10%;
+    }
+}
