@@ -88,15 +88,14 @@ img {
 }
 
 .hero {
-  background: url(./img/header_cover.png) center top no-repeat;
+  background: url(https://rudanastasia.github.io/lstk/img/header_cover.png) center top no-repeat;
   background-color: white;
-  /*height: 100vh;*/
   min-height: 40.625rem;
   background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .hero {
-    background: url(./img/header_cover_mobile.png) center top no-repeat;
+    background: url(https://rudanastasia.github.io/lstk/img/header_cover_mobile.png) center top no-repeat;
     background-size: cover;
     height: 58.5625rem;
   }
