@@ -1,0 +1,271 @@
+.projects {
+    min-height: 980px;
+    background-color: white;
+
+    @include tablets {
+        padding-bottom: 50px;
+    }
+}
+
+.projects-head {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    margin: 125px 0;
+
+    @include tablets {
+        margin-top: 50px;
+        margin-bottom: 19px;
+    }
+}
+
+.projects__title {
+    font-family: 'Unbounded';
+    font-size: 64px;
+    line-height: 79.36px;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-flex;
+    margin: 0;
+
+    @include tablets {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+}
+
+.btn-projects {
+    top: 0;
+    right: 0;
+    margin-top: 29px;
+
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.btn-projects-mobile {
+    display: none;
+
+    @include tablets {
+        display: flex;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        border: 1px solid black;
+        top: 0;
+        color: black;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 335px;
+        margin-top: 50px;
+    }
+
+    @include phones {
+        margin-top: 0;
+    }
+}
+
+.projects__slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    transition: .5s;
+
+    @include tablets {
+        display: flex;
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        text-align: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 1000px;
+    }
+}
+
+.project__item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height: 498px;
+
+    @include tablets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: auto;
+    padding: 0 20px;
+    }
+
+    @include phones {
+        margin-top: -115px;
+    }
+}
+
+.project__content {
+    @include tablets {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.project__description {
+    padding-right: 100px;
+
+    @include tablets {
+        padding-right: 0;
+    }
+}
+
+.project__name {
+    font-family: 'Unbounded';
+    font-size: 28px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.tech__dl__title {
+    color: rgba(61, 61, 61, 0.7);
+}
+
+.project__price {
+    font-family: 'Unbounded';
+    font-size: 24px;
+    line-height: 114px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.tech__dl__desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.project__tech {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    width: 89%;
+
+    @include tablets {
+        display: inline-flex;
+    }
+
+    @include phones {
+        flex-wrap: wrap;
+    }
+}
+
+.tech__dl {
+    margin-right: 10px;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    padding-right: 30px;
+}
+
+.project__price {
+    display: flex;
+
+    @include tablets {
+        display: inline-flex;
+    }
+}
+
+.projects__img {
+    max-width: none !important;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+
+    &::after {
+         content: ''; 
+         position: absolute;
+         bottom: 0px;
+         border: 20px solid transparent; 
+         border-right: 20px solid rgba(219, 255, 0, 1); 
+         border-bottom: 20px solid rgba(219, 255, 0, 1);
+         right: 0;
+    }
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.projects__img__mobile {
+    display: none;
+
+    @include tablets {
+        display: block;
+        max-width: none !important;
+        position: relative;
+        margin-bottom: 33px;
+
+        &::after {
+            content: ''; 
+            position: absolute;
+            bottom: 0px;
+            border: 20px solid transparent; 
+            border-right: 20px solid rgba(219, 255, 0, 1); 
+            border-bottom: 20px solid rgba(219, 255, 0, 1);
+            right: 0;
+        }
+    }
+}
+
+.project__img {
+    border-top-left-radius: 80px;
+}
+
+.directions__projects {
+    position: absolute;
+    max-height: 300px;
+    left: 0;
+    width: 20%;
+    min-width: 250px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    top: 400px;
+
+    @include tablets {
+        top: 932px;
+        width: 100%;
+        min-width: auto;
+    }
+
+    @include phones {
+        top: 845px;
+    }
+}
+
+#previous-projects {
+    left: 0px;
+    background: url('../img/arrowl.png') no-repeat 0 0px;
+    margin-left: 0;
+}
+
+#next-projects {
+    right: 0px;
+    background: url('../img/arrow.png') no-repeat 0 0px;
+    margin-right: 0;
+}

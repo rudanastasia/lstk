@@ -1,0 +1,174 @@
+.main__description {
+    background-color: #f4f4f4;
+    padding: 60px;
+    min-height: 448px;
+    height: auto;
+
+    @include tablets {
+        padding: 0px;
+        height: auto;
+    }
+}
+
+.main__container {
+    height: 400px;
+
+    @include tablets {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    @include phones {
+        margin: 0;
+    }
+}
+
+.main__description-list {
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(61, 61, 61, 0.7);
+    margin: 0 30px;
+
+    &:first-child {
+        font-family: 'Unbounded';
+        font-weight: 400;
+        line-height: 22px;
+        color: rgba(61, 61, 61, 1);
+    }
+
+    @include tablets {
+        margin-bottom: 30px;
+    }
+
+}
+
+.main__description-list-last {
+    @include tablets {
+        margin-bottom: 0px;
+    }
+}
+
+.main__description-item {
+    display: flex;
+    margin-top: 35px;
+
+    @include tablets {
+        flex-direction: column;
+        position: relative;
+        padding: 20px;
+    }
+}
+
+.desc {
+    padding-bottom: 20px;
+    line-height: 22px;
+}
+
+.description-button {
+    margin-top: 40px;
+}
+
+.btn-desc {
+    bottom: 0;
+    left: 0;
+    top: auto;
+    right: auto;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.btn-desc-mobile {
+    display: none;
+
+    @include tablets {
+        display: inline-flex;
+        text-align: left;
+        position: relative;
+        left: 0;
+        top: auto;
+        bottom: 0;
+    }
+}
+
+.restrangle__info {
+    width: 25px;
+    height: 334px;
+    background: rgb(219, 255, 0);
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+
+    @include tablets {
+        width: 100%;
+        height: 25px;
+        left: 0px;
+        top: 0px;
+        margin-top: -1px;
+        margin-left: -1px;
+    }
+}
+
+.info {
+    position: relative;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 80px;
+    height: auto;
+    padding: 30px;
+    float: right;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 1101px;
+    min-height: 280px;
+
+    @include tablets {
+        border-top-left-radius: 0px;
+        position: relative;
+        left: 0;
+        right: 0;
+        height: auto;
+        bottom: 0;
+        margin-top: 0;
+    }
+}
+
+.info__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.info__item {
+    padding: 30px;
+
+    @include tablets {
+        width: 50%;
+        align-self: center;
+    }
+
+    @include phones {
+        align-self: auto;
+        width: auto;
+    }
+}
+
+.data {
+    font-size: 80px;
+    font-family: 'Unbounded';
+    line-height: 99.2px;
+    font-weight: 200;
+}
+
+.data__desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}

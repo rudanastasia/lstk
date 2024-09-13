@@ -1,0 +1,129 @@
+.advantages {
+    background-color: #f4f4f4;
+    min-height: 753px;
+    height: auto;
+    position: relative;
+
+    @include tablets {
+        padding: 0;
+        min-height: 900px;
+    }
+}
+
+.container__advantages {
+    width: 100%;
+    position: static;
+
+    @include tablets {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.advantages__title {
+    padding: 0 20px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+        margin-top: 43px;
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+}
+
+.section__subtitle--adv {
+    margin-right: 156px;
+
+    @include tablets {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+}
+
+.adv__background {
+    @include tablets {
+        background: url(../img/advantages_cover.png) center bottom no-repeat;
+        background-size: cover;
+        height: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+    }
+
+    @include phones {
+        height: auto;
+    }
+}
+
+.advantages__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.restrangle {
+    width: 100%;
+    height: 25px;
+    background: rgba(219, 255, 0, 1);
+    position: absolute;
+    z-index: 2;
+}
+
+.info__advantages {
+    max-width: 789px;
+    margin-top: 325px;
+    margin-left: 400px;
+    padding: 0;
+    color: black;
+    background-color: white;
+    border-top-left-radius: 0;
+    float: left;
+    width: auto;
+
+    @include tablets {
+        float: none;
+        max-width: 500px;
+        margin-top: 133px;
+        margin-left: 0;
+    }
+}
+
+.advantages__list {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.advantages__item {
+    padding: 25px;
+    flex: 1 1 50%;
+}
+
+.num__adv {
+    font-style: italic;
+    margin-bottom: 31px;
+
+    @include tablets {
+        color: black;
+    }
+}
+
+.adv__title {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Unbounded';
+    line-height: 20px;
+    margin-bottom: 5px;
+}

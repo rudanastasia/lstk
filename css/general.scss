@@ -1,0 +1,151 @@
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+    padding-top: 45px;
+
+    @include tablets {
+        margin-left: 23px;
+        margin-bottom: 10px;
+    }
+}
+
+.breadcrumbs__item {
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+    color: rgba(54, 54, 54, 0.6);
+}
+
+.breadcrumbs__item {
+    &::after {
+        content: "/";
+        padding-left: 5px;
+    }
+}
+
+.breadcrumbs__item {
+    &:last-child {
+        padding-left: 5px;
+        width: auto;
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+}
+
+.breadcrumbs__link {
+    width: auto;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include tablets {
+        font-size: 14px;
+    }
+}
+
+.section__title {
+    font-family: 'Unbounded';
+    font-size: 64px;
+    color: rgba(61, 61, 61, 1);
+    line-height: 79.36px;
+    margin-top: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @include tablets {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 20px;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+}
+
+.section__subtitle {
+    font-family: 'Unbounded';
+    font-size: 64px;
+    line-height: 79.36px;
+    text-align: right;
+    font-weight: 300;
+}
+
+.regular-text{
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.text__desc--first {
+    font-family: 'Unbounded';
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-right: 100px;
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.text__desc--last {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    vertical-align: middle;
+    border-radius: 50px;
+    max-width: 215px;
+    height: auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 18px;
+    font-weight: 400;
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px 24px 8px 24px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    max-height: 35px;
+    width: 100%;
+
+    &:after {
+        position: absolute;
+        right: 7%;
+        top: 20%;
+        left: auto;
+        content: url(../img/vector.png);
+        width: 9px;
+        height: 10px;
+        transform: rotate(0deg);
+    }
+}
+
+.img-style {
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: none;
+    }
+}
+
+.preview__img {
+    width: 100%;
+}

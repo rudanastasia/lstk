@@ -1,0 +1,214 @@
+.reviews {
+    background-color: #f4f4f4;
+    min-height: 721px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.blog__head--reviews {
+    margin-top: 116px;
+    margin-bottom: 50px;
+
+    @include tablets {
+        margin-top: 50px;
+        margin-bottom: 28px;
+    }
+}
+
+.reviews__title {
+    font-family: 'Unbounded';
+    color: rgba(61, 61, 61, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-flex;
+    text-transform: uppercase;
+}
+
+.btn-reviews {
+    position: relative;
+    top: 0;
+    margin-top: 46px;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+
+.reviews__block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.reviews__list {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    @include tablets {
+        display: flex;
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        text-align: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
+
+.reviews__item {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    margin-right: 40px;
+    flex: 0 0 50%;
+    margin-right: 32px;
+    margin-left: -16px;
+
+    @include tablets {
+        flex: 0 0 100%;
+        margin: 0 auto;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        border: 20px solid transparent;
+        border-right: 20px solid rgba(219, 255, 0, 1);
+        border-bottom: 20px solid rgba(219, 255, 0, 1);
+        right: 0;
+    }
+
+    &::nth-child(even) {
+        background-color: #99f;
+    }
+
+    &::before {
+        content: counter(item);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -40%, 70px);
+        color: #fff;
+        font-size: 2em;
+    }
+}
+
+.review__display {
+    display: flex;
+    margin-left: 42px;
+
+    @include tablets {
+        margin-left: 0;
+    }
+}
+
+.review__ava {
+    margin-right: 20px;
+}
+
+.review__content {
+    flex: 1;
+    margin-top: 20px;
+
+    @include tablets {
+        text-align: left;
+    }
+}
+
+.reviewer__name {
+    font-family: 'Unbounded';
+    font-size: 18px;
+    line-height: 22.32px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.reviewer__source {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(61, 61, 61, 0.7);
+    margin-bottom: 46px;
+}
+
+.review__description {
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(61, 61, 61, 0.7);
+    margin-bottom: 15px;
+    margin-left: 42px;
+
+    @include tablets {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+.review__src {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 42px;
+
+    @include tablets {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+
+.test {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.test_item {
+    flex: 1 0 40%;
+    margin: 10px;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.directions__reviews {
+    position: absolute;
+    max-height: 300px;
+    left: 0;
+    width: 100%;
+    display: inline-flex;
+    bottom: 0;
+}
+
+.directions__btn {
+    border: none;
+    position: absolute;
+    top: 77%;
+    margin-top: 16px;
+    outline: 0;
+    width: 88px;
+    height: 52px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+#previous {
+    left: 0px;
+    background: url('../img/arrowl.png') no-repeat 0 0px;
+    margin-left: 40px;
+}
+
+#next {
+    right: 0px;
+    background: url('../img/arrow.png') no-repeat 0 0px;
+    margin-right: 40px;
+}

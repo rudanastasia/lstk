@@ -1,0 +1,18 @@
+.regular-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text__desc--first {
+  font-family: "Unbounded";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.text__desc--last {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}

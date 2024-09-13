@@ -1,0 +1,5 @@
+.services__cover {
+  background: url(../img/about_cover.png) center top no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}

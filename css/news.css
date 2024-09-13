@@ -1,0 +1,68 @@
+.news {
+  background-color: #f4f4f4;
+  padding-bottom: 40px;
+}
+
+.news__title {
+  font-family: "Unbounded";
+  font-size: 64px;
+  color: rgb(61, 61, 61);
+  line-height: 79.36px;
+  margin-top: 50px;
+  display: inline-block;
+  margin-right: 150px;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 347px;
+  border-radius: 50px;
+  width: 215px;
+  height: 34px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 18px;
+  font-weight: 400;
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px 24px 8px 24px;
+}
+.btn:after {
+  position: absolute;
+  top: 102px;
+  left: 871px;
+  content: url(../img/vector.png);
+  width: 9px;
+  height: 10px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news__item {
+  margin-right: 40px;
+  background-color: white;
+  padding: 15px;
+}
+.news__item:before {
+  content: url(../img/corner.png);
+  position: absolute;
+  top: 378px;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, transparent), color-stop(0, rgb(219, 255, 0))) 100% 0 no-repeat;
+  background: linear-gradient(to right bottom, transparent 50%, rgb(219, 255, 0) 0) 100% 0 no-repeat;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  margin-left: 229px;
+}
+
+.news__img {
+  margin-bottom: 20px;
+}

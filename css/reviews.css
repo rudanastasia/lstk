@@ -1,0 +1,26 @@
+.reviews {
+  background-color: #f4f4f4;
+  padding: 82px;
+}
+
+.reviews__title {
+  font-family: "Unbounded";
+  font-size: 64px;
+  color: rgb(61, 61, 61);
+  line-height: 79.36px;
+  margin-top: 50px;
+  font-weight: 300;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.btn-reviews:after {
+  position: absolute;
+  top: 102px;
+  left: 871px;
+  content: url(../img/vectorwhite.png);
+  width: 9px;
+  height: 10px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}

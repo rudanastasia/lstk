@@ -1,0 +1,39 @@
+.blog-content {
+    background-color: #f4f4f4;
+}
+
+.blog-content__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 151px;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.blog-content__item {
+    flex: 0 0 30%;
+    margin-bottom: 32px;
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    margin-right: 24px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        border: 20px solid transparent;
+        border-right: 20px solid rgb(219, 255, 0);
+        border-bottom: 20px solid rgb(219, 255, 0);
+        right: 0;
+    }
+
+    @include tablets {
+        align-self: center;
+        margin-right: 0;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+}

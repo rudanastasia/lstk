@@ -1,0 +1,123 @@
+.blog {
+    background-color: #f4f4f4;
+    padding-bottom: 40px;
+    min-height: 600px;
+
+    @include tablets {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+}
+
+.blog__head {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 68px;
+}
+
+.blog__title {
+    display: inline-flex;
+    margin-right: 150px;
+
+    @include tablets {
+        margin-top: 0;
+        margin-bottom: 16px;
+        padding: 0 20px;
+    }
+}
+
+.btn__blog {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: 83px;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.blog__section {
+    margin-bottom: 117px;
+
+    @include tablets {
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+.blog__list {
+    display: flex;
+
+    @include tablets {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        left: 0px;
+    }
+}
+
+.blog__item {
+    margin-right: 40px;
+    background-color: white;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::after {
+         content: ''; 
+         position: absolute;
+         bottom: 0px;
+         border: 20px solid transparent; 
+         border-right: 20px solid rgba(219, 255, 0, 1); 
+         border-bottom: 20px solid rgba(219, 255, 0, 1);
+         right: 0;
+    }
+
+    @include tablets {
+        display: flex;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.full-width {
+    @include tablets {
+        flex: 1 0 100%;
+    }
+}
+
+.blog__img {
+    margin-bottom: 20px;
+}
+
+.offers__days {
+    margin-bottom: 8px;
+}
+
+.directions__blog {
+    display: none;
+
+    @include tablets {
+        display: inline-flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-top: 30px;
+        width: 100%;
+    }
+}

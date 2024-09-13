@@ -1,5 +1,5 @@
 html {
-    font-size: $baseFontSize;
+    font-size: 14px;
 
     @include tablets {
         font-size: $baseFontSize - 1px;
@@ -20,21 +20,23 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
-    font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 .wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
-    min-height: 100%;
 }
 
 .container {
     width: 95%;
-    max-width: $containerWidth;
+    max-width: 1440px;
     margin: 0 auto;
     position: relative;
+
+
 }
 
 h1,
@@ -67,6 +69,143 @@ p {
 footer {
     position: relative;
     width: 100%;
+    background-color: black;
+    padding: 76px 0;
+    display: flex;
+    align-items: center;
+    min-height: 396px;
+    color: white;
+}
+
+.footer_content {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    min-height: 240px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 30px;
+    }
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo-footer {
+    margin-left: 22px;
+    margin-top: 30px;
+}
+
+.menu-footer {
+    display: flex;
+    padding-top: 20px;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.menu-footer__list {
+    margin-right: 66px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 32px;
+
+    @include tablets {
+        margin-bottom: 25px;
+    }
+}
+
+.menu-footer__item {
+    &:first-child {
+        font-family: 'Unbounded';
+        color: rgba(255, 255, 255, 1);
+        line-height: 33px;
+    }
+}
+
+.about-footer__list {
+    margin-right: 75px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 32px;
+
+    @include tablets {
+        margin-bottom: 25px;
+    }
+}
+
+.about-footer__item {
+    &:first-child {
+        font-family: 'Unbounded';
+        color: rgba(255, 255, 255, 1);
+        line-height: 33px;
+    }
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.dropdown__footer {
+    display: flex;
+    margin-bottom: 20px;
+    font-family: 'Unbounded';
+    font-style: normal;
+    margin-top: 7px;
+}
+
+.contacts__footer {
+    display: flex;
+    font-style: normal;
+    line-height: 26px;
+}
+
+.contact__footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.underline-footer {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+
+    @include tablets {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+}
+
+.copy {
+    display: inline-flex;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 19.5px;
+
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
+.design {
+    display: inline-flex;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 1);
+}
+
+.design-text {
+    display: inline-flex;
+    vertical-align: super;
+    font-size: 13px;
+}
+
+.design-img {
+    display: inline-flex;
 }
 
 * {
