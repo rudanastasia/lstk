@@ -1,15 +1,20 @@
+@mixin laptops {
+  @media screen and (max-width: $laptops) {
+    @content;
+  }
+}
 @mixin tablets {
-    @media screen and (max-width: $tablets) {
-        @content;
-    }
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
 }
 
 @mixin phones {
-    @media screen and (max-width: $phones) {
-        @content;
-    }
+  @media screen and (max-width: $phones) {
+    @content;
+  }
 }
 
 @function rem($px) {
-    @return $px / $baseFontSize + 0rem;
+  @return $px / $baseFontSize + 0rem;
 }

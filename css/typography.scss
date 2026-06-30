@@ -1,0 +1,87 @@
+/////////-------секционные заголовки-------/////////
+///
+.section {
+  &__title {
+    font-size: 64px;
+    text-transform: uppercase;
+
+    @include laptops {
+      font-size: 54px;
+    }
+
+    @include tablets {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 24px;
+      font-weight: 400;
+      padding: 0 20px;
+    }
+
+    &--light {
+      color: $white;
+    }
+
+    &--small {
+      font-size: 52px;
+    }
+  }
+}
+
+/////////-------колоночный текст-------/////////
+///
+.column-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  padding-bottom: 20px;
+
+  @include tablets {
+    flex-direction: column;
+    position: relative;
+    gap: 25px;
+    padding: 20px 15px;
+  }
+
+  &--vertical {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+
+    @include tablets {
+      width: 100%;
+    }
+  }
+
+  &__bold {
+    p {
+      font-weight: 400;
+      color: $lightBlack;
+    }
+
+    &--dark {
+      p {
+        color: $white;
+        font-weight: 300;
+        font-family: $Unbounded;
+      }
+    }
+  }
+
+  &__light {
+    p {
+      font-family: $Montserrat;
+      color: $blackAlpha;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--dark {
+      p {
+        color: $lightGreyText;
+      }
+    }
+  }
+}

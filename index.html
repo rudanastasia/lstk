@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Фабрика стальных каркасов</title>
 </head>
 
@@ -15,41 +15,43 @@
             <section class="hero">
                 <div class="container hero__container">
                     <header class="header">
-                        <a href="./"><img src="./img/logo.png" alt="logo" class="logo"></a>
-                        <nav class="menu">
+                        <a href="/" class="logo">
+                            <svg class="logo__icon">
+                                <use href="assets/sprite/sprite.svg#logo"></use>
+                            </svg></a>
+                        <nav class="menu" aria-label="Основное меню">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="./about.html" class="menu__link">О нас</a>
+                                    <a href="pages/about.html" class="menu__link">О нас</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./projects.html" class="menu__link">Проекты</a>
+                                    <a href="pages/projects.html" class="menu__link">Проекты</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="#our_advantages" class="menu__link">Преимущества</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./services.html" class="menu__link">Услуги</a>
+                                    <a href="pages/services.html" class="menu__link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="#our_news" class="menu__link">Новости</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./contacts.html" class="menu__link">Контакты</a>
+                                    <a href="pages/contacts.html" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <a href="tel:+79184451324" class="phone-number header__phone-number">
-                            <span class="phone-number__text">+7 918 4451324</span>
+                        <a href="tel:+79184451324" class="header__phone-number">
+                            +7 918 445 13 24
                         </a>
-                        <div class="mobile-content">
-                            <span class="phone-number__icon">
-                                <a href="tel:+79184451324"><img src="img/phone.png" class="phone-number__icon-elem"
-                                        alt="phone"></a>
-                            </span>
-                            <div class="hamburger">
+                        <div class="header__mobile">
+                            <a href="tel:+79184451324" class="header__phone-button"><svg class="mobile__icon">
+                                    <use href="assets/sprite/sprite.svg#call-light"></use>
+                                </svg></a>
+                            <button class="hamburger" type="button" aria-label="Открыть меню">
                                 <span class="hamburger__plank"></span>
                                 <span class="hamburger__plank"></span>
-                            </div>
+                            </button>
                         </div>
                     </header>
                     <div class="hero__title-section">
@@ -59,41 +61,48 @@
                         </div>
                     </div>
                 </div>
+                <a href="#next-section" class="hero__scroll-link">
+                    <svg>
+                        <use href="assets/sprite/sprite.svg#button-scroll"></use>
+                    </svg>
+                </a>
             </section>
-            <section class="main__description">
-                <div class="container main__container">
-                    <div class="main__description-item">
-                        <div class="main__description-list">
+            <section id="next-section" class="main-description">
+                <div class="container">
+                    <div class="column-text">
+                        <div class="column-text__bold">
                             <p>ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла,
                                 выполняющая проектные и строительно-монтажные работы, выполняет поставки оборудования и
                                 материалов для инженерных сетей.</p>
                         </div>
-                        <div class="main__description-list">
-                            <p class="desc">Наше предприятие стабильно развивается с 2013 года
+                        <div class="column-text__light">
+                            <p>Наше предприятие стабильно развивается с 2013 года
                                 и наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров
                                 – проектировщиков, руководителей проектов, строительно – монтажных бригад.</p>
-                            <p class="desc">При строительстве объектов мы руководствуемся принципами EPCM-подхода, что
+                            <p> При
+                                строительстве
+                                объектов мы руководствуемся принципами EPCM-подхода, что
                                 обеспечивает полный цикл управления проектом — от идеи до реализации</p>
-                            <div class="description-button"><a href="#" class="btn btn-desc">Узнать больше</a></div>
-                            <div class="description-button"><a href="#" class="btn btn-desc-mobile">Узнать больше</a>
+                            <div class="main-description__button"><a href="#no-scroll" class="btn btn--with-text">Узнать
+                                    больше</a>
                             </div>
                         </div>
                     </div>
                     <div class="info">
+                        <div class="info__rectangle"></div>
                         <ul class="info__list">
-                            <div class="restrangle__info"></div>
                             <li class="info__item">
-                                <div class="data">215+</div>
-                                <div class="data__desc">Проектов домов выполнили</div>
+                                <span class="info__value">215+</span>
+                                <div class="info__text">Проектов домов выполнили</div>
                             </li>
                             <li class="info__item">
-                                <div class="data">2013</div>
-                                <div class="data__desc">Год основания нашей компании
+                                <span class="info__value">2013</span>
+                                <div class="info__text">Год основания нашей компании
                                 </div>
                             </li>
                             <li class="info__item">
-                                <div class="data">394+</div>
-                                <div class="data__desc">Домов построили и заселили</div>
+                                <span class="info__value">394+</span>
+                                <div class="info__text">Домов построили и заселили</div>
                             </li>
                         </ul>
                     </div>
@@ -101,128 +110,158 @@
             </section>
             <section class="projects">
                 <div class="container">
-                    <div class="projects-head">
-                        <h2 class="section__title projects__title">Наши проекты</h2>
-                        <a href="#" class="btn btn-projects">Перейти ко всем</a>
+                    <div class="section__head">
+                        <h2 class="section__title">Наши проекты</h2>
+                        <a href="pages/projects.html" class="btn btn--section-more">Перейти ко всем</a>
                     </div>
-                    <ul class="projects__slider">
-                        <li class="project__item">
-                            <div class="project__content">
-                                <div class="projects__img__mobile">
-                                    <img src="img/projects.png" class="img-style project__img">
+                    <div class="projects__block">
+                        <ul class="projects__slider">
+                            <li class="projects__item">
+                                <div class="projects__content">
+                                    <h3 class="projects__name"><a href="#no-scroll" class="projects__source">ЛСТК Каркас
+                                            Барн</a></h3>
+                                    <div class="projects__description">Есть много вариантов Lorem Ipsum, но большинство
+                                        из
+                                        них
+                                        имеет не всегда приемлемые модификации, например, юмористические вставки или
+                                        слова,
+                                        которые даже отдалённо не напоминают латынь.</div>
+                                    <div class="projects__tech">
+                                        <div class="tech-dl">
+                                            <div class="tech-dl__title">Площадь</div>
+                                            <div class="tech-dl__desc">72 м2</div>
+                                        </div>
+                                        <div class="tech-dl">
+                                            <div class="tech-dl__title">Помещений</div>
+                                            <div class="tech-dl__desc">8</div>
+                                        </div>
+                                        <div class="tech-dl">
+                                            <div class="tech-dl__title">Этажей</div>
+                                            <div class="tech-dl__desc">2</div>
+                                        </div>
+                                    </div>
+                                    <div class="projects__price">от 728.000 руб.</div>
                                 </div>
-                                <h3 class="project__name">ЛСТК Каркас Барн</h3>
-                                <div class="project__description">Есть много вариантов Lorem Ipsum, но большинство из
-                                    них
-                                    имеет не всегда приемлемые модификации, например, юмористические вставки или слова,
-                                    которые даже отдалённо не напоминают латынь.</div>
-                                <div class="project__tech">
-                                    <div class="tech__dl">
-                                        <div class="tech__dl__title">Площадь</div>
-                                        <div class="tech__dl__desc">72 м2</div>
+                                <a href="#no-scroll" class="projects__image">
+                                    <img src="assets/img/products/project-2.png" class="img-style projects__img">
+                                </a>
+                            </li>
+                            <li class="projects__item">
+                                <div class="projects__content">
+                                    <h3 class="projects__name"><a href="#no-scroll" class="projects__source">ЛСТК
+                                            Каркас</a>
+                                    </h3>
+                                    <div class="projects__description">Есть много вариантов Lorem Ipsum, но большинство
+                                        из
+                                        них
+                                        имеет не всегда приемлемые модификации, например, юмористические вставки или
+                                        слова,
+                                        которые даже отдалённо не напоминают латынь.</div>
+                                    <div class="projects__tech">
+                                        <div class="tech-dl">
+                                            <div class="tech-dl__title">Площадь</div>
+                                            <div class="tech-dl__desc">72 м2</div>
+                                        </div>
+                                        <div class="tech-dl">
+                                            <div class="tech-dl__title">Помещений</div>
+                                            <div class="tech-dl__desc">8</div>
+                                        </div>
+                                        <div class="tech-dl">
+                                            <div class="tech-dl__title">Этажей</div>
+                                            <div class="tech-dl__desc">2</div>
+                                        </div>
                                     </div>
-                                    <div class="tech__dl">
-                                        <div class="tech__dl__title">Помещений</div>
-                                        <div class="tech__dl__desc">8</div>
-                                    </div>
-                                    <div class="tech__dl">
-                                        <div class="tech__dl__title">Этажей</div>
-                                        <div class="tech__dl__desc">2</div>
-                                    </div>
+                                    <div class="projects__price">от 728.000 руб.</div>
                                 </div>
-                                <div class="project__price">от 728.000 руб.</div>
-                            </div>
-                            <div class="projects__img">
-                                <img src="img/projects.png" class="img-style project__img">
-                            </div>
-                        </li>
-                        <li class="project__item">
-                            <div class="project__content">
-                                <div class="projects__img__mobile">
-                                    <img src="img/projects.png" class="img-style project__img">
-                                </div>
-                                <h3 class="project__name">ЛСТК Каркас</h3>
-                                <div class="project__description">Есть много вариантов Lorem Ipsum, но большинство из
-                                    них
-                                    имеет не всегда приемлемые модификации, например, юмористические вставки или слова,
-                                    которые даже отдалённо не напоминают латынь.</div>
-                                <div class="project__tech">
-                                    <div class="tech__dl">
-                                        <div class="tech__dl__title">Площадь</div>
-                                        <div class="tech__dl__desc">102 м2</div>
-                                    </div>
-                                    <div class="tech__dl">
-                                        <div class="tech__dl__title">Помещений</div>
-                                        <div class="tech__dl__desc">8</div>
-                                    </div>
-                                    <div class="tech__dl">
-                                        <div class="tech__dl__title">Этажей</div>
-                                        <div class="tech__dl__desc">2</div>
-                                    </div>
-                                </div>
-                                <div class="project__price">от 128.000 руб.</div>
-                            </div>
-                            <div class="projects__img">
-                                <img src="img/projects.png" class="img-style project__img">
-                            </div>
-                        </li>
-                        <div class="directions__projects">
-                            <button id="previous-projects" class="directions__btn">Предыдущее</button>
-                            <button id="next-projects" class="directions__btn">Следующее</button>
+                                <a href="#no-scroll" class="projects__image">
+                                    <img src="assets/img/products/project-3.png" class="img-style projects__img">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="directions directions--start">
+                            <button class="directions__btn directions__btn--prev">
+                                <svg class="svg-arrow">
+                                    <use href="assets/sprite/sprite.svg#arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="directions__btn directions__btn--next">
+                                <svg class="svg-arrow">
+                                    <use href="assets/sprite/sprite.svg#arrow-right"></use>
+                                </svg>
+                            </button>
                         </div>
-                    </ul>
-                    <a href="#" class="btn btn-projects-mobile">Перейти ко всем</a>
+                    </div>
+                    <a href="pages/projects.html" class="btn btn--mobile">Перейти ко всем</a>
                 </div>
             </section>
             <section id="our_advantages" class="advantages">
-                <div class="container container__advantages">
-                    <h2 class="section__title advantages__title">Преимущества <span
-                            class="section__subtitle section__subtitle--adv">технологии ЛСТК</span></h2>
-                    <div class="advantages__img"><img src="img/advantages_cover.png" class="img-style adv__img"></div>
-                    <div class="adv__background">
-                        <div class="info info__advantages">
-                            <div class="restrangle"></div>
-                            <ul class="advantages__list">
-                                <li class="advantages__item">
-                                    <div class="num num__adv">(01)</div>
-                                    <div class="adv__title">Легкость и долговечность</div>
-                                    <div class="adv__desc">Есть много вариантов Lorem Ipsum, но большинство из них имеет
-                                    </div>
-                                </li>
-                                <li class="advantages__item">
-                                    <div class="num num__adv">(02)</div>
-                                    <div class="adv__title">Быстрота сборки
-                                    </div>
-                                    <div class="adv__desc">Есть много вариантов Lorem Ipsum, но большинство из них имеет
-                                    </div>
-                                </li>
-                                <li class="advantages__item">
-                                    <div class="num num__adv">(03)</div>
-                                    <div class="adv__title">Экономия ресурсов и затрат</div>
-                                    <div class="adv__desc">Есть много вариантов Lorem Ipsum, но большинство из них имеет
-                                    </div>
-                                </li>
-                                <li class="advantages__item">
-                                    <div class="num num__adv">(04)</div>
-                                    <div class="adv__title">Экологичность</div>
-                                    <div class="adv__desc">Есть много вариантов Lorem Ipsum, но большинство из них имеет
-                                    </div>
-                                </li>
-                            </ul>
+                <div class="container advantages__container">
+                    <h2 class="section__title section__title--column">
+                        <span class="section__title-line">
+                            Преимущества
+                        </span>
+                        <span class="section__title-line section__title-line--right">
+                            технологии ЛСТК
+                        </span>
+                    </h2>
+                    <div class="advantages__visual">
+                        <div class="advantages__image"><img src="assets/img/covers/advantages_cover.png"
+                                class="img-style advantages__img"></div>
+                        <div class="advantages__background">
+                            <div class="advantages__wrapper">
+                                <ul class="advantages__list">
+                                    <li class="advantages__item">
+                                        <div class="num num--dark">(01)</div>
+                                        <div class="advantages__name">Легкость и долговечность</div>
+                                        <div class="advantages__desc">Есть много вариантов Lorem Ipsum, но большинство
+                                            из
+                                            них имеет
+                                        </div>
+                                    </li>
+                                    <li class="advantages__item">
+                                        <div class="num num--dark">(02)</div>
+                                        <div class="advantages__name">Быстрота сборки
+                                        </div>
+                                        <div class="advantages__desc">Есть много вариантов Lorem Ipsum, но большинство
+                                            из
+                                            них имеет
+                                        </div>
+                                    </li>
+                                    <li class="advantages__item">
+                                        <div class="num num--dark">(03)</div>
+                                        <div class="advantages__name">Экономия ресурсов и затрат</div>
+                                        <div class="advantages__desc">Есть много вариантов Lorem Ipsum, но большинство
+                                            из
+                                            них имеет
+                                        </div>
+                                    </li>
+                                    <li class="advantages__item">
+                                        <div class="num num--dark">(04)</div>
+                                        <div class="advantages__name">Экологичность</div>
+                                        <div class="advantages__desc">Есть много вариантов Lorem Ipsum, но большинство
+                                            из
+                                            них имеет
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="services">
                 <div class="container">
-                    <h2 class="section__title services__title--main">Наши услуги</h2>
-                    <div class="services__desc">
-                        <div class="services__description-list">Наша миссия — создать гармоничную городскую среду, где
-                            каждый наслаждается жизнью. Мы стремимся к развитию жилья комфорт и бизнес класса, которое
-                            органично впишется
-                            в окружающую среду.</div>
-                        <div class="services__description-list">
-                            <p class="desc">Наша задача — подтянуть других девелоперов и внедрять передовые технологии,
+                    <h2 class="section__title section__title--light">Наши услуги</h2>
+                    <div class="column-text">
+                        <div class="column-text__bold column-text__bold--dark">
+                            <p>Наша миссия — создать гармоничную городскую среду, где
+                                каждый наслаждается жизнью. Мы стремимся к развитию жилья комфорт и бизнес класса,
+                                которое
+                                органично впишется
+                                в окружающую среду.</p>
+                        </div>
+                        <div class="column-text__light column-text__light--dark">
+                            <p>Наша задача — подтянуть других девелоперов и внедрять передовые технологии,
                                 чтобы сделать город еще более привлекательным и современным. Мы верим, что только
                                 обьединив
                                 усилия, мы сможем сделать этот мир лучше
@@ -233,291 +272,363 @@
                         <li class="services__item">
                             <div class="num">(01)</div>
                             <h3 class="services__name">Проектирование</h3>
-                            <div class="services__description">Мы реализуем проекты любой сложности</div>
+                            <div class="services__description">
+                                <p>Мы реализуем проекты любой сложности</p>
+                            </div>
                         </li>
                         <li class="services__item">
                             <div class="num">(02)</div>
                             <h3 class="services__name">Монтаж</h3>
-                            <div class="services__description">Мы обладаем собственной линией производства</div>
+                            <div class="services__description">
+                                <p>Мы обладаем собственной линией производства</p>
+                            </div>
                         </li>
                         <li class="services__item">
                             <div class="num">(03)</div>
                             <h3 class="services__name">Ремонт и реконструкция</h3>
-                            <div class="services__description">Нас большой опыт реализации нестандартных проектов</div>
+                            <div class="services__description">
+                                <p>Нас большой опыт реализации нестандартных проектов</p>
+                            </div>
                         </li>
                         <li class="services__item">
                             <div class="num">(04)</div>
                             <h3 class="services__name">Консультации</h3>
-                            <div class="services__description">Мы обладаем собственной линией производства</div>
+                            <div class="services__description">
+                                <p>Мы обладаем собственной линией производства</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="reviews">
                 <div class="container">
-                    <div class="blog__head blog__head--reviews">
-                        <h2 class="section__title reviews__title">Отзывы клиентов</h2>
-                        <a href="#" class="btn btn-reviews">Перейти ко всем</a>
+                    <div class="section__head">
+                        <h2 class="section__title">Отзывы клиентов</h2>
+                        <a href="pages/reviews.html" class="btn btn--section-more">Перейти ко всем</a>
                     </div>
                     <div class="reviews__block">
                         <ul class="reviews__list">
                             <li class="reviews__item">
-                                <div class="review__display">
-                                    <div class="review__ava">
-                                        <img src="img/avatar.png" class="avatar">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="assets/img/common/avatar.png" class="avatar">
                                     </div>
-                                    <div class="review__content">
-                                        <div class="reviewer__name">Ольга Н.</div>
-                                        <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Ольга Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
                                     </div>
                                 </div>
-                                <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад
+                                    Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад
+                                    Наше предприятие стабильно развивается с 2013 года и
                                     наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                     инженеров –
                                     проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                                <a href="#" class="review__src">Читать отзыв целиком</a>
+                                <a href="#no-scroll" class="reviews__src">Читать отзыв целиком</a>
                             </li>
                             <li class="reviews__item">
-                                <div class="review__display">
-                                    <div class="review__ava">
-                                        <img src="img/avatar.png" class="avatar">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="assets/img/common/avatar.png" class="avatar">
                                     </div>
-                                    <div class="review__content">
-                                        <div class="reviewer__name">Ольга Н.</div>
-                                        <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Анна Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
                                     </div>
                                 </div>
-                                <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
                                     наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                     инженеров –
                                     проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                                <a href="#" class="review__src">Читать отзыв целиком</a>
+                                <a href="#no-scroll" class="reviews__src">Читать отзыв целиком</a>
                             </li>
                             <li class="reviews__item">
-                                <div class="review__display">
-                                    <div class="review__ava">
-                                        <img src="img/avatar.png" class="avatar">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="assets/img/common/avatar.png" class="avatar">
                                     </div>
-                                    <div class="review__content">
-                                        <div class="reviewer__name">Татьяна Н.</div>
-                                        <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Виктория Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
                                     </div>
                                 </div>
-                                <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
                                     наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                     инженеров –
                                     проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                                <a href="#" class="review__src">Читать отзыв целиком</a>
+                                <a href="#no-scroll" class="reviews__src">Читать отзыв целиком</a>
                             </li>
                             <li class="reviews__item">
-                                <div class="review__display">
-                                    <div class="review__ava">
-                                        <img src="img/avatar.png" class="avatar">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="assets/img/common/avatar.png" class="avatar">
                                     </div>
-                                    <div class="review__content">
-                                        <div class="reviewer__name">Екатерина Н.</div>
-                                        <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Мария Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
                                     </div>
                                 </div>
-                                <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
                                     наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                     инженеров –
                                     проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                                <a href="#" class="review__src">Читать отзыв целиком</a>
+                                <a href="#no-scroll" class="reviews__src">Читать отзыв целиком</a>
                             </li>
                         </ul>
-                        <div class="directions__reviews">
-                            <button id="previous" class="directions__btn">Предыдущее</button>
-                            <button id="next" class="directions__btn">Следующее</button>
+                        <div class="directions">
+                            <button class="directions__btn directions__btn--prev">
+                                <svg class="svg-arrow">
+                                    <use href="assets/sprite/sprite.svg#arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="directions__btn directions__btn--next">
+                                <svg class="svg-arrow">
+                                    <use href="assets/sprite/sprite.svg#arrow-right"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="our_news" class="news">
                 <div class="container">
-                    <div class="blog__head">
-                        <h2 class="section__title news__title">Новости</h2>
-                        <a href="#" class="btn btn-news">Перейти ко всем</a>
+                    <div class="section__head">
+                        <h2 class="section__title section__title--light">Новости</h2>
+                        <a href="#no-scroll" class="btn btn--section-more btn--light">Перейти ко всем</a>
                     </div>
-                    <div class="news__section">
-                        <ul class="news__list">
-                            <li class="news__item">
-                                <div class="news__img">
-                                    <img src="img/blog-element.png" class="img-style preview__img">
-                                </div>
-                                <div class="news__content">
-                                    <div class="offers__date__cell">
-                                        <div class="offers__days">12.02.21</div>
+                    <div class="info-block">
+                        <ul class="info-block__list info-block__list--column">
+                            <li class="info-block__item">
+                                <a href="#no-scroll" class="info-block__source ">
+                                    <div class="info-block__img">
+                                        <img src="assets/img/blog/preview/blog-preview.png"
+                                            class="img-style preview__img">
                                     </div>
-                                    <h3 class="offers__title">Давно выяснено, что при оценке дизайна</h3>
-                                </div>
+                                    <div class="info-block__content">
+                                        <div class="date-cell">
+                                            <div class="publication-date">12.02.21</div>
+                                        </div>
+                                        <h3 class="info-block__title">Давно выяснено, что при оценке дизайна</h3>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="news__item">
-                                <div class="news__img">
-                                    <img src="img/blog-element-1.png" class="img-style preview__img">
-                                </div>
-                                <div class="news__content">
-                                    <div class="offers__date__cell">
-                                        <div class="offers__days">12.02.21</div>
+                            <li class="info-block__item">
+                                <a href="#no-scroll" class="info-block__source ">
+                                    <div class="info-block__img">
+                                        <img src="assets/img/blog/preview/blog-preview-1.png"
+                                            class="img-style preview__img">
                                     </div>
-                                    <h3 class="offers__title">Давно выяснено, что при оценке дизайна</h3>
-                                </div>
+                                    <div class="info-block__content">
+                                        <div class="date-cell">
+                                            <div class="publication-date">12.02.21</div>
+                                        </div>
+                                        <h3 class="info-block__title">Давно выяснено, что при оценке дизайна</h3>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="news__item">
-                                <div class="news__img">
-                                    <img src="img/blog-element-2.png" class="img-style preview__img">
-                                </div>
-                                <div class="news__content">
-                                    <div class="offers__date__cell">
-                                        <div class="offers__days">12.02.21</div>
+                            <li class="info-block__item">
+                                <a href="#no-scroll" class="info-block__source ">
+                                    <div class="info-block__img">
+                                        <img src="assets/img/blog/preview/blog-preview-2.png"
+                                            class="img-style preview__img">
                                     </div>
-                                    <h3 class="offers__title">Давно выяснено, что при оценке дизайна</h3>
-                                </div>
+                                    <div class="info-block__content">
+                                        <div class="date-cell">
+                                            <div class="publication-date">12.02.21</div>
+                                        </div>
+                                        <h3 class="info-block__title">Давно выяснено, что при оценке дизайна</h3>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
-                        <a href="#" class="btn news-mobile">Перейти ко всем</a>
+                        <a href="#no-scroll" class="btn btn--mobile btn--light">Перейти ко всем</a>
                     </div>
                 </div>
             </section>
             <section class="blog">
                 <div class="container">
-                    <div class="blog__head">
-                        <h2 class="section__title blog__title">Блог</h2>
-                        <a href="./blog.html" class="btn btn__blog">Перейти ко всем</a>
+                    <div class="section__head">
+                        <h2 class="section__title">Блог</h2>
+                        <a href="pages/blog.html" class="btn btn--section-more">Перейти ко всем</a>
                     </div>
-                    <div class="blog__section">
-                        <ul class="blog__list">
-                            <li class="blog__item">
-                                <div class="blog__img">
-                                    <img src="img/blog-element.png" class="img-style preview__img">
-                                </div>
-                                <div class="blog__content">
-                                    <div class="offers__date__cell">
-                                        <div class="offers__days">12.02.21</div>
+                    <div class="info-block">
+                        <ul class="info-block__list info-block__list--slider">
+                            <li class="info-block__item info-block__item--slider">
+                                <a href="#no-scroll" class="info-block__source ">
+                                    <div class="info-block__img">
+                                        <img src="assets/img/blog/preview/blog-preview.png"
+                                            class="img-style preview__img">
                                     </div>
-                                    <h4 class="offers__title">Давно выяснено, что при оценке дизайна</h4>
-                                </div>
+                                    <div class="info-block__content">
+                                        <div class="date-cell">
+                                            <div class="publication-date">12.02.21</div>
+                                        </div>
+                                        <h3 class="info-block__title">Давно выяснено, что при оценке дизайна</h3>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="blog__item">
-                                <div class="blog__img">
-                                    <img src="img/blog-element-1.png" class="img-style preview__img">
-                                </div>
-                                <div class="blog__content">
-                                    <div class="offers__date__cell">
-                                        <div class="offers__days">12.02.21</div>
+                            <li class="info-block__item info-block__item--slider">
+                                <a href="#no-scroll" class="info-block__source ">
+                                    <div class="info-block__img">
+                                        <img src="assets/img/blog/preview/blog-preview-1.png"
+                                            class="img-style preview__img">
                                     </div>
-                                    <h4 class="offers__title">Давно выяснено, что при оценке дизайна</h4>
-                                </div>
+                                    <div class="info-block__content">
+                                        <div class="date-cell">
+                                            <div class="publication-date">12.02.22</div>
+                                        </div>
+                                        <h3 class="info-block__title">Давно выяснено, что при оценке дизайна. Давно
+                                            выяснено, что при оценке дизайна.Давно выяснено, что при оценке дизайна.
+                                        </h3>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="blog__item">
-                                <div class="blog__img">
-                                    <img src="img/blog-element-2.png" class="img-style preview__img">
-                                </div>
-                                <div class="blog__content">
-                                    <div class="offers__date__cell">
-                                        <div class="offers__days">12.02.21</div>
+                            <li class="info-block__item info-block__item--slider">
+                                <a href="#no-scroll" class="info-block__source ">
+                                    <div class="info-block__img">
+                                        <img src="assets/img/blog/preview/blog-preview-2.png"
+                                            class="img-style preview__img">
                                     </div>
-                                    <h4 class="offers__title">Давно выяснено, что при оценке дизайна</h4>
-                                </div>
+                                    <div class="info-block__content">
+                                        <div class="date-cell">
+                                            <div class="publication-date">12.02.23</div>
+                                        </div>
+                                        <h3 class="info-block__title">Мы выяснили, что при оценке дизайна стоит
+                                            учитывать множество факторов</h3>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
-                        <div class="directions__blog">
-                            <button id="previous" class="directions__btn">Предыдущее</button>
-                            <button id="next" class="directions__btn">Следующее</button>
+                        <div class="directions directions--none">
+                            <button class="directions__btn directions__btn--prev">
+                                <svg class="svg-arrow">
+                                    <use href="assets/sprite/sprite.svg#arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="directions__btn directions__btn--next">
+                                <svg class="svg-arrow">
+                                    <use href="assets/sprite/sprite.svg#arrow-right"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="contacts">
                 <div class="container">
-                    <h2 class="section__title contacts__title-main">Контакты</h2>
-                    <div class="contacts__content">
-                        <div class="contacts__address">
-                            <a href="https://maps.app.goo.gl/SZaS2mJhPDm7jqjv5" class="address__street">Краснодар, ул.
-                                Рашпилевская, 267</a>
-                            <div class="address__desc">Адрес</div>
-                        </div>
-                        <div class="contacts__phone">
-                            <a href="tel:+79184451324" class="contact__content">+7 918 4451324</a>
-                            <div class="address__desc">Телефон</div>
-                        </div>
-                        <div class="contacts__email">
-                            <a href="mailto:mail@pochta.ru" class="contact__content">mail@pochta.ru</a>
-                            <div class="address__desc">Почта</div>
+                    <h2 class="section__title">Контакты</h2>
+                    <div class="contacts__row">
+                        <div class="contacts__content">
+                            <div class="contacts__address">
+                                <a href="https://maps.app.goo.gl/SZaS2mJhPDm7jqjv5" class="address">Краснодар, ул.
+                                    Рашпилевская, 267</a>
+                                <div class="contacts-text">Адрес</div>
+                            </div>
+                            <div class="contacts__phone">
+                                <a href="tel:+79184451324" class="contact-phone">+7 918 445 13 24</a>
+                                <div class="contacts-text">Телефон</div>
+                            </div>
+                            <div class="contacts__email">
+                                <a href="mailto:mail@pochta.ru" class="contact-email">mail@pochta.ru</a>
+                                <div class="contacts-text">Почта</div>
+                            </div>
                         </div>
                         <div class="socials">
-                            <a href="#" class="social__link">
-                                <img src="img/telegram.png" class="social__img">
+                            <a href="#no-scroll" class="socials__link">
+                                <svg class="socials__img">
+                                    <use href="assets/sprite/sprite.svg#telegram-icon"></use>
+                                </svg>
                             </a>
-                            <a href="#" class="social__link">
-                                <img src="img/whatsapp.png" class="social__img">
+                            <a href="#no-scroll" class="socials__link">
+
+                                <svg class="socials__img">
+                                    <use href="assets/sprite/sprite.svg#whatsapp-icon"></use>
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-        <section class="section map-section">
-            <div id="map"><iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A70acb0a03e59d581d675a1cbc4432a66eeb0151b4510e7ae6132b18f2020e1c7&amp;source=constructor"
-                    width="100%" height="456" frameborder="0"></iframe></div>
-        </section>
-        <footer class="footer__container">
-            <div class="container footer-container__content">
-                <div class="footer_content">
-                    <div class="logo">
-                        <a href="./" class="logo">
-                            <img src="./img/logo.png" alt="logo" class="logo">
-                        </a>
-                    </div>
-                    <nav class="menu-footer">
-                        <ul class="menu-footer__list">
-                            <li class="menu-footer__item">
-                                Меню
-                            </li>
-                            <li class="menu-footer__item">
-                                <a href=".projects.html" class="menu__link">Проекты</a>
-                            </li>
-                            <li class="menu-footer__item">
-                                <a href="#" class="menu__link">О технологии ЛСТК</a>
-                            </li>
-                            <li class="menu-footer__item">
-                                <a href="#" class="menu__link">Новости</a>
-                            </li>
-                        </ul>
-                        <ul class="about-footer__list">
-                            <li class="about-footer__item">
-                                Компания
-                            </li>
-                            <li class="about-footer__item">
-                                <a href=".about.html" class="menu__link">О нас</a>
-                            </li>
-                            <li class="about-footer__item">
-                                <a href="#" class="menu__link">Стать партнером</a>
-                            </li>
-                        </ul>
-                        <address class="contact">
-                            <div class="dropdown__footer">Контакты</div>
-                            <a href="tel:+79184451324" class="contact__footer">+7 918 4451324</a>
-                            <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
-                        </address>
-                    </nav>
+    </div>
+    <section class="section map-section">
+        <div id="map">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="./" class="logo">
+                        <svg class="logo__icon">
+                            <use href="assets/sprite/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
                 </div>
-                <div class="underline-footer">
-                    <div class="copy">
-                        <p>© Фабрика Стальных Каркасов | 2013-2024</p>
+                <nav class="footer__nav">
+                    <div class="footer__column">
+                        <div class="footer__title">Меню</div>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="pages/projects.html" class="footer__link">Проекты</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#no-scroll" class="footer__link">О технологии ЛСТК</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#no-scroll" class="footer__link">Новости</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="pages/blog.html" class="footer__link">Блог</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="design">
-                        <p class="design-text">Сделано в</p>
-                        <div class="design-img"><img src="./img/logokr.png" alt="logo" class="logo"></div>
+                    <div class="footer__column">
+                        <div class="footer__title">Компания</div>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="pages/about.html" class="footer__link">О нас</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#no-scroll" class="footer__link">Стать партнером</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="pages/reviews.html" class="footer__link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <address class="footer__contacts">
+                    <div class="footer__title">Контакты</div>
+                    <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
+                    <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
+                </address>
+            </div>
+            <div class="footer__bottom">
+                <div class="copyright">
+                    <p>© Фабрика Стальных Каркасов | 2013-2026</p>
+                </div>
+                <div class="footer__developer">
+                    <p class="developer-text">Сделано в</p>
+                    <div class="developer-image"><img src="assets\img\logos\logokr.png" alt="Компания-разработчик"
+                            class="developer-img">
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=08c5f0d6-8f9c-46dd-9597-0fa0e2a4efca&lang=ru_RU"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 
 </html>

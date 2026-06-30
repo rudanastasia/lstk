@@ -1,0 +1,236 @@
+///
+///Слайдер для проектов////
+///
+document.addEventListener('DOMContentLoaded', () => {
+  const projects = document.querySelector('.projects');
+
+  const slider = projects.querySelector('.projects__slider');
+  const items = projects.querySelectorAll('.projects__item');
+
+  const prevBtn = projects.querySelector('.directions__btn--prev');
+  const nextBtn = projects.querySelector('.directions__btn--next');
+
+  let current = 0;
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${current * 100}%)`;
+  }
+
+  function next() {
+    current = (current + 1) % items.length;
+    updateSlider();
+  }
+
+  function prev() {
+    current = (current - 1 + items.length) % items.length;
+    updateSlider();
+  }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  //
+  // Свайп//
+  //
+
+  let startX = 0;
+  let endX = 0;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', () => {
+    const diff = startX - endX;
+
+    const threshold = 50;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        next();
+      } else {
+        prev();
+      }
+    }
+  });
+
+  updateSlider();
+});
+
+///
+///Карусель для отзывов////
+///
+document.addEventListener('DOMContentLoaded', () => {
+  const reviews = document.querySelector('.reviews');
+
+  const slider = reviews.querySelector('.reviews__list');
+  const items = reviews.querySelectorAll('.reviews__item');
+
+  const prevBtn = reviews.querySelector('.directions__btn--prev');
+  const nextBtn = reviews.querySelector('.directions__btn--next');
+
+  let currentIndex = 0;
+
+  //
+  // Свайп//
+  //
+  let startX = 0;
+  let currentX = 0;
+  let isSwiping = false;
+
+  function getVisibleItems() {
+    return window.innerWidth <= 768 ? 1 : 2;
+  }
+
+  function updateSlider() {
+    const itemWidth = items[0].offsetWidth;
+    const gap = parseInt(getComputedStyle(slider).gap) || 0;
+
+    slider.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
+  }
+
+  function next() {
+    const maxIndex = items.length - getVisibleItems();
+    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+    updateSlider();
+  }
+
+  function prev() {
+    const maxIndex = items.length - getVisibleItems();
+    currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+    updateSlider();
+  }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+    currentX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', () => {
+    if (!isSwiping) return;
+    isSwiping = false;
+
+    const diff = startX - currentX;
+
+    const threshold = 50;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        next(); //
+      } else {
+        prev(); //
+      }
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    const maxIndex = items.length - getVisibleItems();
+
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+
+    updateSlider();
+  });
+
+  updateSlider();
+});
+
+///
+///Слайдер для блога////
+///
+document.addEventListener('DOMContentLoaded', () => {
+  const blog = document.querySelector('.blog');
+
+  const slider = blog.querySelector('.info-block__list--slider');
+  const items = blog.querySelectorAll('.info-block__item--slider');
+
+  const prevBtn = blog.querySelector('.directions__btn--prev');
+  const nextBtn = blog.querySelector('.directions__btn--next');
+
+  let currentIndex = 0;
+
+  function getVisibleItems() {
+    return window.innerWidth <= 768 ? 1 : 2;
+  }
+
+  function updateSlider() {
+    if (window.innerWidth > 768) {
+      slider.style.transform = '';
+      currentIndex = 0;
+      return;
+    }
+
+    const itemWidth = items[0].offsetWidth;
+    const gap = parseInt(getComputedStyle(slider).gap || 0) || 0;
+
+    slider.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
+  }
+
+  function moveNext() {
+    const maxIndex = items.length - getVisibleItems();
+    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+    updateSlider();
+  }
+
+  function movePrev() {
+    const maxIndex = items.length - getVisibleItems();
+    currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+    updateSlider();
+  }
+
+  nextBtn.addEventListener('click', moveNext);
+  prevBtn.addEventListener('click', movePrev);
+
+  window.addEventListener('resize', () => {
+    const maxIndex = items.length - getVisibleItems();
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    updateSlider();
+  });
+
+  //
+  // Свайп//
+  //
+
+  let startX = 0;
+  let endX = 0;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', () => {
+    const diff = startX - endX;
+
+    const threshold = 50;
+
+    if (Math.abs(diff) < threshold) return;
+
+    if (diff > 0) {
+      moveNext();
+    } else {
+      movePrev();
+    }
+
+    startX = 0;
+    endX = 0;
+  });
+
+  updateSlider();
+});

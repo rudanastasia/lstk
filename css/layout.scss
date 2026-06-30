@@ -1,222 +1,333 @@
-html {
-    font-size: 14px;
+/////////-------hero-------/////////
+///
+.hero {
+  background: url(/assets/img/covers/main-hero_cover.png) top center / cover no-repeat;
+  border-radius: 0 0 $radius-desk $radius-desk;
+  position: relative;
+
+  @include tablets {
+    border-radius: 0 0 $radius-tab $radius-tab;
+  }
+
+  &--inner {
+    background: none;
+    border-bottom: 1px solid rgb(217, 217, 217);
+    border-radius: 0;
 
     @include tablets {
-        font-size: $baseFontSize - 1px;
+      border-bottom: 0;
+    }
+  }
+
+  &__container {
+    @extend %flex-column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1.5rem 0 2.8125rem 0;
+  }
+
+  &__title-section {
+    font-family: $Unbounded;
+    width: 100%;
+    flex: 1;
+    @extend %flex-column-center;
+    margin-top: 35vh;
+
+    @include tablets {
+      align-items: flex-start;
+    }
+  }
+
+  &__main-title {
+    font-size: 64px;
+    margin-bottom: 5vh;
+    text-transform: uppercase;
+    color: $yellow;
+    @extend %flex-column;
+
+    @include laptops {
+      font-size: 54px;
+    }
+
+    @include tablets {
+      margin-top: 4.125rem;
+      text-align: left;
+      font-size: 24px;
+      font-weight: 400;
+      display: block;
     }
 
     @include phones {
-        font-size: $baseFontSize - 2px;
+      font-size: $baseFontSize;
     }
-}
+  }
 
-html,
-body {
-    height: 100%;
-}
-
-body {
-    line-height: 1.42;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-}
-
-.wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.container {
-    width: 95%;
-    max-width: 1440px;
-    margin: 0 auto;
-    position: relative;
-
-
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    font-weight: normal;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    li {
-        list-style: none;
-    }
-}
-
-p {
-    padding: 0;
-    margin: 0;
-}
-
-footer {
-    position: relative;
-    width: 100%;
-    background-color: black;
-    padding: 76px 0;
-    display: flex;
-    align-items: center;
-    min-height: 396px;
-    color: white;
-}
-
-.footer_content {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    display: flex;
-    min-height: 240px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  &__main-subtitle {
+    color: $white;
+    text-align: right;
 
     @include tablets {
-        flex-direction: column;
-        align-items: baseline;
-        margin-left: 30px;
+      text-align: left;
+      font-size: 24px;
     }
+
+    @include phones {
+      font-size: $baseFontSize;
+    }
+  }
+
+  &__title-description {
+    font-size: 18px;
+    color: $lightGreyText;
+    width: 340px;
+    margin-left: auto;
+
+    @include tablets {
+      text-align: left;
+      font-size: 14px;
+      margin-left: 0;
+    }
+
+    @include phones {
+      font-size: 12px;
+    }
+  }
+
+  &__scroll-link {
+    position: absolute;
+    inset: auto auto 0 50%;
+    transform: translateX(-50%);
+    width: 81px;
+    height: 37px;
+  }
+}
+
+/////////-------header-------/////////
+///
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: $white;
+
+  &--inner {
+    color: $black;
+  }
+
+  &__mobile {
+    @extend %flex-center;
+    gap: 35px;
+  }
 }
 
 .logo {
-    margin-bottom: 30px;
+  &__icon {
+    width: 173px;
+    height: 45px;
+  }
 }
 
-.logo-footer {
-    margin-left: 22px;
-    margin-top: 30px;
-}
+.menu {
+  display: flex;
+  margin: 0 30px;
+  padding-top: 14px;
 
-.menu-footer {
+  @include tablets {
+    display: none;
+  }
+
+  &__list {
     display: flex;
-    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 35px;
+  }
+
+  &__item {
+    @extend %hover-scale;
+  }
+}
+
+.menu__link,
+.footer__link {
+  @extend %nav-link;
+}
+
+.header__phone-number {
+  font-family: $Unbounded;
+  font-size: 14px;
+  font-weight: 400;
+  @extend %flex-center;
+  padding-top: 14px;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $yellow;
+    @extend %hover-scale;
+  }
+
+  @include tablets {
+    display: none;
+  }
+
+  &--dark {
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.mobile__icon {
+  display: none;
+
+  @include tablets {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @include tablets {
+    display: inline-flex;
+    width: 32px;
+    height: 13px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__plank {
+    display: block;
+    background: $white;
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+
+    &--dark {
+      background: $black;
+    }
+  }
+}
+
+/////////-------inner-page wrapper-------/////////
+///
+.headline {
+  padding-bottom: 50px;
+}
+
+/////////-------footer-------/////////
+///
+.footer {
+  background: $black;
+  padding: 76px 0 40px;
+  color: $white;
+
+  @include phones {
+    padding: 36px 10px 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 55px;
+    border-bottom: 1px solid $darkBackgroundBorder;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 120px;
+
+    @include laptops {
+      gap: 35px;
+    }
+  }
+
+  @include tablets {
+    .footer__content,
+    .footer__nav {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__column,
+  &__list,
+  &__contacts {
+    @extend %flex-column;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: $Unbounded;
+    font-size: 14px;
+  }
+
+  &__list,
+  &__contacts {
+    gap: 12px;
+  }
+
+  &__link {
+    color: $lightGreyText;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
 
     @include tablets {
-        flex-direction: column;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
     }
-}
+  }
 
-.menu-footer__list {
-    margin-right: 66px;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 32px;
-
-    @include tablets {
-        margin-bottom: 25px;
-    }
-}
-
-.menu-footer__item {
-    &:first-child {
-        font-family: 'Unbounded';
-        color: rgba(255, 255, 255, 1);
-        line-height: 33px;
-    }
-}
-
-.about-footer__list {
-    margin-right: 75px;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 32px;
-
-    @include tablets {
-        margin-bottom: 25px;
-    }
-}
-
-.about-footer__item {
-    &:first-child {
-        font-family: 'Unbounded';
-        color: rgba(255, 255, 255, 1);
-        line-height: 33px;
-    }
-}
-
-.contact {
-    margin-bottom: 20px;
-}
-
-.dropdown__footer {
+  &__developer {
     display: flex;
-    margin-bottom: 20px;
-    font-family: 'Unbounded';
-    font-style: normal;
-    margin-top: 7px;
-}
-
-.contacts__footer {
-    display: flex;
-    font-style: normal;
-    line-height: 26px;
+    vertical-align: middle;
+    align-items: center;
+    gap: 8px;
+    color: $white;
+  }
 }
 
 .contact__footer {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 10px;
+  @extend %flex-column;
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.underline-footer {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-between;
-    padding-top: 30px;
-
-    @include tablets {
-        flex-direction: column;
-        margin-left: 20px;
-    }
+.copyright {
+  color: $lightGreyOnBlack;
 }
 
-.copy {
-    display: inline-flex;
-    vertical-align: middle;
-    color: rgba(255, 255, 255, 0.4);
-    line-height: 19.5px;
-
-    @include tablets {
-        margin-bottom: 20px;
-    }
+.developer-text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
 }
 
-.design {
-    display: inline-flex;
-    vertical-align: middle;
-    color: rgba(255, 255, 255, 1);
-}
-
-.design-text {
-    display: inline-flex;
-    vertical-align: super;
-    font-size: 13px;
-}
-
-.design-img {
-    display: inline-flex;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-a {
-    color: inherit;
-}
-
-img {
-    display: block;
-    max-width: 100%;
+.developer-image {
+  @extend %flex-center;
 }
