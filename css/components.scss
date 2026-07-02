@@ -117,23 +117,6 @@
   top: 30px;
 }
 
-.section__head {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-  @include tablets {
-    padding-bottom: 19px;
-  }
-
-  .section__title {
-    @include tablets {
-      padding: 0;
-    }
-  }
-}
-
 /////////-------навигационные стрелки-------/////////
 ///
 
@@ -289,159 +272,112 @@
 
 /////////-------форма обратной связи-------/////////
 ///
-.form-section {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.container-form {
-  width: 100%;
-}
 
 .form {
-  @extend %flex-column;
-  background: $white;
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   max-width: 891px;
   width: 100%;
-  position: relative;
-  bottom: 100px;
-  float: right;
-  min-height: 350px;
+  padding: 40px;
+  background: $white;
+  position: absolute;
+  transform: translateX(90%) translateY(28%);
+  z-index: 10;
 
   @include tablets {
-    padding: 0 7%;
-    left: 0;
-    bottom: 0;
-    height: auto;
+    transform: none;
+    margin-bottom: 0;
+    padding: 30px;
   }
 
   @include phones {
-    padding: 0;
+    padding: 20px;
   }
 }
 
 .form-title {
-  text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
   font-size: 40px;
-  line-height: 49px;
-}
 
-.form__col {
-  flex: 1;
-  margin-right: 1.25rem;
-
-  &:last-child {
-    margin-right: 0;
-    width: 100%;
-    justify-content: space-between;
-    display: inline-flex;
-
-    @include tablets {
-      margin-right: 0;
-
-      &:last-child {
-        flex-direction: column;
-      }
-    }
+  @include phones {
+    font-size: 30px;
   }
 }
 
 .form__row {
-  display: inline-flex;
-  width: 100%;
+  display: flex;
+  gap: 32px;
 
   @include tablets {
     flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.form__bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
   }
 }
 
 .form__block {
   flex: 1;
-  margin-right: 1.25rem;
-  border-bottom: 1px solid $blackAlpha;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @include tablets {
-    margin-bottom: 30px;
-    width: 100%;
-  }
 }
 
-.form__row-comment {
-  width: 70%;
-  height: 70px;
-
-  @include tablets {
-    width: 100%;
-  }
+.form__block--message {
+  flex: 1;
 }
 
 .form__input {
   width: 100%;
+  padding: 12px 0;
   border: none;
-  padding: 1.125rem 0.6875rem;
-  border: solid 0.1875rem transparent;
-  border-radius: 3px;
-
-  @include tablets {
-    padding: 0.375rem 0.6875rem;
-  }
-
-  &--textarea {
-    height: auto;
-    resize: none;
-
-    @include tablets {
-      height: 6.25rem;
-    }
-  }
+  border-bottom: 1px solid rgba(61, 61, 61, 0.7);
 
   &:focus {
     outline: none;
+    border-bottom-color: $black;
+  }
+
+  &::placeholder {
+    color: rgba(61, 61, 61, 0.7);
   }
 }
 
-.form__controls {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0.75rem;
-
-  @include phones {
-    justify-content: center;
-  }
-}
-
-.form__btns {
-  display: inline-flex;
-  position: relative;
-
-  @include tablets {
-    display: flex;
-    justify-content: left;
-  }
+.form__input--textarea {
+  min-height: 90px;
+  resize: none;
 }
 
 .btn--form {
-  display: inline-flex;
-  bottom: 0;
-  top: 35%;
-  height: 34px;
-  width: 185px;
   background: $white;
 
   @include tablets {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-bottom: 50px;
+    max-width: 100%;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  margin: -1px;
+  padding: 0;
+
+  overflow: hidden;
+
+  clip: rect(0 0 0 0);
+
+  border: 0;
 }
 
 /////////-------карта-------/////////

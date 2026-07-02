@@ -12,11 +12,13 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="hero hero__inner">
-                <div class="container hero__container hero__container-inner">
-                    <header class="header header__inner">
-                        <a href="/"><img src="../img/logo-black.png" alt="logo" class="logo"></a>
-                        <nav class="menu">
+            <section class="hero hero--inner">
+                <div class="container hero__container">
+                    <header class="header header--inner">
+                        <a href="../" class="logo"><svg class="logo__icon">
+                                <use href="../assets/sprite/sprite.svg#logo-black"></use>
+                            </svg></a>
+                        <nav class="menu" aria-label="Основное меню">
                             <ul class="menu__list">
                                 <li class="menu__item">
                                     <a href="./about.html" class="menu__link">О нас</a>
@@ -25,134 +27,153 @@
                                     <a href="./projects.html" class="menu__link">Проекты</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/#our_advantages" class="menu__link">Преимущества</a>
+                                    <a href="../#our_advantages" class="menu__link">Преимущества</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="./services.html" class="menu__link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#our_news" class="menu__link">Новости</a>
+                                    <a href="../#our_news" class="menu__link">Новости</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="./contacts.html" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <a href="tel:+79184451324" class="phone-number phone-number__inner">
-                            <span class="phone-number__text">+7 918 4451324</span>
+                        <a href="tel:+79184451324" class="header__phone-number header__phone-number--dark">
+                            +7 918 445 13 24
                         </a>
-                        <div class="mobile-content">
-                            <span class="phone-number__icon">
-                                <a href="tel:+79184451324"><img src="../img/phone-black.png"
-                                        class="phone-number__icon-elem" alt="phone"></a>
-                            </span>
-                            <div class="hamburger">
-                                <span class="hamburger__plank hamburger__plank-black"></span>
-                                <span class="hamburger__plank hamburger__plank-black"></span>
-                            </div>
+                        <div class="header__mobile">
+                            <a href="tel:+79184451324" class="header__phone-button"><svg class="mobile__icon">
+                                    <use href="../assets/sprite/sprite.svg#call-dark"></use>
+                                </svg></a>
+                            <button class="hamburger" type="button" aria-label="Открыть меню">
+                                <span class="hamburger__plank hamburger__plank--dark"></span>
+                                <span class="hamburger__plank hamburger__plank--dark"></span>
+                            </button>
                         </div>
                     </header>
-                    <nav class="breadcrumbs__list">
-                        <li class="breadcrumbs__item">
-                            <a href="#no_scroll" class="breadcrumbs__link">Главная</a>
-                        </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--active">
-                            Отзывы клиентов
-                        </li>
+                </div>
+            </section>
+            <section class="headline">
+                <div class="container">
+                    <nav class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="../" class="breadcrumbs__link">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__item breadcrumbs__item--active">
+                                Отзывы клиентов
+                            </li>
+                        </ul>
                     </nav>
-                    <div class="reviews-page-title">
-                        <h1 class="section__title about-us__title">Отзывы клиентов</h1>
-                        <a href="#no_scroll" class="btn btn-reviews-page">Оставить отзыв</a>
+                    <div class="section__head section__head-inner">
+                        <h2 class="section__title">Отзывы клиентов</h2>
+                        <a href="pages/projects.html" class="btn btn--section-more">Оставить отзыв</a>
                     </div>
                 </div>
             </section>
-            <section class="reviews-content">
+            <section class="page-inner">
                 <div class="container">
-                    <div class="reviews-content__description">
-                        <p class="reviews-content__text">ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла, выполняющая
+                    <div class="page-inner__description regular-text regular-text--bold">
+                        <p>ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла, выполняющая
                             проектные и строительно-монтажные работы, выполняет поставки оборудования и материалов для
                             инженерных сетей.</p>
                     </div>
-                </div>
-            </section>
-            <section class="reviews-block">
-                <div class="container">
-                    <ul class="reviews-block__list">
-                        <li class="reviews-block__item">
-                            <div class="review__display">
-                                <div class="review__ava">
-                                    <img src="../img/avatar.png" class="avatar">
+                    <div class="reviews__block">
+                        <ul class="reviews__list reviews__list--grid">
+                            <li class="reviews__item reviews__item--grid">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
+                                    </div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Ольга Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                                    </div>
                                 </div>
-                                <div class="review__content">
-                                    <div class="reviewer__name">Ольга Н.</div>
-                                    <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                            </div>
-                            <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
-                                наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров –
-                                проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                            </div>
-                            <a href="#no_scroll" class="review__src">Читать отзыв целиком</a>
-                        </li>
-                        <li class="reviews-block__item">
-                            <div class="review__display">
-                                <div class="review__ava">
-                                    <img src="../img/avatar.png" class="avatar">
+                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                            </li>
+                            <li class="reviews__item reviews__item--grid">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
+                                    </div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Ольга Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                                    </div>
                                 </div>
-                                <div class="review__content">
-                                    <div class="reviewer__name">Ольга Н.</div>
-                                    <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
+                                    Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                            </div>
-                            <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
-                                наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров –
-                                проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                            </div>
-                            <a href="#no_scroll" class="review__src">Читать отзыв целиком</a>
-                        </li>
-                        <li class="reviews-block__item">
-                            <div class="review__display">
-                                <div class="review__ava">
-                                    <img src="../img/avatar.png" class="avatar">
+                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                            </li>
+                            <li class="reviews__item reviews__item--grid">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
+                                    </div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Ольга Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                                    </div>
                                 </div>
-                                <div class="review__content">
-                                    <div class="reviewer__name">Татьяна Н.</div>
-                                    <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
+
                                 </div>
-                            </div>
-                            <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
-                                наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров –
-                                проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                            </div>
-                            <a href="#no_scroll" class="review__src">Читать отзыв целиком</a>
-                        </li>
-                        <li class="reviews-block__item">
-                            <div class="review__display">
-                                <div class="review__ava">
-                                    <img src="../img/avatar.png" class="avatar">
+                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                            </li>
+                            <li class="reviews__item reviews__item--grid">
+                                <div class="reviews__display">
+                                    <div class="reviews__avatar">
+                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
+                                    </div>
+                                    <div class="reviews__content">
+                                        <div class="reviews__name">Ольга Н.</div>
+                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                                    </div>
                                 </div>
-                                <div class="review__content">
-                                    <div class="reviewer__name">Екатерина Н.</div>
-                                    <div class="reviewer__source">ЛСТК каркас барн 76м2</div>
+                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
+                                    Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
+                                    Наше предприятие стабильно развивается с 2013 года и
+                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                    инженеров –
+                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
                                 </div>
-                            </div>
-                            <div class="review__description">Наше предприятие стабильно развивается с 2013 года и
-                                наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров –
-                                проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                            </div>
-                            <a href="#no_scroll" class="review__src">Читать отзыв целиком</a>
-                        </li>
-                    </ul>
-                    <a href="#no_scroll" class="btn btn-reviews-page--mobile">Оставить отзыв</a>
+                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <footer class="footer">
                 <div class="container">
                     <div class="footer__content">
                         <div class="footer__logo">
-                            <a href="./" class="logo">
-                                <svg class="logo__img">
-                                    <use xlink:href="./sprite.svg#logo"></use>
+                            <a href="../" class="logo">
+                                <svg class="logo__icon">
+                                    <use href="../assets/sprite/sprite.svg#logo"></use>
                                 </svg>
                             </a>
                         </div>
@@ -161,16 +182,16 @@
                                 <div class="footer__title">Меню</div>
                                 <ul class="footer__list">
                                     <li class="footer__item">
-                                        <a href="pages/projects.html" class="footer__link">Проекты</a>
+                                        <a href="../pages/projects.html" class="footer__link">Проекты</a>
                                     </li>
                                     <li class="footer__item">
-                                        <a href="#no-scroll" class="footer__link">О технологии ЛСТК</a>
+                                        <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
                                     </li>
                                     <li class="footer__item">
-                                        <a href="#no-scroll" class="footer__link">Новости</a>
+                                        <a href="../#our_news" class="footer__link">Новости</a>
                                     </li>
                                     <li class="footer__item">
-                                        <a href="pages/blog.html" class="footer__link">Блог</a>
+                                        <a href="../pages/blog.html" class="footer__link">Блог</a>
                                     </li>
                                 </ul>
                             </div>
@@ -178,13 +199,13 @@
                                 <div class="footer__title">Компания</div>
                                 <ul class="footer__list">
                                     <li class="footer__item">
-                                        <a href="pages/about.html" class="footer__link">О нас</a>
+                                        <a href="../pages/about.html" class="footer__link">О нас</a>
                                     </li>
                                     <li class="footer__item">
                                         <a href="#no-scroll" class="footer__link">Стать партнером</a>
                                     </li>
                                     <li class="footer__item">
-                                        <a href="pages/reviews.html" class="footer__link">Отзывы</a>
+                                        <a href="../pages/reviews.html" class="footer__link">Отзывы</a>
                                     </li>
                                 </ul>
                             </div>
@@ -201,16 +222,16 @@
                         </div>
                         <div class="footer__developer">
                             <p class="developer-text">Сделано в</p>
-                            <div class="developer-image"><img src="assets\img\logos\logokr.png"
+                            <div class="developer-image"><img src="../assets/img/logos/logokr.png"
                                     alt="Компания-разработчик" class="developer-img">
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
-            <script
-                src="https://api-maps.yandex.ru/v3/?apikey=08c5f0d6-8f9c-46dd-9597-0fa0e2a4efca&lang=ru_RU"></script>
-            <script src="../dist/bundle.js"></script>
+        </div>
+    </div>
+    <script src="../dist/bundle.js"></script>
 </body>
 
 </html>

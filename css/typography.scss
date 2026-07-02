@@ -23,7 +23,37 @@
 
     &--small {
       font-size: 52px;
+
+      @include tablets {
+        font-size: 30px;
+      }
     }
+  }
+}
+
+/////////-------Секционный заголовок с кнопкой more-------/////////
+///
+.section__head {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include tablets {
+    padding-bottom: 19px;
+  }
+
+  .section__title {
+    @include tablets {
+      padding: 0;
+    }
+  }
+}
+
+.section__head-inner {
+  @include laptops {
+    margin-top: 20px;
+    margin-left: 15px;
   }
 }
 
@@ -82,6 +112,23 @@
       p {
         color: $lightGreyText;
       }
+    }
+  }
+}
+
+.regular-text {
+  & p {
+    font-family: $Montserrat;
+    color: $blackAlpha;
+    margin-bottom: 10px;
+  }
+}
+.regular-text {
+  &--bold {
+    & p {
+      font-weight: 400;
+      color: $lightBlack;
+      font-family: $Unbounded;
     }
   }
 }

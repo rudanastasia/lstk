@@ -5,7 +5,7 @@
 async function init() {
   await ymaps3.ready;
 
-  const customization = await fetch('./customization.json').then((response) => response.json());
+  const customization = await fetch('/customization.json').then((response) => response.json());
 
   const coords = [38.974016, 45.041572];
 
@@ -27,7 +27,7 @@ async function init() {
   const markerElement = document.createElement('div');
   markerElement.className = 'my-marker';
   markerElement.innerHTML = `  
-  <img src="assets/img/icons/marker.svg" alt="Метка">
+  <img src="/assets/img/icons/marker.svg" alt="Метка">
   `;
 
   map.addChild(

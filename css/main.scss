@@ -1,152 +1,3 @@
-/////////-------описание и инфографика на главной-------/////////
-///
-.main-description {
-  @include section-padding;
-  font-family: $Unbounded;
-  z-index: 2;
-  position: relative;
-
-  @include tablets {
-    padding: 0;
-  }
-
-  &--inner {
-    padding: 0 0 90px 0;
-  }
-
-  &__image {
-    width: 100%;
-    height: 460px;
-
-    & img {
-      width: 100%;
-      height: 460px;
-      object-fit: cover;
-    }
-  }
-
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__content {
-    display: flex;
-    gap: 100px;
-  }
-
-  &__content-image {
-    position: relative;
-    transform: translateY(-120px);
-    width: 100%;
-
-    & img {
-      max-width: none;
-    }
-
-    @include laptops {
-      display: none;
-    }
-  }
-}
-
-.info {
-  position: relative;
-  background: $black;
-  color: $white;
-  border-top-left-radius: 80px;
-  padding: 30px;
-  margin: 100px 0 -140px auto;
-  width: 100%;
-  max-width: 1101px;
-  min-height: 280px;
-
-  @include laptops {
-    margin: 65px 0 -140px auto;
-  }
-
-  @include tablets {
-    border-top-left-radius: 0;
-    margin: 0;
-  }
-
-  &--top {
-    margin: -140px 0 70px auto;
-    border-top-left-radius: 0;
-
-    @include laptops {
-      margin: -140px 0 70px auto;
-    }
-  }
-
-  &__rectangle {
-    width: 25px;
-    height: 70%;
-    background: $yellow;
-    position: absolute;
-    z-index: 2;
-    inset: 0 0 auto auto;
-
-    @include tablets {
-      inset: 0 auto auto 0;
-      width: 100%;
-      height: 25px;
-    }
-
-    &--full {
-      height: 100%;
-
-      @include tablets {
-        height: 25px;
-      }
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-
-    @include tablets {
-      flex-direction: column;
-    }
-  }
-
-  &__item {
-    padding: 30px;
-    @extend %flex-column;
-
-    @include tablets {
-      align-self: center;
-    }
-  }
-
-  &__value {
-    font-size: 80px;
-    line-height: 99.2px;
-    font-weight: 200;
-    align-self: center;
-
-    @include tablets {
-      align-self: flex-start;
-    }
-
-    @include phones {
-      font-size: 60px;
-    }
-  }
-
-  &__text {
-    color: $lightGreyText;
-    font-family: $Montserrat;
-    font-size: 18px;
-    font-weight: 200;
-
-    @include phones {
-      font-size: $baseFontSize;
-    }
-  }
-}
-
 /////////-------проекты на главной-------/////////
 ///
 .projects {
@@ -321,7 +172,7 @@
 
     @include tablets {
       position: static;
-      background: url(assets/img/covers/advantages_cover.png) center center no-repeat;
+      background: url(../assets/img/covers/advantages_cover.png) center center no-repeat;
       background-size: cover;
       justify-content: center;
       min-height: 900px;
@@ -383,10 +234,19 @@
   &__wrapper-left {
     position: relative;
     width: 30%;
-    margin-left: 100px;
+    transform: translateX(100px);
 
     &::before {
       display: none;
+    }
+
+    @include laptops {
+      transform: translateX(0);
+      width: 40%;
+    }
+
+    @include tablets {
+      width: 100%;
     }
   }
 
@@ -410,6 +270,10 @@
 
     &--column {
       padding: 25px 50px;
+
+      @include tablets {
+        padding: 25px;
+      }
     }
   }
 
@@ -546,6 +410,7 @@
 
     @include tablets {
       color: $black;
+      margin-top: 20px;
     }
   }
 
@@ -662,7 +527,7 @@
 .news {
   background:
     linear-gradient($gradient, $gradient),
-    url(/assets/img/covers/news_cover.png) center top / cover no-repeat;
+    url(../assets/img/covers/news_cover.png) center top / cover no-repeat;
   @include section-padding;
 
   &:hover {

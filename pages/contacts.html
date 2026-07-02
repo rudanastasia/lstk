@@ -12,11 +12,13 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="hero hero__inner">
-                <div class="container hero__container hero__container-inner">
-                    <header class="header header__inner">
-                        <a href="/"><img src="../img/logo-black.png" alt="logo" class="logo"></a>
-                        <nav class="menu">
+            <section class="hero hero--inner">
+                <div class="container hero__container">
+                    <header class="header header--inner">
+                        <a href="../" class="logo"><svg class="logo__icon">
+                                <use href="../assets/sprite/sprite.svg#logo-black"></use>
+                            </svg></a>
+                        <nav class="menu" aria-label="Основное меню">
                             <ul class="menu__list">
                                 <li class="menu__item">
                                     <a href="./about.html" class="menu__link">О нас</a>
@@ -25,114 +27,121 @@
                                     <a href="./projects.html" class="menu__link">Проекты</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/#our_advantages" class="menu__link">Преимущества</a>
+                                    <a href="../#our_advantages" class="menu__link">Преимущества</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="./services.html" class="menu__link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#our_news" class="menu__link">Новости</a>
+                                    <a href="../#our_news" class="menu__link">Новости</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="./contacts.html" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <a href="tel:+79184451324" class="phone-number phone-number__inner">
-                            <span class="phone-number__text">+7 918 4451324</span>
+                        <a href="tel:+79184451324" class="header__phone-number header__phone-number--dark">
+                            +7 918 445 13 24
                         </a>
-                        <span class="phone-number__icon">
-                            <a href="tel:+79184451324">
-                                <svg class="phone-number__icon-elem">
-                                    <use xlink:href="../sprite.svg#call-dark"></use>
+                        <div class="header__mobile">
+                            <a href="tel:+79184451324" class="header__phone-button"><svg class="mobile__icon">
+                                    <use href="../assets/sprite/sprite.svg#call-dark"></use>
                                 </svg></a>
-                        </span>
-                        <div class="hamburger">
-                            <span class="hamburger__plank hamburger__plank-black"></span>
-                            <span class="hamburger__plank hamburger__plank-black"></span>
+                            <button class="hamburger" type="button" aria-label="Открыть меню">
+                                <span class="hamburger__plank hamburger__plank--dark"></span>
+                                <span class="hamburger__plank hamburger__plank--dark"></span>
+                            </button>
                         </div>
                     </header>
-                    <nav class="breadcrumbs__list">
-                        <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__link">Главная</a>
-                        </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--active">
-                            Контакты
-                        </li>
+                </div>
+            </section>
+            <section class="headline">
+                <div class="container">
+                    <nav class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="../" class="breadcrumbs__link">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__item breadcrumbs__item--active">
+                                Контакты
+                            </li>
+                        </ul>
                     </nav>
-                    <h1 class="section__title about-us__title">Контакты</h1>
+                    <h1 class="section__title">Контакты</h1>
                 </div>
+            </section>
+            <section class="contacts contacts--dark">
+                <div class="container">
+                    <div class="contacts__row">
+                        <div class="contacts__content">
+                            <div class="contacts__address">
+                                <a href="https://maps.app.goo.gl/SZaS2mJhPDm7jqjv5" class="address">Краснодар, ул.
+                                    Рашпилевская, 267</a>
+                                <div class="contacts-text">Адрес</div>
+                            </div>
+                            <div class="contacts__phone">
+                                <a href="tel:+79184451324" class="contact-phone">+7 918 445 13 24</a>
+                                <div class="contacts-text">Телефон</div>
+                            </div>
+                            <div class="contacts__email">
+                                <a href="mailto:mail@pochta.ru" class="contact-email">mail@pochta.ru</a>
+                                <div class="contacts-text">Почта</div>
+                            </div>
+                        </div>
+                        <div class="socials">
+                            <a href="#no-scroll" class="socials__link">
+                                <svg class="socials__img">
+                                    <use href="../assets/sprite/sprite.svg#telegram-icon"></use>
+                                </svg>
+                            </a>
+                            <a href="#no-scroll" class="socials__link">
+
+                                <svg class="socials__img">
+                                    <use href="../assets/sprite/sprite.svg#whatsapp-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        </section>
-        <section class="contacts contacts--grey">
-            <div class="container">
-                <div class="contacts__content">
-                    <div class="contacts__address">
-                        <a href="https://maps.app.goo.gl/SZaS2mJhPDm7jqjv5" class="address__street">Краснодар, ул.
-                            Рашпилевская, 267</a>
-                        <div class="address__desc">Адрес</div>
-                    </div>
-                    <div class="contacts__phone">
-                        <a href="tel:+79184451324" class="contact__content">+7 918 4451324</a>
-                        <div class="address__desc">Телефон</div>
-                    </div>
-                    <div class="contacts__email">
-                        <a href="mailto:mail@pochta.ru" class="contact__content">mail@pochta.ru</a>
-                        <div class="address__desc">Почта</div>
-                    </div>
-                    <div class="socials">
-                        <a href="#no_scroll" class="social__link">
-                            <img src="../img/telegram.png" class="social__img">
-                        </a>
-                        <a href="#no_scroll" class="social__link">
-                            <img src="../img/whatsapp.png" class="social__img">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <section class="section map-section">
-        <div id="map"><iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A70acb0a03e59d581d675a1cbc4432a66eeb0151b4510e7ae6132b18f2020e1c7&amp;source=constructor"
-                width="100%" height="456" frameborder="0"></iframe></div>
-        <div class="container container-form">
-            <form class="form">
-                <h2 class="section__title form-title">Напишите нам</h2>
-                <input type="hidden" name="to" value="some@gmail.com">
-                <div class="form__col">
-                    <div class="form__row">
-                        <label class="form__block">
-                            <input type="text" name="name" placeholder="Ваше имя" class="form__input input-error">
-                        </label>
-                        <label class="form__block">
-                            <input type="text" name="phone" placeholder="Email" class="form__input input-error">
-                        </label>
-                    </div>
-                </div>
-                <div class="form__col">
-                    <div class="form__row form__row-comment">
-                        <label class="form__block">
-                            <textarea name="comment" placeholder="Сообщение"
-                                class="form__input form__input--textarea input-error"></textarea>
-                        </label>
-                    </div>
-                    <div class="form__btns">
-                        <input type="submit" id="myBtn" value="Отправить" class="btn btn--form">
-                    </div>
-                </div>
-            </form>
+        <div id="map">
         </div>
-    </section>
-    <section class="form-section">
+        <form class="form" action="send.php" method="post">
+            <h2 class="section__title form-title">
+                Напишите нам
+            </h2>
+            <div class="form__row">
+                <div class="form__block">
+                    <label for="name" class="visually-hidden">Ваше имя</label>
+                    <input id="name" class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__block">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input id="email" class="form__input" type="email" name="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form__bottom">
+                <div class="form__block form__block--message">
+                    <label for="message" class="visually-hidden">Сообщение</label>
+                    <textarea id="message" class="form__input form__input--textarea" name="message"
+                        placeholder="Сообщение" rows="3"></textarea>
+                </div>
+                <button class="btn btn--form" type="submit">
+                    Отправить
+                </button>
+            </div>
+        </form>
     </section>
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <a href="./" class="logo">
-                        <svg class="logo__img">
-                            <use xlink:href="./sprite.svg#logo"></use>
+                    <a href="../" class="logo">
+                        <svg class="logo__icon">
+                            <use href="../assets/sprite/sprite.svg#logo"></use>
                         </svg>
                     </a>
                 </div>
@@ -141,16 +150,16 @@
                         <div class="footer__title">Меню</div>
                         <ul class="footer__list">
                             <li class="footer__item">
-                                <a href="pages/projects.html" class="footer__link">Проекты</a>
+                                <a href="../pages/projects.html" class="footer__link">Проекты</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#no-scroll" class="footer__link">О технологии ЛСТК</a>
+                                <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#no-scroll" class="footer__link">Новости</a>
+                                <a href="../#our_news" class="footer__link">Новости</a>
                             </li>
                             <li class="footer__item">
-                                <a href="pages/blog.html" class="footer__link">Блог</a>
+                                <a href="../pages/blog.html" class="footer__link">Блог</a>
                             </li>
                         </ul>
                     </div>
@@ -158,13 +167,13 @@
                         <div class="footer__title">Компания</div>
                         <ul class="footer__list">
                             <li class="footer__item">
-                                <a href="pages/about.html" class="footer__link">О нас</a>
+                                <a href="../pages/about.html" class="footer__link">О нас</a>
                             </li>
                             <li class="footer__item">
                                 <a href="#no-scroll" class="footer__link">Стать партнером</a>
                             </li>
                             <li class="footer__item">
-                                <a href="pages/reviews.html" class="footer__link">Отзывы</a>
+                                <a href="../pages/reviews.html" class="footer__link">Отзывы</a>
                             </li>
                         </ul>
                     </div>
@@ -181,7 +190,7 @@
                 </div>
                 <div class="footer__developer">
                     <p class="developer-text">Сделано в</p>
-                    <div class="developer-image"><img src="assets\img\logos\logokr.png" alt="Компания-разработчик"
+                    <div class="developer-image"><img src="../assets/img/logos/logokr.png" alt="Компания-разработчик"
                             class="developer-img">
                     </div>
                 </div>
