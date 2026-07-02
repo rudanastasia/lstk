@@ -1,26 +1,26 @@
 (() => {
-  var __create = Object.create;
-  var __defProp = Object.defineProperty;
-  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-  var __getOwnPropNames = Object.getOwnPropertyNames;
-  var __getProtoOf = Object.getPrototypeOf;
-  var __hasOwnProp = Object.prototype.hasOwnProperty;
-  var __commonJS = (cb, mod) => function __require() {
+  const __create = Object.create;
+  const __defProp = Object.defineProperty;
+  const __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  const __getOwnPropNames = Object.getOwnPropertyNames;
+  const __getProtoOf = Object.getPrototypeOf;
+  const __hasOwnProp = Object.prototype.hasOwnProperty;
+  const __commonJS = (cb, mod) => function __require() {
     try {
       return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
     } catch (e) {
       throw mod = 0, e;
     }
   };
-  var __copyProps = (to, from, except, desc) => {
+  const __copyProps = (to, from, except, desc) => {
     if (from && typeof from === "object" || typeof from === "function") {
-      for (let key of __getOwnPropNames(from))
+      for (const key of __getOwnPropNames(from))
         if (!__hasOwnProp.call(to, key) && key !== except)
           __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
     }
     return to;
   };
-  var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  const __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
     // If the importer is in node compatibility mode or this is not an ESM
     // file that has been converted to a CommonJS file using a Babel-
     // compatible transform (i.e. "__esModule" has not been set), then set
@@ -30,7 +30,7 @@
   ));
 
   // js/slider.js
-  var require_slider = __commonJS({
+  const require_slider = __commonJS({
     "js/slider.js"() {
       document.addEventListener("DOMContentLoaded", () => {
         const projects = document.querySelector(".projects");
@@ -196,7 +196,7 @@
   });
 
   // js/reviews.js
-  var require_reviews = __commonJS({
+  const require_reviews = __commonJS({
     "js/reviews.js"() {
       document.querySelectorAll(".reviews__src").forEach((link) => {
         link.addEventListener("click", function(e) {
@@ -211,11 +211,11 @@
   });
 
   // js/map.js
-  var require_map = __commonJS({
+  const require_map = __commonJS({
     "js/map.js"() {
       async function init() {
         await ymaps3.ready;
-        const customization = await fetch("./customization.json").then((response) => response.json());
+        const customization = await fetch("/customization.json").then((response) => response.json());
         const coords = [38.974016, 45.041572];
         const map = new ymaps3.YMap(document.getElementById("map"), {
           location: {
@@ -232,7 +232,7 @@
         const markerElement = document.createElement("div");
         markerElement.className = "my-marker";
         markerElement.innerHTML = `  
-  <img src="assets/img/icons/marker.svg" alt="\u041C\u0435\u0442\u043A\u0430">
+  <img src="/assets/img/icons/marker.svg" alt="\u041C\u0435\u0442\u043A\u0430">
   `;
         map.addChild(
           new ymaps3.YMapMarker(
@@ -248,11 +248,11 @@
   });
 
   // js/script.js
-  var require_script = __commonJS({
+  const require_script = __commonJS({
     "js/script.js"() {
-      var import_slider = __toESM(require_slider());
-      var import_reviews = __toESM(require_reviews());
-      var import_map = __toESM(require_map());
+      const import_slider = __toESM(require_slider());
+      const import_reviews = __toESM(require_reviews());
+      const import_map = __toESM(require_map());
     }
   });
   require_script();
