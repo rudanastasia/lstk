@@ -1,0 +1,147 @@
+/////////-------преимущества на главной-------/////////
+///
+.advantages {
+  position: relative;
+  padding: 90px 0 0;
+
+  @include tablets {
+    padding: 0;
+  }
+
+  &__container {
+    width: 100%;
+    position: static;
+
+    @include tablets {
+      margin: 0;
+    }
+  }
+
+  &__visual {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+
+    @include tablets {
+      position: static;
+      background: url(../assets/img/covers/advantages_cover.png) center center no-repeat;
+      background-size: cover;
+      justify-content: center;
+      min-height: 900px;
+    }
+  }
+
+  &__image {
+    width: 71%;
+    display: flex;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-top-right-radius: 70px;
+  }
+
+  &__background {
+    @include tablets {
+      margin: 0 40px;
+    }
+
+    @include phones {
+      margin: 0 20px;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 720px;
+    color: $black;
+    background: $white;
+    border-top-left-radius: 0;
+    padding: 0;
+    margin: 0;
+    inset: auto 0 -150px auto;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 25px;
+      background: $yellow;
+    }
+
+    @include tablets {
+      position: static;
+      max-width: none;
+      inset: auto 0 -70px auto;
+      z-index: 2;
+    }
+  }
+
+  &__wrapper-left {
+    position: relative;
+    width: 30%;
+    transform: translateX(100px);
+
+    &::before {
+      display: none;
+    }
+
+    @include laptops {
+      transform: translateX(0);
+      width: 40%;
+    }
+
+    @include tablets {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablets {
+      flex-direction: column;
+    }
+
+    &--column {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    padding: 25px;
+    flex: 0 0 50%;
+
+    &--column {
+      padding: 25px 50px;
+
+      @include tablets {
+        padding: 25px;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-family: $Unbounded;
+    margin-bottom: 5px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    color: $lightBlack;
+
+    &--border-bottom {
+      border-bottom: 1px solid $lightBackgroundBorder;
+      padding-bottom: 30px;
+    }
+  }
+}

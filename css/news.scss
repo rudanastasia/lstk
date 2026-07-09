@@ -1,0 +1,11 @@
+/////////-------новости на главной-------/////////
+///
+.news {
+  background:
+    linear-gradient($gradient, $gradient),
+    url(../assets/img/covers/news_cover.png) center top / cover no-repeat;
+
+  &:hover {
+    filter: none;
+  }
+}

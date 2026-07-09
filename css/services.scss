@@ -1,0 +1,111 @@
+/////////-------услуги на главной-------/////////
+///
+.services {
+  background: $black;
+  padding: 100px 0;
+
+  @include tablets {
+    position: relative;
+    padding: 50px 10px;
+  }
+
+  @include phones {
+    padding: 50px 10px 20px;
+  }
+
+  &__list {
+    display: flex;
+    border: 1px solid $darkBackgroundBorder;
+    border-left: none;
+    border-right: none;
+
+    @include tablets {
+      flex-direction: column;
+      border: none;
+    }
+
+    &--no_border {
+      border: none;
+    }
+  }
+
+  &__item {
+    border-right: 1px solid $darkBackgroundBorder;
+    padding: 20px;
+    @extend %flex-column;
+    align-self: stretch;
+
+    &:last-child {
+      border-right: none;
+
+      @include tablets {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include laptops {
+      padding: 10px;
+    }
+
+    @include tablets {
+      border-right: none;
+      border-bottom: 1px solid $darkBackgroundBorder;
+    }
+
+    &--dark {
+      border-right: 1px solid $lightBackgroundBorder;
+
+      @include tablets {
+        border-right: none;
+        border-bottom: 1px solid $lightBackgroundBorder;
+      }
+    }
+  }
+
+  &__name {
+    font-size: $baseFontSize;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
+
+    &--dark {
+      color: $lightBlack;
+    }
+  }
+
+  &__description {
+    color: $lightGreyText;
+
+    &--dark {
+      color: $blackAlpha;
+      font-family: $Montserrat;
+    }
+  }
+}
+
+.num {
+  color: $yellow;
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 23px;
+
+  &--dark {
+    margin-bottom: 31px;
+    color: $lightBlack;
+
+    @include tablets {
+      color: $black;
+      margin-top: 20px;
+    }
+  }
+
+  &--grey {
+    color: $blackAlpha;
+  }
+}
+
+/////////-------На внутренних страницах-------/////////
+///
+.services-wrapper {
+  margin-top: 50px;
+}

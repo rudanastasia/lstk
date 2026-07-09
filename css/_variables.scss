@@ -1,0 +1,30 @@
+$baseFontSize: 16px;
+
+//breakpoints
+$laptops: 1023px;
+$tablets: 768px;
+$phones: 360px;
+//
+
+$Unbounded: 'Unbounded', Arial, Helvetica, sans-serif;
+$Montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+
+//colors
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$lightBlack: rgba(61, 61, 61, 1);
+$lightGreyText: rgba(255, 255, 255, 0.7);
+$blackAlpha: rgba(61, 61, 61, 0.7);
+$backgroundGrey: rgb(244, 244, 244);
+$yellow: rgba(219, 255, 0, 1);
+$darkBackgroundBorder: rgba(255, 255, 255, 0.25);
+$lightBackgroundBorder: rgba(217, 217, 217, 1);
+$lightGreyOnBlack: rgba(255, 255, 255, 0.4);
+$lightGreyOnWhite: rgba(83, 81, 84, 1);
+$gradient: rgba(0, 0, 0, 0.4);
+//
+
+$z-fixed-menu: 100;
+
+$radius-desk: 80px;
+$radius-tab: 40px;

@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="maincontent">
+        <main class="maincontent">
             <section class="hero hero--inner">
                 <div class="container hero__container">
                     <header class="header header--inner">
@@ -21,22 +21,22 @@
                         <nav class="menu" aria-label="Основное меню">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="./about.html" class="menu__link">О нас</a>
+                                    <a href="./about" class="menu__link">О нас</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./projects.html" class="menu__link">Проекты</a>
+                                    <a href="./projects" class="menu__link">Проекты</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="../#our_advantages" class="menu__link">Преимущества</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./services.html" class="menu__link">Услуги</a>
+                                    <a href="./services" class="menu__link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="../#our_news" class="menu__link">Новости</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./contacts.html" class="menu__link">Контакты</a>
+                                    <a href="./contacts" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -104,101 +104,131 @@
                     </div>
                 </div>
             </section>
+        </main>
+        <section class="section map-section">
+            <div id="map">
+            </div>
+            <div class="contacts-form">
+                <form class="form" action="send.php" method="post">
+                    <h2 class="section__title form-title">
+                        Напишите нам
+                    </h2>
+                    <div class="form__row">
+                        <div class="form__block">
+                            <label for="name" class="visually-hidden">Ваше имя</label>
+                            <input id="name" class="form__input" type="text" name="name" placeholder="Ваше имя"
+                                required>
+                        </div>
+                        <div class="form__block">
+                            <label for="email" class="visually-hidden">Email</label>
+                            <input id="email" class="form__input" type="email" name="email" placeholder="Email"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form__bottom">
+                        <div class="form__block form__block--message">
+                            <label for="message" class="visually-hidden">Сообщение</label>
+                            <textarea id="message" class="form__input form__input--textarea" name="message"
+                                placeholder="Сообщение" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn--form" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__logo">
+                        <a href="../" class="logo">
+                            <svg class="logo__icon">
+                                <use href="../assets/sprite/sprite.svg#logo"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__column">
+                            <div class="footer__title">Меню</div>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="../pages/projects" class="footer__link">Проекты</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../#our_news" class="footer__link">Новости</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../pages/blog" class="footer__link">Блог</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__title">Компания</div>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="../pages/about" class="footer__link">О нас</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#no-scroll" class="footer__link">Стать партнером</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../pages/reviews" class="footer__link">Отзывы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <address class="footer__contacts">
+                        <div class="footer__title">Контакты</div>
+                        <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
+                        <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
+                    </address>
+                </div>
+                <div class="footer__bottom">
+                    <div class="copyright">
+                        <p>© Фабрика Стальных Каркасов | 2013-2026</p>
+                    </div>
+                    <div class="footer__developer">
+                        <p class="developer-text">Сделано в</p>
+                        <div class="developer-image"><img src="../assets/img/logos/logokr.png"
+                                alt="Компания-разработчик" class="developer-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+
+            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+            </button>
+
+            <nav class="mobile-menu__nav" aria-label="Мобильное меню">
+                <ul class="mobile-menu__list">
+                    <li><a href="./about">О нас</a></li>
+                    <li><a href="./projects">Проекты</a></li>
+                    <li><a href="../#our_advantages">Преимущества</a></li>
+                    <li><a href="./services">Услуги</a></li>
+                    <li><a href="../#our_news">Новости</a></li>
+                    <li><a href="./blog">Блог</a></li>
+                    <li><a href="./reviews">Отзывы</a></li>
+                    <li><a href="./contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a class="mobile-menu__phone" href="tel:+79184451324">
+                +7 918 445 13 24
+            </a>
+
         </div>
     </div>
-    <section class="section map-section">
-        <div id="map">
-        </div>
-        <form class="form" action="send.php" method="post">
-            <h2 class="section__title form-title">
-                Напишите нам
-            </h2>
-            <div class="form__row">
-                <div class="form__block">
-                    <label for="name" class="visually-hidden">Ваше имя</label>
-                    <input id="name" class="form__input" type="text" name="name" placeholder="Ваше имя" required>
-                </div>
-                <div class="form__block">
-                    <label for="email" class="visually-hidden">Email</label>
-                    <input id="email" class="form__input" type="email" name="email" placeholder="Email" required>
-                </div>
-            </div>
-            <div class="form__bottom">
-                <div class="form__block form__block--message">
-                    <label for="message" class="visually-hidden">Сообщение</label>
-                    <textarea id="message" class="form__input form__input--textarea" name="message"
-                        placeholder="Сообщение" rows="3"></textarea>
-                </div>
-                <button class="btn btn--form" type="submit">
-                    Отправить
-                </button>
-            </div>
-        </form>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__logo">
-                    <a href="../" class="logo">
-                        <svg class="logo__icon">
-                            <use href="../assets/sprite/sprite.svg#logo"></use>
-                        </svg>
-                    </a>
-                </div>
-                <nav class="footer__nav">
-                    <div class="footer__column">
-                        <div class="footer__title">Меню</div>
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a href="../pages/projects.html" class="footer__link">Проекты</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="../#our_news" class="footer__link">Новости</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="../pages/blog.html" class="footer__link">Блог</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__column">
-                        <div class="footer__title">Компания</div>
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a href="../pages/about.html" class="footer__link">О нас</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#no-scroll" class="footer__link">Стать партнером</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="../pages/reviews.html" class="footer__link">Отзывы</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <address class="footer__contacts">
-                    <div class="footer__title">Контакты</div>
-                    <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
-                    <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
-                </address>
-            </div>
-            <div class="footer__bottom">
-                <div class="copyright">
-                    <p>© Фабрика Стальных Каркасов | 2013-2026</p>
-                </div>
-                <div class="footer__developer">
-                    <p class="developer-text">Сделано в</p>
-                    <div class="developer-image"><img src="../assets/img/logos/logokr.png" alt="Компания-разработчик"
-                            class="developer-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
     <script src="https://api-maps.yandex.ru/v3/?apikey=08c5f0d6-8f9c-46dd-9597-0fa0e2a4efca&lang=ru_RU"></script>
-    <script src="../dist/bundle.js"></script>
+    <script src="../js/map.js"></script>
 </body>
 
 </html>

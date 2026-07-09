@@ -1,0 +1,16 @@
+@mixin section-padding {
+  padding: 90px;
+
+  @include laptops {
+    padding: 50px;
+  }
+}
+
+@mixin corner {
+  content: '';
+  position: absolute;
+  border: 20px solid transparent;
+  border-right: 20px solid $yellow;
+  border-bottom: 20px solid $yellow;
+  inset: auto 0 0 auto;
+}

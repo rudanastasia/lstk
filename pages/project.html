@@ -11,131 +11,175 @@
 
 <body>
     <div class="wrapper">
-        <div class="maincontent">
-            <section class="hero hero-project">
+        <main class="maincontent">
+            <section class="hero hero-picture">
                 <div class="container hero__container">
                     <header class="header">
-                        <a href="/"><img src="../img/logo.png" alt="logo" class="logo"></a>
-                        <nav class="menu">
+                        <a href="../" class="logo">
+                            <svg class="logo__icon">
+                                <use href="../assets/sprite/sprite.svg#logo"></use>
+                            </svg></a>
+                        <nav class="menu" aria-label="Основное меню">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="./about.html" class="menu__link">О нас</a>
+                                    <a href="./about" class="menu__link">О нас</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./projects.html" class="menu__link">Проекты</a>
+                                    <a href="./projects" class="menu__link">Проекты</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/#our_advantages" class="menu__link">Преимущества</a>
+                                    <a href="../#our_advantages" class="menu__link">Преимущества</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./services.html" class="menu__link">Услуги</a>
+                                    <a href="./services" class="menu__link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#our_news" class="menu__link">Новости</a>
+                                    <a href="../#our_news" class="menu__link">Новости</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./contacts.html" class="menu__link">Контакты</a>
+                                    <a href="./contacts" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <a href="tel:+79184451324" class="phone-number phone-number--white">
-                            <span class="phone-number__text">+7 918 4451324</span>
+                        <a href="tel:+79184451324" class="header__phone-number">
+                            +7 918 445 13 24
                         </a>
-                        <div class="mobile-content">
-                            <span class="phone-number__icon">
-                                <a href="tel:+79184451324"><img src="../img/phone.png" class="phone-number__icon-elem"
-                                        alt="phone"></a>
-                            </span>
-                            <div class="hamburger">
+                        <div class="header__mobile">
+                            <a href="tel:+79184451324" class="header__phone-button"><svg class="mobile__icon">
+                                    <use href="../assets/sprite/sprite.svg#call-light"></use>
+                                </svg></a>
+                            <button class="hamburger" type="button" aria-label="Открыть меню">
                                 <span class="hamburger__plank"></span>
                                 <span class="hamburger__plank"></span>
-                            </div>
+                            </button>
                         </div>
                     </header>
-                    <div class="hero__title-section hero__title-section--project">
-                        <h1 class="section__title project-title">ЛСТК каркас барн</h1>
-                        <div class="section__subtitle-price">от 728.002 руб.
+                    <div class="hero__title-section">
+                        <div class="hero__desc">
+                            <h1 class="section__title section__title--light">ЛСТК каркас барн</h1>
+                            <a href="#no_scroll" class="btn btn--light btn--arrow-down">Скачать
+                                презентацию</a>
                         </div>
-                        <a href="#no_scroll" class="btn btn-desc-mobile btn-desc-mobile--project">Скачать
-                            презентацию</a>
                     </div>
+                    <div class="product-price">от 728.002 руб.</div>
                 </div>
+                <a href="#description" class="hero__scroll-link">
+                    <svg>
+                        <use href="../assets/sprite/sprite.svg#button-scroll"></use>
+                    </svg>
+                </a>
             </section>
-            <section class="project-content">
+            <section id="description" class="main-description">
                 <div class="container">
-                    <div class="project-content__block">
-                        <ul class="project-content__description">
-                            <li class="project-content__descr--text">
-                                <p class="text__desc--first">ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла,
-                                    выполняющая проектные и строительно-монтажные работы, выполняет поставки
-                                    оборудования и материалов для инженерных сетей.</p>
-                            </li>
-                            <li class="project-content__descr--text project-content__descr--text-last">
-                                <p class="text__desc--last">Наше предприятие стабильно развивается с 2013 года
-                                    и наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров – проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </p>
-                                <p>При строительстве объектов мы руководствуемся принципами EPCM-подхода, что
-                                    обеспечивает полный цикл управления проектом — от идеи до реализации</p>
-                                <div class="project-content__btn">
-                                    <a href="#no_scroll" class="btn btn-cost">Рассчитать стоимость</a>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="column-text">
+                        <div class="column-text__bold">
+                            <p>ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла,
+                                выполняющая проектные и строительно-монтажные работы, выполняет поставки оборудования и
+                                материалов для инженерных сетей.</p>
+                        </div>
+                        <div class="column-text__light">
+                            <p>Наше предприятие стабильно развивается с 2013 года
+                                и наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров
+                                – проектировщиков, руководителей проектов, строительно – монтажных бригад.</p>
+                            <p> При
+                                строительстве
+                                объектов мы руководствуемся принципами EPCM-подхода, что
+                                обеспечивает полный цикл управления проектом — от идеи до реализации</p>
+                            <div class="main-description__button"><a href="#no-scroll"
+                                    class="btn btn--with-text">Рассчитать стоимость</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="slider-img">
+            <section class="section portfolio">
                 <div class="slider-img__block">
                     <ul class="slider-img__list">
                         <li class="slider-img__item">
-                            <img src="../img/project-example-2.png" id="img1" class="slider-img-style">
+                            <img src="../assets/img/products/project-example.png" alt="Наш проект" id="img1"
+                                class="slider-img-style">
                         </li>
                         <li class="slider-img__item slider-img__item--active">
-                            <img src="../img/project-example-3.png" id="img2"
+                            <img src="../assets/img/products/project-example-2.png" alt="Наш проект" id="img2"
                                 class="slider-img-style slider-img-style--active">
                         </li>
                         <li class="slider-img__item">
-                            <img src="../img/project-example.png" id="img3" class="slider-img-style">
+                            <img src="../assets/img/products/project-example-3.png" alt="Наш проект" id="img3"
+                                class="slider-img-style">
+                        </li>
+                        <li class="slider-img__item">
+                            <img src="../assets/img/products/project-example.png" alt="Наш проект" id="img1"
+                                class="slider-img-style">
+                        </li>
+                        <li class="slider-img__item">
+                            <img src="../assets/img/products/project-example-2.png" alt="Наш проект" id="img2"
+                                class="slider-img-style">
+                        </li>
+                        <li class="slider-img__item">
+                            <img src="../assets/img/products/project-example-3.png" alt="Наш проект" id="img3"
+                                class="slider-img-style">
                         </li>
                     </ul>
                 </div>
-                <div class="directions">
-                    <button id="previous" class="directions__btn">Предыдущее</button>
-                    <button id="next" class="directions__btn">Следующее</button>
+                <div class="container">
+                    <div class="directions">
+                        <button class="directions__btn directions__btn--prev">
+                            <svg class="svg-arrow">
+                                <use href="../assets/sprite/sprite.svg#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="directions__btn directions__btn--next">
+                            <svg class="svg-arrow">
+                                <use href="../assets/sprite/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </section>
-            <section class="about-project">
+            <section class="section about-project">
                 <div class="container">
-                    <h2 class="section__title section__title--project-title">О домокоплекте</h2>
+                    <h2 class="section__title section__title--small">О домокоплекте</h2>
                     <div class="about-project__description">
-                        <p class="regular-text regular-text--first">Экстерьер домокомплекта – это внешний вид и
-                            оформление дома, выполненного в виде комплекта для самостоятельной сборки. Включает в себя
-                            все элементы, необходимые для создания внешнего облика дома, такие как стены, крыша, окна,
-                            двери, наружная отделка и т.д.</p>
-                        <p class="regular-text">Экстерьер домокомплекта может быть разнообразным, в зависимости от
-                            дизайна и стиля, который выбран для конкретного дома. Многие комплекты предлагают различные
-                            варианты отделки, цветовую гамму и стили, чтобы покупатели могли выбрать то, что больше
-                            всего подходит для своих индивидуальных предпочтений. Стильный и ухоженный экстерьер
-                            домокомплекта может значительно повлиять на общее впечатление от дома и создать уютную и
-                            привлекательную атмосферу.</p>
-                        <a href="#no_scroll" class="btn btn-guarantee">Гарантия и оплата</a>
+                        <div class="column-text column-text--vertical">
+                            <div class="column-text__light">
+                                <p>Экстерьер домокомплекта – это внешний вид и
+                                    оформление дома, выполненного в виде комплекта для самостоятельной сборки. Включает
+                                    в
+                                    себя
+                                    все элементы, необходимые для создания внешнего облика дома, такие как стены, крыша,
+                                    окна,
+                                    двери, наружная отделка и т.д.</p>
+                                <p>Экстерьер домокомплекта может быть разнообразным, в зависимости от
+                                    дизайна и стиля, который выбран для конкретного дома. Многие комплекты предлагают
+                                    различные
+                                    варианты отделки, цветовую гамму и стили, чтобы покупатели могли выбрать то, что
+                                    больше
+                                    всего подходит для своих индивидуальных предпочтений. Стильный и ухоженный экстерьер
+                                    домокомплекта может значительно повлиять на общее впечатление от дома и создать
+                                    уютную и
+                                    привлекательную атмосферу.</p>
+                            </div>
+                            <div class="main-description__button"><a href="#no-scroll"
+                                    class="btn btn--with-text">Гарантия и
+                                    оплата</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="project-cost">
+            <section class="section project-cost">
                 <div class="container">
-                    <h2 class="section__title section__title--accordion">Что входит в стоимость</h2>
-                    <div class="work-process__accordion">
-                        <ul class="work-process__accordion__list">
-                            <details class="work-process__accordion__item">
-                                <summary class="acc-plate">
-                                    <div class="work-process__accordion--title">Каркас внешних стен в соответствии с СП
+                    <h2 class="section__title section__title--small">Что входит в стоимость</h2>
+                    <div class="accordion__content">
+                        <div class="accordion__list">
+                            <details class="accordion__item">
+                                <summary class="accordion__plate">
+                                    <div class="accordion__title">Каркас внешних стен в соответствии с СП
                                         260.1325800.2016</div>
-                                    <div class="acc-control">
+                                    <div class="accordion__control">
                                     </div>
                                 </summary>
-                                <div class="work-process__accordion--content">
+                                <div class="accordion__desc">
                                     <p class="regular-text">Наше предприятие стабильно развивается с 2013 года
                                         и наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                         инженеров – проектировщиков, руководителей проектов, строительно – монтажных
@@ -143,13 +187,14 @@
                                     </p>
                                 </div>
                             </details>
-                            <details class="work-process__accordion__item">
-                                <summary class="acc-plate">
-                                    <div class="work-process__accordion--title">Каркас внутренних перегородок</div>
-                                    <div class="acc-control">
+                            <details class="accordion__item">
+                                <summary class="accordion__plate">
+                                    <div class="accordion__title">Каркас внешних стен в соответствии с СП
+                                        260.1325800.2016</div>
+                                    <div class="accordion__control">
                                     </div>
                                 </summary>
-                                <div class="work-process__accordion--content">
+                                <div class="accordion__desc">
                                     <p class="regular-text">Наше предприятие стабильно развивается с 2013 года
                                         и наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                         инженеров – проектировщиков, руководителей проектов, строительно – монтажных
@@ -157,13 +202,14 @@
                                     </p>
                                 </div>
                             </details>
-                            <details class="work-process__accordion__item">
-                                <summary class="acc-plate">
-                                    <div class="work-process__accordion--title">Каркас стропильной системы</div>
-                                    <div class="acc-control">
+                            <details class="accordion__item">
+                                <summary class="accordion__plate">
+                                    <div class="accordion__title">Каркас внешних стен в соответствии с СП
+                                        260.1325800.2016</div>
+                                    <div class="accordion__control">
                                     </div>
                                 </summary>
-                                <div class="work-process__accordion--content">
+                                <div class="accordion__desc">
                                     <p class="regular-text">Наше предприятие стабильно развивается с 2013 года
                                         и наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                         инженеров – проектировщиков, руководителей проектов, строительно – монтажных
@@ -171,13 +217,14 @@
                                     </p>
                                 </div>
                             </details>
-                            <details class="work-process__accordion__item">
-                                <summary class="acc-plate">
-                                    <div class="work-process__accordion--title">Крепеж для сборки</div>
-                                    <div class="acc-control">
+                            <details class="accordion__item">
+                                <summary class="accordion__plate">
+                                    <div class="accordion__title">Каркас внешних стен в соответствии с СП
+                                        260.1325800.2016</div>
+                                    <div class="accordion__control">
                                     </div>
                                 </summary>
-                                <div class="work-process__accordion--content">
+                                <div class="accordion__desc">
                                     <p class="regular-text">Наше предприятие стабильно развивается с 2013 года
                                         и наращивает объёмы благодаря профессиональной работе высококвалифицированных
                                         инженеров – проектировщиков, руководителей проектов, строительно – монтажных
@@ -185,86 +232,116 @@
                                     </p>
                                 </div>
                             </details>
-                            <details class="work-process__accordion__item">
-                                <summary class="acc-plate">
-                                    <div class="work-process__accordion--title">Перечень отделочных материалов с
-                                        объемами</div>
-                                    <div class="acc-control">
+                            <details class="accordion__item">
+                                <summary class="accordion__plate">
+                                    <div class="accordion__title">Каркас внешних стен в соответствии с СП
+                                        260.1325800.2016</div>
+                                    <div class="accordion__control">
                                     </div>
                                 </summary>
-                                <div class="work-process__accordion--content">
-                                    <p class="regular-text">Набор элементов, таких как винты, гайки, шайбы и другие
-                                        детали, предназначенный для соединения различных элементов конструкции или
-                                        изделия
+                                <div class="accordion__desc">
+                                    <p class="regular-text">Наше предприятие стабильно развивается с 2013 года
+                                        и наращивает объёмы благодаря профессиональной работе высококвалифицированных
+                                        инженеров – проектировщиков, руководителей проектов, строительно – монтажных
+                                        бригад.
                                     </p>
                                 </div>
                             </details>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </section>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer__content">
-                        <div class="footer__logo">
-                            <a href="../" class="logo">
-                                <svg class="logo__icon">
-                                    <use href="../assets/sprite/sprite.svg#logo"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <nav class="footer__nav">
-                            <div class="footer__column">
-                                <div class="footer__title">Меню</div>
-                                <ul class="footer__list">
-                                    <li class="footer__item">
-                                        <a href="../pages/projects.html" class="footer__link">Проекты</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../#our_news" class="footer__link">Новости</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../pages/blog.html" class="footer__link">Блог</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer__column">
-                                <div class="footer__title">Компания</div>
-                                <ul class="footer__list">
-                                    <li class="footer__item">
-                                        <a href="../pages/about.html" class="footer__link">О нас</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="#no-scroll" class="footer__link">Стать партнером</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../pages/reviews.html" class="footer__link">Отзывы</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <address class="footer__contacts">
-                            <div class="footer__title">Контакты</div>
-                            <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
-                            <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
-                        </address>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__logo">
+                        <a href="../" class="logo">
+                            <svg class="logo__icon">
+                                <use href="../assets/sprite/sprite.svg#logo"></use>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="footer__bottom">
-                        <div class="copyright">
-                            <p>© Фабрика Стальных Каркасов | 2013-2026</p>
+                    <nav class="footer__nav">
+                        <div class="footer__column">
+                            <div class="footer__title">Меню</div>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="../pages/projects" class="footer__link">Проекты</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../#our_news" class="footer__link">Новости</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../pages/blog" class="footer__link">Блог</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="footer__developer">
-                            <p class="developer-text">Сделано в</p>
-                            <div class="developer-image"><img src="../assets/img/logos/logokr.png"
-                                    alt="Компания-разработчик" class="developer-img">
-                            </div>
+                        <div class="footer__column">
+                            <div class="footer__title">Компания</div>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="../pages/about" class="footer__link">О нас</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#no-scroll" class="footer__link">Стать партнером</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../pages/reviews" class="footer__link">Отзывы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <address class="footer__contacts">
+                        <div class="footer__title">Контакты</div>
+                        <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
+                        <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
+                    </address>
+                </div>
+                <div class="footer__bottom">
+                    <div class="copyright">
+                        <p>© Фабрика Стальных Каркасов | 2013-2026</p>
+                    </div>
+                    <div class="footer__developer">
+                        <p class="developer-text">Сделано в</p>
+                        <div class="developer-image"><img src="../assets/img/logos/logokr.png"
+                                alt="Компания-разработчик" class="developer-img">
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+
+            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+            </button>
+
+            <nav class="mobile-menu__nav" aria-label="Мобильное меню">
+                <ul class="mobile-menu__list">
+                    <li><a href="./about">О нас</a></li>
+                    <li><a href="./projects">Проекты</a></li>
+                    <li><a href="../#our_advantages">Преимущества</a></li>
+                    <li><a href="./services">Услуги</a></li>
+                    <li><a href="../#our_news">Новости</a></li>
+                    <li><a href="./blog">Блог</a></li>
+                    <li><a href="./reviews">Отзывы</a></li>
+                    <li><a href="./contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a class="mobile-menu__phone" href="tel:+79184451324">
+                +7 918 445 13 24
+            </a>
+
+        </div>
+    </div>
+
+    <script src="../js/slider.js"></script>
 </body>
 
 </html>

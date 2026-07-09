@@ -215,7 +215,7 @@
     "js/map.js"() {
       async function init() {
         await ymaps3.ready;
-        const customization = await fetch("/customization.json").then((response) => response.json());
+        const customization = await fetch("./customization.json").then((response) => response.json());
         const coords = [38.974016, 45.041572];
         const map = new ymaps3.YMap(document.getElementById("map"), {
           location: {
@@ -232,7 +232,7 @@
         const markerElement = document.createElement("div");
         markerElement.className = "my-marker";
         markerElement.innerHTML = `  
-  <img src="/assets/img/icons/marker.svg" alt="\u041C\u0435\u0442\u043A\u0430">
+  <img src="assets/img/icons/marker.svg" alt="\u041C\u0435\u0442\u043A\u0430">
   `;
         map.addChild(
           new ymaps3.YMapMarker(

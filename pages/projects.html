@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="maincontent">
+        <main class="maincontent">
             <section class="hero hero--inner">
                 <div class="container hero__container">
                     <header class="header header--inner">
@@ -21,22 +21,22 @@
                         <nav class="menu" aria-label="Основное меню">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="./about.html" class="menu__link">О нас</a>
+                                    <a href="./about" class="menu__link">О нас</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./projects.html" class="menu__link">Проекты</a>
+                                    <a href="./projects" class="menu__link">Проекты</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="../#our_advantages" class="menu__link">Преимущества</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./services.html" class="menu__link">Услуги</a>
+                                    <a href="./services" class="menu__link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="../#our_news" class="menu__link">Новости</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./contacts.html" class="menu__link">Контакты</a>
+                                    <a href="./contacts" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -63,225 +63,345 @@
                                 <a href="../" class="breadcrumbs__link">Главная</a>
                             </li>
                             <li class="breadcrumbs__item breadcrumbs__item--active">
-                                О компании
+                                Наши проекты
                             </li>
                         </ul>
                     </nav>
-                    <h1 class="section__title">О компании</h1>
+                    <h1 class="section__title">Наши проекты</h1>
                 </div>
             </section>
-            <section class="projects__content">
+            <section class="section page-inner">
                 <div class="container">
-                    <div class="projects__description">
-                        <p class="text__desc--first">ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла, выполняющая
-                            проектные и строительно-монтажные работы, выполняет поставки оборудования и материалов для
-                            инженерных сетей.</p>
-                        <p class="text__desc--last">Наше предприятие стабильно развивается с 2013 года
-                            и наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров –
-                            проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                        </p>
+                    <div class="column-text">
+                        <div class="column-text__bold">
+                            <p>ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла,
+                                выполняющая проектные и строительно-монтажные работы, выполняет поставки оборудования и
+                                материалов для инженерных сетей.</p>
+                        </div>
+                        <div class="column-text__light">
+                            <p>Наше предприятие стабильно развивается с 2013 года
+                                и наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров
+                                – проектировщиков, руководителей проектов, строительно – монтажных бригад.</p>
+                            <p> При
+                                строительстве
+                                объектов мы руководствуемся принципами EPCM-подхода, что
+                                обеспечивает полный цикл управления проектом — от идеи до реализации</p>
+                        </div>
                     </div>
-                    <ul class="projects__list">
-                        <li class="projects__item">
-                            <a href="./project.html">
-                                <div class="project-img__item">
-                                    <img src="../img/project-1.png" class="img-style project__item-img">
-                                    <div class="hidden__block">
-                                        <ul class="project-param__list">
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Площадь</p>
-                                                <p class="project-param--value">72 м2</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Помещений</p>
-                                                <p class="project-param--value">8</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Этажей</p>
-                                                <p class="project-param--value">2</p>
-                                            </li>
-                                        </ul>
+                    <div class="product__block">
+                        <ul class="product__list">
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="projects__item-desc">
-                                    <p class="projects__item-desc--name">ЛСТК Каркас 44м2</p>
-                                    <p class="projects__item-desc--price">от 1 893 000 руб.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="projects__item">
-                            <a href="./project.html">
-                                <div class="project-img__item">
-                                    <img src="../img/project-2.png" class="img-style project__item-img">
-                                    <div class="hidden__block">
-                                        <ul class="project-param__list">
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Площадь</p>
-                                                <p class="project-param--value">72 м2</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Помещений</p>
-                                                <p class="project-param--value">8</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Этажей</p>
-                                                <p class="project-param--value">2</p>
-                                            </li>
-                                        </ul>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
                                     </div>
-                                </div>
-                                <div class="projects__item-desc">
-                                    <p class="projects__item-desc--name">ЛСТК Каркас 44м2</p>
-                                    <p class="projects__item-desc--price">от 1 893 000 руб.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="projects__item">
-                            <a href="./project.html">
-                                <div class="project-img__item">
-                                    <img src="../img/project-3.png" class="img-style project__item-img">
-                                    <div class="hidden__block">
-                                        <ul class="project-param__list">
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Площадь</p>
-                                                <p class="project-param--value">72 м2</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Помещений</p>
-                                                <p class="project-param--value">8</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Этажей</p>
-                                                <p class="project-param--value">2</p>
-                                            </li>
-                                        </ul>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-3.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="projects__item-desc">
-                                    <p class="projects__item-desc--name">ЛСТК Каркас 44м2</p>
-                                    <p class="projects__item-desc--price">от 1 893 000 руб.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="projects__item">
-                            <a href="./project.html">
-                                <div class="project-img__item">
-                                    <img src="../img/project-4.png" class="img-style project__item-img">
-                                    <div class="hidden__block">
-                                        <ul class="project-param__list">
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Площадь</p>
-                                                <p class="project-param--value">72 м2</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Помещений</p>
-                                                <p class="project-param--value">8</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Этажей</p>
-                                                <p class="project-param--value">2</p>
-                                            </li>
-                                        </ul>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
                                     </div>
-                                </div>
-                                <div class="projects__item-desc">
-                                    <p class="projects__item-desc--name">ЛСТК Каркас 44м2</p>
-                                    <p class="projects__item-desc--price">от 1 893 000 руб.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="projects__item">
-                            <a href="./project.html">
-                                <div class="project-img__item">
-                                    <img src="../img/project-5.png" class="img-style project__item-img">
-                                    <div class="hidden__block">
-                                        <ul class="project-param__list">
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Площадь</p>
-                                                <p class="project-param--value">72 м2</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Помещений</p>
-                                                <p class="project-param--value">8</p>
-                                            </li>
-                                            <li class="project-param__item">
-                                                <p class="project-param--name">Этажей</p>
-                                                <p class="project-param--value">2</p>
-                                            </li>
-                                        </ul>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-4.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="projects__item-desc">
-                                    <p class="projects__item-desc--name">ЛСТК Каркас 44м2</p>
-                                    <p class="projects__item-desc--price">от 1 893 000 руб.</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-5.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product__item">
+                                <a href="./project" class="product-src">
+                                    <div class="product__image">
+                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
+                                        <div class="product__hidden">
+                                            <ul class="product-desc__list">
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Площадь</p>
+                                                    <p class="product-desc__value">72 м2</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Помещений</p>
+                                                    <p class="product-desc__value">8</p>
+                                                </li>
+                                                <li class="product-desc__item">
+                                                    <p class="product-desc__name">Этажей</p>
+                                                    <p class="product-desc__value">2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__title">
+                                        <p class="item-name">ЛСТК Каркас 44м2</p>
+                                        <p class="item-price">от 1 893 000 руб.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pagination"></div>
+                    </div>
                 </div>
             </section>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer__content">
-                        <div class="footer__logo">
-                            <a href="../" class="logo">
-                                <svg class="logo__icon">
-                                    <use href="../assets/sprite/sprite.svg#logo"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <nav class="footer__nav">
-                            <div class="footer__column">
-                                <div class="footer__title">Меню</div>
-                                <ul class="footer__list">
-                                    <li class="footer__item">
-                                        <a href="../pages/projects.html" class="footer__link">Проекты</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../#our_news" class="footer__link">Новости</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../pages/blog.html" class="footer__link">Блог</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer__column">
-                                <div class="footer__title">Компания</div>
-                                <ul class="footer__list">
-                                    <li class="footer__item">
-                                        <a href="../pages/about.html" class="footer__link">О нас</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="#no-scroll" class="footer__link">Стать партнером</a>
-                                    </li>
-                                    <li class="footer__item">
-                                        <a href="../pages/reviews.html" class="footer__link">Отзывы</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <address class="footer__contacts">
-                            <div class="footer__title">Контакты</div>
-                            <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
-                            <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
-                        </address>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__logo">
+                        <a href="../" class="logo">
+                            <svg class="logo__icon">
+                                <use href="../assets/sprite/sprite.svg#logo"></use>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="footer__bottom">
-                        <div class="copyright">
-                            <p>© Фабрика Стальных Каркасов | 2013-2026</p>
+                    <nav class="footer__nav">
+                        <div class="footer__column">
+                            <div class="footer__title">Меню</div>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="../pages/projects" class="footer__link">Проекты</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../#next-section" class="footer__link">О технологии ЛСТК</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../#our_news" class="footer__link">Новости</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../pages/blog" class="footer__link">Блог</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="footer__developer">
-                            <p class="developer-text">Сделано в</p>
-                            <div class="developer-image"><img src="../assets/img/logos/logokr.png"
-                                    alt="Компания-разработчик" class="developer-img">
-                            </div>
+                        <div class="footer__column">
+                            <div class="footer__title">Компания</div>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="../pages/about" class="footer__link">О нас</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#no-scroll" class="footer__link">Стать партнером</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="../pages/reviews" class="footer__link">Отзывы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <address class="footer__contacts">
+                        <div class="footer__title">Контакты</div>
+                        <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
+                        <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
+                    </address>
+                </div>
+                <div class="footer__bottom">
+                    <div class="copyright">
+                        <p>© Фабрика Стальных Каркасов | 2013-2026</p>
+                    </div>
+                    <div class="footer__developer">
+                        <p class="developer-text">Сделано в</p>
+                        <div class="developer-image"><img src="../assets/img/logos/logokr.png"
+                                alt="Компания-разработчик" class="developer-img">
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+
+            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+            </button>
+
+            <nav class="mobile-menu__nav" aria-label="Мобильное меню">
+                <ul class="mobile-menu__list">
+                    <li><a href="./about">О нас</a></li>
+                    <li><a href="./projects">Проекты</a></li>
+                    <li><a href="../#our_advantages">Преимущества</a></li>
+                    <li><a href="./services">Услуги</a></li>
+                    <li><a href="../#our_news">Новости</a></li>
+                    <li><a href="./blog">Блог</a></li>
+                    <li><a href="./reviews">Отзывы</a></li>
+                    <li><a href="./contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a class="mobile-menu__phone" href="tel:+79184451324">
+                +7 918 445 13 24
+            </a>
+
+        </div>
+    </div>
+
+    <script src="../js/pagination.js"></script>
 </body>
 
 </html>

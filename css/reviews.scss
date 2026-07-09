@@ -1,0 +1,102 @@
+/////////-------отзывы на главной-------/////////
+///
+.reviews {
+  display: flex;
+  position: relative;
+
+  &__block {
+    @extend %flex-column;
+    position: relative;
+    overflow: hidden;
+
+    @include tablets {
+      padding-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.4s ease;
+
+    @include tablets {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &--grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+
+      @include tablets {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__item {
+    @extend %flex-column;
+    flex-shrink: 0;
+    position: relative;
+    background: $white;
+    padding: 40px;
+    flex: 0 0 calc((100% - 32px) / 2);
+
+    &::after {
+      @include corner;
+    }
+
+    @include tablets {
+      flex: 0 0 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__display {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__content {
+    flex: 1;
+    margin-top: 20px;
+  }
+
+  &__name {
+    font-family: $Unbounded;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__object {
+    font-size: $baseFontSize;
+    color: $blackAlpha;
+    margin-bottom: 46px;
+  }
+
+  &__description {
+    font-size: 15px;
+    color: $blackAlpha;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    &--expanded {
+      display: block;
+    }
+  }
+
+  &__src {
+    font-weight: 400;
+    font-size: $baseFontSize;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -28,8 +28,6 @@
 
   &__title-section {
     font-family: $Unbounded;
-    width: 100%;
-    flex: 1;
     @extend %flex-column-center;
     margin-top: 35vh;
 
@@ -93,6 +91,16 @@
     }
   }
 
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @include laptops {
+      flex-direction: column-reverse;
+    }
+  }
+
   &__scroll-link {
     position: absolute;
     inset: auto auto 0 50%;
@@ -100,6 +108,13 @@
     width: 81px;
     height: 37px;
   }
+}
+
+.hero-picture {
+  background:
+    linear-gradient($gradient, $gradient),
+    url(../assets/img/products/project-example-3.png) top center / cover no-repeat;
+  min-height: 700px;
 }
 
 /////////-------header-------/////////
@@ -141,7 +156,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px 35px;
+    gap: 10px 60px;
   }
 
   &__item {
@@ -218,10 +233,38 @@
   }
 }
 
-/////////-------inner-page wrapper-------/////////
+/////////-------Секции-------/////////
 ///
-.headline {
-  padding-bottom: 50px;
+.section {
+  padding: 50px 0;
+
+  @include tablets {
+    padding: 30px 0;
+  }
+
+  &--light {
+    background: $white;
+  }
+
+  &--dark-grey {
+    background: $backgroundGrey;
+  }
+
+  &--dark-black {
+    background: $black;
+  }
+}
+
+/////////-------Текстовый блок-------/////////
+///
+.page-inner__description {
+  max-width: 50%;
+  margin-bottom: 30px;
+
+  @include tablets {
+    margin-left: 20px;
+    max-width: 100%;
+  }
 }
 
 /////////-------footer-------/////////
@@ -237,15 +280,19 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
     align-items: flex-start;
     padding-bottom: 55px;
     border-bottom: 1px solid $darkBackgroundBorder;
   }
 
+  &__logo {
+    margin-right: auto;
+  }
+
   &__nav {
     display: flex;
-    gap: 120px;
+    gap: 50px;
 
     @include laptops {
       gap: 35px;

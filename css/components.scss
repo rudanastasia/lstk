@@ -8,7 +8,6 @@
   @include tablets {
     margin-top: 0;
     margin-bottom: 10px;
-    padding: 0 20px;
   }
 }
 
@@ -67,54 +66,265 @@
     border-color: $white;
   }
 
+  &--arrow-down {
+    &:before {
+      width: 1px;
+      height: 10px;
+    }
+
+    &:after {
+      right: 38px;
+      transform: translate(16px, -35%) rotate(133deg);
+    }
+  }
+
   &--mobile {
     display: none;
 
     @include tablets {
       display: flex;
       margin: 0 auto;
-      max-width: 335px;
       margin-top: 50px;
     }
   }
 }
 
-/////////-------модальное окно-------/////////
+/////////-------мобильное меню-------/////////
 ///
-.modal {
+.mobile-menu {
   position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &__nav {
+    border-bottom: 1px solid $lightBackgroundBorder;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    & a {
+      font-weight: 400;
+      text-decoration: none;
+      color: $lightBlack;
+    }
+    & li {
+      padding: 10px 0;
+    }
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: $lightBlack;
+    font-weight: 600;
+    font-size: $Unbounded;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+
+.mobile-menu__content {
+  position: absolute;
+  right: 0;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 320px;
+  max-width: 85%;
   height: 100%;
-  background: $blackAlpha;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  text-align: center;
-  display: none;
-
-  &.active {
-    display: flex;
-  }
+  padding: 40px;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 
-.menu__burger__link {
-  text-decoration: none;
-  font-size: 36px;
-  line-height: 72px;
-  text-align: center;
-  font-weight: 400;
-
-  &:hover {
-    color: $yellow;
-  }
-}
-
-.modal__close {
+.mobile-menu__close {
   position: absolute;
   right: 20px;
   top: 30px;
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $lightBlack;
+    top: 50%;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.mobile-menu.active .mobile-menu__content {
+  transform: translateX(0);
+}
+
+/////////-------Блок с описанием-------/////////
+///
+.main-description {
+  @include section-padding;
+  font-family: $Unbounded;
+  z-index: 2;
+  position: relative;
+
+  @include tablets {
+    padding: 0;
+  }
+
+  &--inner {
+    padding: 0 0 90px 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 460px;
+
+    & img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    display: flex;
+    gap: 100px;
+  }
+
+  &__content-image {
+    position: relative;
+    transform: translateY(-120px);
+    width: 100%;
+
+    & img {
+      max-width: none;
+    }
+
+    @include laptops {
+      display: none;
+    }
+  }
+}
+
+/////////-------Внепотоковый блок с доп.контентом-------/////////
+///
+.info {
+  position: relative;
+  background: $black;
+  color: $white;
+  border-top-left-radius: 80px;
+  padding: 30px;
+  margin: 100px 0 -140px auto;
+  width: 100%;
+  max-width: 1101px;
+  min-height: 280px;
+
+  @include laptops {
+    margin: 65px 0 -140px auto;
+  }
+
+  @include tablets {
+    border-top-left-radius: 0;
+    margin: 0;
+  }
+
+  &--top {
+    margin: -140px 0 70px auto;
+    border-top-left-radius: 0;
+
+    @include laptops {
+      margin: -140px 0 70px auto;
+    }
+  }
+
+  &__rectangle {
+    width: 25px;
+    height: 70%;
+    background: $yellow;
+    position: absolute;
+    z-index: 2;
+    inset: 0 0 auto auto;
+
+    @include tablets {
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 25px;
+    }
+
+    &--full {
+      height: 100%;
+
+      @include tablets {
+        height: 25px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding: 30px;
+    @extend %flex-column;
+
+    @include tablets {
+      align-self: center;
+    }
+  }
+
+  &__value {
+    font-size: 80px;
+    line-height: 99.2px;
+    font-weight: 200;
+    align-self: center;
+
+    @include tablets {
+      align-self: flex-start;
+    }
+
+    @include phones {
+      font-size: 60px;
+    }
+  }
+
+  &__text {
+    color: $lightGreyText;
+    font-family: $Montserrat;
+    font-size: 18px;
+    font-weight: 200;
+
+    @include phones {
+      font-size: $baseFontSize;
+    }
+  }
 }
 
 /////////-------навигационные стрелки-------/////////
@@ -153,6 +363,7 @@
   &__btn {
     pointer-events: auto;
     cursor: pointer;
+    transition: transform 0.3s ease;
 
     &--prev {
       background: none;
@@ -181,15 +392,12 @@
   pointer-events: none;
 }
 
-/////////-------список карточек-------/////////
+/////////-------список карточек превью-------/////////
 ///
 .info-block {
-  @include tablets {
-    max-width: 375px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 
   &__list {
     display: flex;
@@ -218,14 +426,20 @@
     }
 
     &:hover {
-      @extend %hover-scale;
-
-      @include tablets {
-        transform: scale(1);
+      .info-block__source {
+        transform: scale(1.03);
       }
     }
 
     &--slider {
+      @include tablets {
+        flex: 0 0 100%;
+      }
+    }
+
+    &--many {
+      flex: 0 0 calc((100% - 80px) / 3);
+
       @include tablets {
         flex: 0 0 100%;
       }
@@ -241,6 +455,7 @@
     text-decoration: none;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease;
 
     @include tablets {
       flex: 0 0 100%;
@@ -270,25 +485,71 @@
   margin-bottom: 8px;
 }
 
+/////////-------Модальное окно-------/////////
+///
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: calc(100% - 40px);
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+}
+
 /////////-------форма обратной связи-------/////////
 ///
+.contacts-form {
+  position: absolute;
+  right: 150px;
+  bottom: 0;
+  z-index: 10;
+  max-width: 891px;
+  width: 100%;
+
+  @include laptops {
+    position: static;
+  }
+}
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 891px;
-  width: 100%;
   padding: 40px;
   background: $white;
-  position: absolute;
-  transform: translateX(90%) translateY(28%);
-  z-index: 10;
 
-  @include tablets {
+  @include laptops {
     transform: none;
     margin-bottom: 0;
     padding: 30px;
+    max-width: 100%;
   }
 
   @include phones {
@@ -347,7 +608,7 @@
   }
 
   &::placeholder {
-    color: rgba(61, 61, 61, 0.7);
+    color: $blackAlpha;
   }
 }
 
@@ -366,18 +627,148 @@
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
-
   margin: -1px;
   padding: 0;
-
   overflow: hidden;
-
   clip: rect(0 0 0 0);
-
   border: 0;
+}
+
+/////////-------аккордеон-------/////////
+///
+.accordion {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    border-top: 1px solid rgba(217, 217, 217, 1);
+    padding: 20px 0;
+    padding-right: 35px;
+
+    &:last-child {
+      border-bottom: 1px solid rgb(217, 217, 217);
+    }
+
+    &[open] {
+      .accordion__control {
+        &::before {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  &__plate {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $Unbounded;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__control {
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 2px;
+      background: #555;
+      margin-top: 10px;
+    }
+
+    &::before {
+      webkit-transform: rotate(45deg);
+      transform: rotate(-90deg);
+    }
+
+    &::after {
+      webkit-transform: rotate(-45deg);
+      transform: rotate(0deg);
+    }
+  }
+
+  &__desc {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+
+    @include laptops {
+      flex-direction: column;
+    }
+  }
+}
+
+.acc__img {
+  width: 100%;
+  max-width: 379px;
+
+  @include tablets {
+    max-width: none;
+  }
+}
+
+.desc {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 575px;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $Unbounded;
+    font-weight: 400;
+    padding: 0 0 20px;
+  }
+
+  &__content {
+    & p {
+      color: $blackAlpha;
+    }
+  }
+}
+
+/////////-------Пагинация-------/////////
+///
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: #f2f2f2;
+  }
+
+  &.active {
+    background: $black;
+    color: $white;
+    border-color: $black;
+  }
 }
 
 /////////-------карта-------/////////
@@ -391,6 +782,18 @@
   #map {
     position: absolute;
     inset: 0;
+  }
+
+  @include laptops {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    #map {
+      position: relative;
+      height: 300px;
+    }
   }
 }
 
