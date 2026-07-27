@@ -5,6 +5,8 @@
 const BASE_PATH = location.hostname === 'rudanastasia.github.io' ? '/lstk' : '';
 
 async function init() {
+  const mapElement = document.getElementById('map');
+  if (!mapElement) return;
   await ymaps3.ready;
 
   const customization = await fetch(`${BASE_PATH}/customization.json`).then((response) =>

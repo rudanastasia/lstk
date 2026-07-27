@@ -3,6 +3,7 @@
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const projects = document.querySelector('.projects');
+  if (!projects) return;
 
   const slider = projects.querySelector('.projects__slider');
   const items = projects.querySelectorAll('.projects__item');
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const reviews = document.querySelector('.reviews');
+  if (!reviews) return;
 
   const slider = reviews.querySelector('.reviews__list');
   const items = reviews.querySelectorAll('.reviews__item');
@@ -153,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const blog = document.querySelector('.blog');
+  if (!blog) return;
 
   const slider = blog.querySelector('.info-block__list--slider');
   const items = blog.querySelectorAll('.info-block__item--slider');
@@ -240,6 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const portfolio = document.querySelector('.portfolio');
+  if (!portfolio) return;
+
   const slider = portfolio.querySelector('.slider-img__list');
 
   const prevBtn = portfolio.querySelector('.directions__btn--prev');
@@ -326,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const section__articles = document.querySelector('.section__articles');
+  if (!section__articles) return;
 
   const slider = section__articles.querySelector('.info-block__list--slider');
   const items = section__articles.querySelectorAll('.info-block__item--slider');

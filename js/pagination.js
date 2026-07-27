@@ -2,6 +2,8 @@
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const reviews__block = document.querySelector('.reviews__block');
+  if (!reviews__block) return;
+
   const items = reviews__block.querySelectorAll('.reviews__item');
   const pagination = reviews__block.querySelector('.pagination');
 
@@ -37,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const product__block = document.querySelector('.product__block');
+  if (!product__block) return;
+
   const items = product__block.querySelectorAll('.product__item');
   const pagination = product__block.querySelector('.pagination');
 
@@ -72,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
 ///
 document.addEventListener('DOMContentLoaded', () => {
   const blog__content = document.querySelector('.blog__content');
+  if (!blog__content) return;
+
   const items = blog__content.querySelectorAll('.blog__item');
   const pagination = blog__content.querySelector('.pagination');
 
