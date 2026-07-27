@@ -1,24 +1,28 @@
 /////////-------Модальное окно с формой (отзывы)-------/////////
 ///
-const modal = document.getElementById('review-modal');
-const openBtn = document.getElementById('open-review');
-const closeBtn = modal.querySelector('.modal__close');
-const overlay = modal.querySelector('.modal__overlay');
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('review-modal');
+  if (!modal) return;
 
-openBtn.addEventListener('click', () => {
-  modal.classList.add('active');
-});
+  const openBtn = document.getElementById('open-review');
+  const closeBtn = modal.querySelector('.modal__close');
+  const overlay = modal.querySelector('.modal__overlay');
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
+  openBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+  });
 
-overlay.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
+  closeBtn.addEventListener('click', () => {
     modal.classList.remove('active');
-  }
+  });
+
+  overlay.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modal.classList.remove('active');
+    }
+  });
 });

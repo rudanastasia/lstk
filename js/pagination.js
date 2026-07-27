@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const items = reviews__block.querySelectorAll('.reviews__item');
   const pagination = reviews__block.querySelector('.pagination');
+  if (!pagination) return;
 
   const itemsPerPage = 6;
   const pageCount = Math.ceil(items.length / itemsPerPage);
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const items = product__block.querySelectorAll('.product__item');
   const pagination = product__block.querySelector('.pagination');
+  if (!pagination) return;
 
   const itemsPerPage = 6;
   const pageCount = Math.ceil(items.length / itemsPerPage);
@@ -80,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const items = blog__content.querySelectorAll('.blog__item');
   const pagination = blog__content.querySelector('.pagination');
+  if (!pagination) return;
 
   const itemsPerPage = 9;
   const pageCount = Math.ceil(items.length / itemsPerPage);

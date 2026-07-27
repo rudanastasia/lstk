@@ -2,14 +2,14 @@
 ///Карта Яндекс API////
 ///
 
-const BASE_PATH = location.hostname === 'rudanastasia.github.io' ? '/lstk' : '';
+const BASE_PATH = import.meta.env.BASE_URL;
 
 async function init() {
   const mapElement = document.getElementById('map');
   if (!mapElement) return;
   await ymaps3.ready;
 
-  const customization = await fetch(`${BASE_PATH}/customization.json`).then((response) =>
+  const customization = await fetch(`${BASE_PATH}customization.json`).then((response) =>
     response.json(),
   );
 
@@ -33,7 +33,7 @@ async function init() {
   const markerElement = document.createElement('div');
   markerElement.className = 'my-marker';
   markerElement.innerHTML = `
-    <img src="${BASE_PATH}/assets/img/icons/marker.svg" alt="Метка">
+    <img src="${BASE_PATH}assets/img/icons/marker.svg" alt="Метка">
   `;
 
   map.addChild(
