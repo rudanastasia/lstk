@@ -319,8 +319,8 @@
                 ✕
             </button>
 
-            <form class="form" action="send.php" method="post">
-
+            <form class="form" action="https://formspree.io/f/xojgoeee" method="post" novalidate>
+                <input type="hidden" name="form-type" value="Отправка отзыва">
                 <h2 class="section__title form-title">
                     Оставить отзыв
                 </h2>
@@ -347,12 +347,12 @@
 
                 <div class="form__bottom">
                     <div class="form__block form__block--message">
-                        <label for="review-message" class="visually-hidden">
+                        <label for="message" class="visually-hidden">
                             Сообщение
                         </label>
 
-                        <textarea id="review-message" class="form__input form__input--textarea" name="message"
-                            placeholder="Сообщение"></textarea>
+                        <textarea id="message" class="form__textarea" name="message" placeholder="Сообщение"
+                            required></textarea>
                     </div>
 
                     <button class="btn btn--form" type="submit">

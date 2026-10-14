@@ -109,7 +109,8 @@
             <div id="map">
             </div>
             <div class="contacts-form">
-                <form class="form" action="send.php" method="post">
+                <form class="form" action="https://formspree.io/f/xojgoeee" method="post" novalidate>
+                    <input type="hidden" name="form-type" value="Обратная связь в контактах">
                     <h2 class="section__title form-title">
                         Напишите нам
                     </h2>
@@ -128,8 +129,8 @@
                     <div class="form__bottom">
                         <div class="form__block form__block--message">
                             <label for="message" class="visually-hidden">Сообщение</label>
-                            <textarea id="message" class="form__input form__input--textarea" name="message"
-                                placeholder="Сообщение" rows="3"></textarea>
+                            <textarea id="message" class="form__textarea" name="message" placeholder="Сообщение"
+                                rows="3" required></textarea>
                         </div>
                         <button class="btn btn--form" type="submit">
                             Отправить

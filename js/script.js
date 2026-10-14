@@ -4,3 +4,4 @@ import './slider.js';
 import './reviews.js';
 import './pagination.js';
 import './map.js';
+import './form.js';
