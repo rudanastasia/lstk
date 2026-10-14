@@ -1,0 +1,54 @@
+/////////-------кнопки-------/////////
+///
+.btn {
+  @extend %btn-base-style;
+
+  &--with-text {
+    @include phones {
+      max-width: none;
+    }
+  }
+
+  &--section-more {
+    margin-top: 29px;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &--light {
+    color: $white;
+    border-color: $white;
+  }
+
+  &--arrow-down {
+    &:before {
+      width: 1px;
+      height: 10px;
+    }
+
+    &:after {
+      right: 38px;
+      transform: translate(16px, -35%) rotate(133deg);
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @include tablets {
+      display: flex;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+  }
+
+  &--form {
+    background: $white;
+
+    @include tablets {
+      max-width: 100%;
+    }
+  }
+}

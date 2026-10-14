@@ -1,0 +1,125 @@
+/////////-------форма обратной связи-------/////////
+///
+.contacts-form {
+  position: absolute;
+  right: 150px;
+  bottom: 0;
+  z-index: 10;
+  max-width: 891px;
+  width: 100%;
+
+  @include laptops {
+    position: static;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  background: $white;
+
+  @include laptops {
+    transform: none;
+    margin-bottom: 0;
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  @include phones {
+    padding: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+
+    @include phones {
+      font-size: 30px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 32px;
+
+    @include tablets {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__block {
+    flex: 1;
+
+    &--message {
+      flex: 1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid rgba(61, 61, 61, 0.7);
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $black;
+    }
+
+    &::placeholder {
+      color: $blackAlpha;
+    }
+
+    &--error {
+      border-bottom-color: red;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 30px;
+    }
+  }
+
+  &__textarea {
+    min-height: 90px;
+    resize: none;
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid rgba(61, 61, 61, 0.7);
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $black;
+    }
+
+    &::placeholder {
+      color: $blackAlpha;
+    }
+
+    &--error {
+      border-bottom-color: red;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
