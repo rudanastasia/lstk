@@ -1,0 +1,52 @@
+<div class="modal" id="review-modal">
+    <div class="modal__overlay"></div>
+
+    <div class="modal__content">
+
+        <button class="modal__close" type="button">
+            ✕
+        </button>
+
+        <form class="form" action="https://formspree.io/f/xojgoeee" method="post" novalidate>
+            <input type="hidden" name="form-type" value="Отправка отзыва">
+            <h2 class="section__title form__title">
+                Оставить отзыв
+            </h2>
+
+            <div class="form__row">
+                <div class="form__block">
+                    <label for="review-name" class="visually-hidden">
+                        Ваше имя
+                    </label>
+
+                    <input id="review-name" class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+
+                <div class="form__block">
+                    <label for="review-email" class="visually-hidden">
+                        Email
+                    </label>
+
+                    <input id="review-email" class="form__input" type="email" name="email" placeholder="Email" required>
+                </div>
+            </div>
+
+            <div class="form__bottom">
+                <div class="form__block form__block--message">
+                    <label for="message" class="visually-hidden">
+                        Сообщение
+                    </label>
+
+                    <textarea id="message" class="form__textarea" name="message" placeholder="Сообщение"
+                        required></textarea>
+                </div>
+
+                <button class="btn btn--form" type="submit">
+                    Отправить
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

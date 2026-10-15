@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en,ru">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -14,46 +14,7 @@
         <main class="maincontent">
             <section class="hero">
                 <div class="container hero__container">
-                    <header class="header">
-                        <a href="./" class="logo">
-                            <svg class="logo__icon">
-                                <use href="assets/sprite/sprite.svg#logo"></use>
-                            </svg></a>
-                        <nav class="menu" aria-label="Основное меню">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="pages/about" class="menu__link">О нас</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="pages/projects" class="menu__link">Проекты</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#our_advantages" class="menu__link">Преимущества</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="pages/services" class="menu__link">Услуги</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#our_news" class="menu__link">Новости</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="pages/contacts" class="menu__link">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <a href="tel:+79184451324" class="header__phone-number">
-                            +7 918 445 13 24
-                        </a>
-                        <div class="header__mobile">
-                            <a href="tel:+79184451324" class="header__phone-button"><svg class="mobile__icon">
-                                    <use href="assets/sprite/sprite.svg#call-light"></use>
-                                </svg></a>
-                            <button class="hamburger" type="button" aria-label="Открыть меню">
-                                <span class="hamburger__plank"></span>
-                                <span class="hamburger__plank"></span>
-                            </button>
-                        </div>
-                    </header>
+                    {{> header}}
                     <div class="hero__title-section">
                         <h1 class="hero__main-title">Готовый каркасный дом <span class="hero__main-subtitle">по
                                 технологии ЛСТК</span></h1>
@@ -566,94 +527,9 @@
             <div id="map">
             </div>
         </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__content">
-                    <div class="footer__logo">
-                        <a href="./" class="logo">
-                            <svg class="logo__icon">
-                                <use href="assets/sprite/sprite.svg#logo"></use>
-                            </svg>
-                        </a>
-                    </div>
-                    <nav class="footer__nav">
-                        <div class="footer__column">
-                            <div class="footer__title">Меню</div>
-                            <ul class="footer__list">
-                                <li class="footer__item">
-                                    <a href="pages/projects" class="footer__link">Проекты</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a href="#no-scroll" class="footer__link">О технологии ЛСТК</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a href="#no-scroll" class="footer__link">Новости</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a href="pages/blog" class="footer__link">Блог</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer__column">
-                            <div class="footer__title">Компания</div>
-                            <ul class="footer__list">
-                                <li class="footer__item">
-                                    <a href="pages/about" class="footer__link">О нас</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a href="#no-scroll" class="footer__link">Стать партнером</a>
-                                </li>
-                                <li class="footer__item">
-                                    <a href="pages/reviews" class="footer__link">Отзывы</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <address class="footer__contacts">
-                        <div class="footer__title">Контакты</div>
-                        <a href="tel:+79184451324" class="contact__footer">+7 918 445 13 24</a>
-                        <a href="mailto:fsk.krasnodar@mail.ru" class="contact__footer">fsk.krasnodar@mail.ru</a>
-                    </address>
-                </div>
-                <div class="footer__bottom">
-                    <div class="copyright">
-                        <p>© Фабрика Стальных Каркасов | 2013-2026</p>
-                    </div>
-                    <div class="footer__developer">
-                        <p class="developer-text">Сделано в</p>
-                        <div class="developer-image"><img src="assets\img\logos\logokr.png" alt="Компания-разработчик"
-                                class="developer-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        {{> footer}}
     </div>
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu__content">
-
-            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
-            </button>
-
-            <nav class="mobile-menu__nav" aria-label="Мобильное меню">
-                <ul class="mobile-menu__list">
-                    <li><a href="pages/about">О нас</a></li>
-                    <li><a href="pages/projects">Проекты</a></li>
-                    <li><a href="#our_advantages">Преимущества</a></li>
-                    <li><a href="pages/services">Услуги</a></li>
-                    <li><a href="#our_news">Новости</a></li>
-                    <li><a href="pages/blog">Блог</a></li>
-                    <li><a href="pages/reviews">Отзывы</a></li>
-                    <li><a href="pages/contacts">Контакты</a></li>
-                </ul>
-            </nav>
-
-            <a class="mobile-menu__phone" href="tel:+79184451324">
-                +7 918 445 13 24
-            </a>
-
-        </div>
-    </div>
+    {{> mobile-menu}}
 
     <script src="https://api-maps.yandex.ru/v3/?apikey=08c5f0d6-8f9c-46dd-9597-0fa0e2a4efca&lang=ru_RU"></script>
     <script type="module" src="js/script.js"></script>

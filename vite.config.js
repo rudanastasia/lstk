@@ -1,11 +1,36 @@
 import { defineConfig } from 'vite';
+import handlebars from 'vite-plugin-handlebars';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
+import pageData from './src/data/pages.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
   base: '/lstk/',
+
+  plugins: [
+    handlebars({
+      partialDirectory: resolve(__dirname, 'src/partials'),
+
+      context(pagePath) {
+        const isInnerPage = pagePath !== '/index.html';
+
+        const normalizedPath = pagePath.replace(/\\/g, '/');
+
+        const pageKey = Object.keys(pageData).find((key) => normalizedPath.endsWith(key));
+
+        const isHomePage =
+          normalizedPath.endsWith('/index.html') || normalizedPath.endsWith('/pages/project.html');
+
+        return {
+          base: '/lstk/',
+          isInnerPage: !isHomePage,
+          ...(pageKey ? pageData[pageKey] : {}),
+        };
+      },
+    }),
+  ],
 
   build: {
     rollupOptions: {
