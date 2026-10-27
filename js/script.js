@@ -1,7 +1,9 @@
-import './mobile-menu.js';
-import './modal.js';
-import './slider.js';
-import './reviews.js';
-import './pagination.js';
-import './map.js';
-import './form.js';
+"use strict";
+
+require("./mobile-menu");
+require("./modal");
+require("./slider");
+require("./reviews");
+require("./pagination");
+require("./map");
+require("./form");

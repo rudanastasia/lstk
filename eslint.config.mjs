@@ -4,24 +4,24 @@ npm run lint: fix — автоматически исправить ошибки
 npm run format — отформатировать все файлы проекта.
 npm run format: check — проверить, правильно ли отформатированы все файлы.*/
 
-import js from "@eslint/js";
-import globals from "globals";
-import { defineConfig } from "eslint/config";
-import eslintConfigPrettier from "eslint-config-prettier";
+import js from '@eslint/js';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default defineConfig([
-  { 
-    files: ["**/*.{js,mjs,cjs}"], 
-    plugins: { js }, 
-    extends: ["js/recommended"], 
-    languageOptions: { globals: globals.browser }
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,mjs,cjs,ts}'],
+    extends: [js.configs.recommended, tseslint.configs.recommended],
+    languageOptions: { globals: globals.browser },
   },
   eslintConfigPrettier, // Отключает конфликтующие с Prettier правила
   {
     rules: {
-      "prefer-const": "error",
-      "no-var": "error",
+      'prefer-const': 'error',
+      'no-var': 'error',
     },
   },
 ]);
-

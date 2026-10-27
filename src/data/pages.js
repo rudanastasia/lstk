@@ -1,33 +1,68 @@
-export default {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var pageData = {
   '/pages/about.html': {
-    breadcrumbs: [{ title: 'Главная', url: '' }, { title: 'О компании' }],
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'О компании'
+    }]
   },
-
   '/pages/blog.html': {
-    breadcrumbs: [{ title: 'Главная', url: '' }, { title: 'Блог' }],
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'Блог'
+    }]
   },
-
   '/pages/article.html': {
-    breadcrumbs: [
-      { title: 'Главная', url: '' },
-      { title: 'Блог', url: 'pages/blog.html' },
-      { title: 'Статья' },
-    ],
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'Блог',
+      url: 'pages/blog.html'
+    }, {
+      title: 'Статья'
+    }]
   },
-
   '/pages/projects.html': {
-    breadcrumbs: [{ title: 'Главная', url: '' }, { title: 'Наши проекты' }],
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'Наши проекты'
+    }]
   },
-
   '/pages/services.html': {
-    breadcrumbs: [{ title: 'Главная', url: '' }, { title: 'Наши услуги' }],
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'Наши услуги'
+    }]
   },
-
   '/pages/contacts.html': {
-    breadcrumbs: [{ title: 'Главная', url: '' }, { title: 'Контакты' }],
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'Контакты'
+    }]
   },
-
   '/pages/reviews.html': {
-    breadcrumbs: [{ title: 'Главная', url: '' }, { title: 'Отзывы клиентов' }],
-  },
+    breadcrumbs: [{
+      title: 'Главная',
+      url: ''
+    }, {
+      title: 'Отзывы клиентов'
+    }]
+  }
 };
+var _default = exports.default = pageData;
