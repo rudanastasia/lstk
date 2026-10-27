@@ -1,28 +1,18 @@
 /////////-------Модальное окно с формой (отзывы)-------/////////
 ///
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('review-modal');
-  if (!modal) return;
+const modal = document.getElementById('review-modal');
+const openBtn = document.getElementById('open-review');
 
-  const openBtn = document.getElementById('open-review');
-  const closeBtn = modal.querySelector('.modal__close');
-  const overlay = modal.querySelector('.modal__overlay');
+if (modal && openBtn) {
+  const closeModal = (): void => modal.classList.remove('active');
 
-  openBtn.addEventListener('click', () => {
-    modal.classList.add('active');
+  openBtn.addEventListener('click', () => modal.classList.add('active'));
+
+  modal.querySelector('.modal__close')?.addEventListener('click', closeModal);
+  modal.querySelector('.modal__overlay')?.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Escape') closeModal();
   });
-
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-  });
-
-  overlay.addEventListener('click', () => {
-    modal.classList.remove('active');
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      modal.classList.remove('active');
-    }
-  });
-});
+}
+export {};

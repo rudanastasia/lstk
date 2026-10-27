@@ -88,6 +88,9 @@
 
     &--expanded {
       display: block;
+      -webkit-line-clamp: unset;
+      line-clamp: unset;
+      overflow: visible;
     }
   }
 

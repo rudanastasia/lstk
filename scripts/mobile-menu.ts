@@ -1,16 +1,15 @@
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.mobile-menu__close');
+const hamburger = document.querySelector<HTMLElement>('.hamburger');
+const mobileMenu = document.querySelector<HTMLElement>('.mobile-menu');
+const closeBtn = document.querySelector<HTMLElement>('.mobile-menu__close');
 
-function openMenu() {
-  mobileMenu.classList.add('active');
-  document.body.classList.add('menu-open');
+if (hamburger && mobileMenu && closeBtn) {
+  const menuSet = (isOpen: boolean): void => {
+    mobileMenu.classList.toggle('active', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+  };
+
+  hamburger.addEventListener('click', () => menuSet(true));
+  closeBtn.addEventListener('click', () => menuSet(false));
 }
 
-function closeMenu() {
-  mobileMenu.classList.remove('active');
-  document.body.classList.remove('menu-open');
-}
-
-hamburger.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
+export {};

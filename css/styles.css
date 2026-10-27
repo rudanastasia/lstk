@@ -2111,6 +2111,9 @@ img {
 }
 .reviews__description--expanded {
   display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
 }
 .reviews__src {
   font-weight: 400;
