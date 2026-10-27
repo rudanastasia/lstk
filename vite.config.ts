@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
-import pageData from './src/data/pages.js';
+import pageData from './src/data/pages';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
