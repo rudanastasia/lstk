@@ -1,113 +1,52 @@
-/////////-------Пагинация для отзывов-------/////////
-///
-document.addEventListener('DOMContentLoaded', () => {
-  const reviews__block = document.querySelector('.reviews__block');
-  if (!reviews__block) return;
+interface PaginationConfig {
+  container: string;
+  item: string;
+  perPage: number;
+}
 
-  const items = reviews__block.querySelectorAll('.reviews__item');
-  const pagination = reviews__block.querySelector('.pagination');
-  if (!pagination) return;
+const paginations: PaginationConfig[] = [
+  { container: '.reviews__block', item: '.reviews__item', perPage: 6 },
+  { container: '.product__block', item: '.product__item', perPage: 6 },
+  { container: '.blog__content', item: '.blog__item', perPage: 9 },
+];
 
-  const itemsPerPage = 6;
-  const pageCount = Math.ceil(items.length / itemsPerPage);
+function initPagination({ container, item, perPage }: PaginationConfig): void {
+  const root = document.querySelector<HTMLElement>(container);
+  const pagination = root?.querySelector<HTMLElement>('.pagination');
+  if (!root || !pagination) return;
 
-  function showPage(page) {
-    items.forEach((item, index) => {
-      item.style.display =
-        index >= (page - 1) * itemsPerPage && index < page * itemsPerPage ? '' : 'none';
+  const items = root.querySelectorAll<HTMLElement>(item);
+  const pageCount = Math.ceil(items.length / perPage);
+  const buttons: HTMLButtonElement[] = [];
+
+  const showPage = (page: number): void => {
+    const start = (page - 1) * perPage;
+    const end = page * perPage;
+
+    items.forEach((el, index) => {
+      el.style.display = index >= start && index < end ? '' : 'none';
     });
 
-    document.querySelectorAll('.page-btn').forEach((btn) => {
-      btn.classList.toggle('active', Number(btn.dataset.page) === page);
+    buttons.forEach((btn, index) => {
+      btn.classList.toggle('active', index + 1 === page);
     });
-  }
+  };
 
-  for (let i = 1; i <= pageCount; i++) {
+  for (let page = 1; page <= pageCount; page++) {
     const btn = document.createElement('button');
-    btn.textContent = i;
-    btn.dataset.page = i;
+    btn.type = 'button';
+    btn.textContent = String(page);
     btn.className = 'page-btn';
+    btn.dataset.page = String(page);
+    btn.addEventListener('click', () => showPage(page));
 
-    btn.addEventListener('click', () => showPage(i));
-
+    buttons.push(btn);
     pagination.appendChild(btn);
   }
 
   showPage(1);
-});
+}
 
-/////////-------Пагинация для проектов-портфолио-------/////////
-///
-document.addEventListener('DOMContentLoaded', () => {
-  const product__block = document.querySelector('.product__block');
-  if (!product__block) return;
+paginations.forEach(initPagination);
 
-  const items = product__block.querySelectorAll('.product__item');
-  const pagination = product__block.querySelector('.pagination');
-  if (!pagination) return;
-
-  const itemsPerPage = 6;
-  const pageCount = Math.ceil(items.length / itemsPerPage);
-
-  function showPage(page) {
-    items.forEach((item, index) => {
-      item.style.display =
-        index >= (page - 1) * itemsPerPage && index < page * itemsPerPage ? '' : 'none';
-    });
-
-    document.querySelectorAll('.page-btn').forEach((btn) => {
-      btn.classList.toggle('active', Number(btn.dataset.page) === page);
-    });
-  }
-
-  for (let i = 1; i <= pageCount; i++) {
-    const btn = document.createElement('button');
-    btn.textContent = i;
-    btn.dataset.page = i;
-    btn.className = 'page-btn';
-
-    btn.addEventListener('click', () => showPage(i));
-
-    pagination.appendChild(btn);
-  }
-
-  showPage(1);
-});
-
-/////////-------Пагинация для блога-------/////////
-///
-document.addEventListener('DOMContentLoaded', () => {
-  const blog__content = document.querySelector('.blog__content');
-  if (!blog__content) return;
-
-  const items = blog__content.querySelectorAll('.blog__item');
-  const pagination = blog__content.querySelector('.pagination');
-  if (!pagination) return;
-
-  const itemsPerPage = 9;
-  const pageCount = Math.ceil(items.length / itemsPerPage);
-
-  function showPage(page) {
-    items.forEach((item, index) => {
-      item.style.display =
-        index >= (page - 1) * itemsPerPage && index < page * itemsPerPage ? '' : 'none';
-    });
-
-    document.querySelectorAll('.page-btn').forEach((btn) => {
-      btn.classList.toggle('active', Number(btn.dataset.page) === page);
-    });
-  }
-
-  for (let i = 1; i <= pageCount; i++) {
-    const btn = document.createElement('button');
-    btn.textContent = i;
-    btn.dataset.page = i;
-    btn.className = 'page-btn';
-
-    btn.addEventListener('click', () => showPage(i));
-
-    pagination.appendChild(btn);
-  }
-
-  showPage(1);
-});
+export {};
