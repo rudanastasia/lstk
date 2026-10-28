@@ -1,117 +1,94 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.form');
-  if (!form) return;
-  const submitButton = form.querySelector('button[type="submit"]');
+type FieldName = 'name' | 'email' | 'message';
+type Field = HTMLInputElement | HTMLTextAreaElement;
 
-  const fields = {
-    name: form.elements.name,
-    email: form.elements.email,
-    message: form.elements.message,
+// ---------- Правила валидации ----------
+
+const validators: Record<FieldName, (value: string) => string> = {
+  name: (value) => {
+    const v = value.trim();
+    if (!v) return 'Введите имя';
+    if (v.length < 2) return 'Имя слишком короткое';
+    if (!/^[а-яёa-z]+(?:\s+[а-яёa-z]+)*$/i.test(v)) return 'Имя должно содержать только буквы';
+    return '';
+  },
+  email: (value) => {
+    const v = value.trim();
+    if (!v) return 'Введите эл. почту';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return 'Введите эл. почту в корректном формате';
+    return '';
+  },
+  message: (value) => {
+    const v = value.trim();
+    if (!v) return 'Введите сообщение (не менее 10 символов)';
+    if (v.length < 10) return 'Сообщение должно содержать не менее 10 символов';
+    return '';
+  },
+};
+
+const fieldNames = Object.keys(validators) as FieldName[];
+
+// ---------- Отображение ошибок ----------
+
+const getErrorClass = (field: Field): string =>
+  `${field instanceof HTMLTextAreaElement ? 'form__textarea' : 'form__input'}--error`;
+
+// Показывает ошибку под полем или убирает её, если message пустой
+function renderError(field: Field, message: string): void {
+  field.classList.toggle(getErrorClass(field), Boolean(message));
+
+  const next = field.nextElementSibling;
+  let errorElement = next?.matches('.form__error') ? next : null;
+
+  if (!message) {
+    errorElement?.remove();
+    return;
+  }
+
+  if (!errorElement) {
+    errorElement = document.createElement('p');
+    errorElement.className = 'form__error';
+    field.after(errorElement);
+  }
+  errorElement.textContent = message;
+}
+
+// ---------- Форма ----------
+
+function initForm(): void {
+  const form = document.querySelector<HTMLFormElement>('.form');
+  const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+  if (!form || !submitButton) return;
+
+  const fields = {} as Record<FieldName, Field>;
+  for (const name of fieldNames) {
+    const field = form.querySelector<Field>(`[name="${name}"]`);
+    if (!field) return;
+    fields[name] = field;
+  }
+
+  const validateField = (name: FieldName): boolean => {
+    const message = validators[name](fields[name].value);
+    renderError(fields[name], message);
+    return !message;
   };
 
-  // ---------- Валидация полей ----------
+  // map, а не every/some: нужно проверить все поля сразу, чтобы показать все ошибки
+  const validateForm = (): boolean => fieldNames.map((name) => validateField(name)).every(Boolean);
 
-  const validators = {
-    name: (value) => {
-      const v = value.trim();
-      if (!v) return 'Введите имя';
-      if (v.length < 2) return 'Имя слишком короткое';
-      if (!/^[а-яёa-z]+(?:\s+[а-яёa-z]+)*$/i.test(v)) return 'Имя должно содержать только буквы';
-      return '';
-    },
-    email: (value) => {
-      const v = value.trim();
+  const showFormMessage = (text: string, isError: boolean): void => {
+    let status = form.querySelector<HTMLElement>('.form__status');
 
-      if (!v) return 'Введите эл. почту';
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
-        return 'Введите эл. почту в корректном формате';
-      }
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'form__status';
+      form.append(status);
+    }
 
-      return '';
-    },
-    message: (value) => {
-      const v = value.trim();
-      if (!v) return 'Введите сообщение (не менее 10 символов)';
-      if (v.length < 10) return 'Сообщение должно содержать не менее 10 символов';
-      return '';
-    },
+    status.textContent = text;
+    status.classList.toggle('form__status--error', isError);
   };
 
-  // ---------- Обработка ошибок заполнения полей ----------
-
-  function getBaseClass(field) {
-    return field.tagName === 'TEXTAREA' ? 'form__textarea' : 'form__input';
-  }
-
-  // Показываем ошибку (добавляем модификатор и выводим текст ошибки)
-  function showError(field, message) {
-    const baseClass = getBaseClass(field);
-    field.classList.add(`${baseClass}--error`);
-
-    let errorElement = field.nextElementSibling;
-    if (!errorElement || !errorElement.classList.contains('form__error')) {
-      errorElement = document.createElement('p');
-      errorElement.className = 'form__error';
-      field.after(errorElement);
-    }
-    errorElement.textContent = message;
-  }
-
-  // Убираем ошибку (снимаем модификатор и удаляем текст ошибки)
-  function clearError(field) {
-    const baseClass = getBaseClass(field);
-    field.classList.remove(`${baseClass}--error`);
-
-    const errorElement = field.nextElementSibling;
-    if (errorElement && errorElement.classList.contains('form__error')) {
-      errorElement.remove();
-    }
-  }
-
-  // ---------- Проверка полей формы и всей формы ----------
-
-  function validateField(name) {
-    const field = fields[name];
-    const errorMessage = validators[name](field.value);
-
-    if (errorMessage) {
-      showError(field, errorMessage);
-      return false;
-    }
-
-    clearError(field);
-    return true;
-  }
-
-  function validateForm() {
-    let isValid = true;
-    for (const name in fields) {
-      if (!validateField(name)) {
-        isValid = false;
-      }
-    }
-
-    return isValid;
-  }
-
-  // ---------- Сообщение отправки формы (успех/не успех) ----------
-
-  function showFormMessage(text, isError) {
-    let messageElement = form.querySelector('.form__status');
-
-    if (!messageElement) {
-      messageElement = document.createElement('p');
-      messageElement.className = 'form__status';
-      form.append(messageElement);
-    }
-
-    messageElement.textContent = text;
-    messageElement.classList.toggle('form__status--error', isError);
-  }
-
-  // ---------- Отправка данных формы ----------
-
-  async function sendForm() {
+  const sendForm = async (): Promise<void> => {
     submitButton.disabled = true;
 
     try {
@@ -132,33 +109,26 @@ document.addEventListener('DOMContentLoaded', () => {
     } finally {
       submitButton.disabled = false;
     }
-  }
+  };
 
-  // ---------- Подключение обработчика ----------
-
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', (event: SubmitEvent) => {
     event.preventDefault();
-
-    if (validateForm()) {
-      sendForm();
-    }
+    if (validateForm()) void sendForm();
   });
 
-  // ---------- Проверяем поля до отправки формы ----------
-
-  for (const name in fields) {
+  for (const name of fieldNames) {
     const field = fields[name];
 
-    // Проверяем поле после того, как пользователь его покинул
-    field.addEventListener('blur', () => {
-      validateField(name);
-    });
+    // проверяем поле, когда пользователь его покинул
+    field.addEventListener('blur', () => validateField(name));
 
-    // Проверяем поле пока пользователь печатает (если ошибка уже показана - пропадет в случае исправления)
+    // пока печатает: перепроверяем только если ошибка уже показана (чтобы пропала после исправления)
     field.addEventListener('input', () => {
-      if (field.classList.contains(`&{getBaseClass(field)}--error`)) {
-        validateField(name);
-      }
+      if (field.classList.contains(getErrorClass(field))) validateField(name);
     });
   }
-});
+}
+
+initForm();
+
+export {};
