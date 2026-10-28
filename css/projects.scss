@@ -262,14 +262,13 @@
     align-items: center;
 
     @include tablets {
-      overflow: hidden;
       padding: 0 20px;
     }
   }
 
   &__item {
     flex: 0 0 25%;
-    transition: transform 0.5s ease;
+    transition: flex-basis 0.4s ease;
 
     @include tablets {
       flex: 0 0 100%;
@@ -280,19 +279,24 @@
       flex-shrink: 0;
       flex-basis: 50%;
       flex: 0 0 50%;
+
+      @include tablets {
+        flex: 0 0 100%;
+      }
     }
   }
 }
 
 .slider-img-style {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 466px;
   filter: grayscale(100%);
   transition: 0.5s;
 
   @include tablets {
     height: auto;
+    filter: none;
   }
 
   &--active {
