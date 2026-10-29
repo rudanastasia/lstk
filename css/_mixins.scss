@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'media' as *;
+
 @mixin section-padding {
   padding: 90px;
 

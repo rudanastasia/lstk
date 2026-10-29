@@ -1,28 +1,28 @@
-//normalize
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
-
 //setups
-@import '_variables';
-@import '_placeholders';
-@import '_mixins';
-@import 'media';
+@use 'variables';
+@use 'placeholders';
+@use 'mixins';
+@use 'media';
+@use 'base';
+@use 'typography';
+@use 'layout';
+@use 'btns';
+@use 'breadcrumbs';
+@use 'components';
+@use 'projects';
+@use 'advantages';
+@use 'services';
+@use 'reviews';
+@use 'news';
+@use 'blog';
+@use 'about-us';
+@use 'contacts';
+@use 'form';
+@use 'map';
+@use 'mobile-menu';
+@use 'modal';
+
+// Внешние стили
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import 'base';
-@import 'typography';
-@import 'layout';
-@import 'btns';
-@import 'breadcrumbs';
-@import 'components';
-@import 'projects';
-@import 'advantages';
-@import 'services';
-@import 'reviews';
-@import 'news';
-@import 'blog';
-@import 'about-us';
-@import 'contacts';
-@import 'form';
-@import 'map';
-@import 'mobile-menu';
-@import 'modal';

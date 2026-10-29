@@ -1,3 +1,8 @@
+@use 'variables' as *;
+@use 'media' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+
 /////////-------проекты на главной-------/////////
 ///
 .projects {
