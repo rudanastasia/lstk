@@ -1,6 +1,10 @@
 type FieldName = 'name' | 'email' | 'message';
 type Field = HTMLInputElement | HTMLTextAreaElement;
 
+export function clearFormMessage(): void {
+  document.querySelector('.form .form__status')?.remove();
+}
+
 // ---------- Правила валидации ----------
 
 const validators: Record<FieldName, (value: string) => string> = {
@@ -122,8 +126,10 @@ function initForm(): void {
     // проверяем поле, когда пользователь его покинул
     field.addEventListener('blur', () => validateField(name));
 
-    // пока печатает: перепроверяем только если ошибка уже показана (чтобы пропала после исправления)
     field.addEventListener('input', () => {
+      clearFormMessage();
+
+      // пока печатает: перепроверяем только если ошибка уже показана (чтобы пропала после исправления)
       if (field.classList.contains(getErrorClass(field))) validateField(name);
     });
   }

@@ -3,16 +3,27 @@
 const modal = document.getElementById('review-modal');
 const openBtn = document.getElementById('open-review');
 
-if (modal && openBtn) {
-  const closeModal = (): void => modal.classList.remove('active');
+import { clearFormMessage } from './form';
 
-  openBtn.addEventListener('click', () => modal.classList.add('active'));
+if (modal && openBtn) {
+  const closeModal = (): void => {
+    modal.classList.remove('active');
+    clearFormMessage();
+  };
+
+  openBtn.addEventListener('click', () => {
+    clearFormMessage();
+    modal.classList.add('active');
+  });
 
   modal.querySelector('.modal__close')?.addEventListener('click', closeModal);
   modal.querySelector('.modal__overlay')?.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
   });
 }
+
 export {};
