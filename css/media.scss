@@ -14,7 +14,3 @@
     @content;
   }
 }
-
-@function rem($px) {
-  @return $px / $baseFontSize + 0rem;
-}

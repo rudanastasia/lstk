@@ -1,2 +1,5 @@
 node_modules/
 dist/
+.claude/
+prepros.config
+css/styles.css
