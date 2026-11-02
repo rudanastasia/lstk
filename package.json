@@ -21,7 +21,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "validate:html": "html-validate \"dist/**/*.html\"",
+    "test:html": "npm run build && npm run validate:html"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -31,6 +33,7 @@
     "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.6.0",
+    "html-validate": "^11.18.0",
     "prettier": "3.8.3",
     "sass": "^1.102.0",
     "typescript": "^6.0.3",

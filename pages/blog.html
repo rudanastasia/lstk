@@ -1,208 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.scss" />
+    <title>Блог | Фабрика стальных каркасов</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/styles.scss">
-    <title>Фабрика стальных каркасов</title>
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <main class="maincontent">
-            <section class="hero hero--inner">
-                <div class="container hero__container">
-                    {{> header}}
-                </div>
-            </section>
-            <section class="headline">
-                <div class="container">
-                    {{> breadcrumbs}}
-                    <h1 class="section__title">Блог</h1>
-                </div>
-            </section>
-            <section class="section page-inner">
-                <div class="container">
-                    <div class="blog__content">
-                        <ul class="blog__list">
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="blog__item info-block__item">
-                                <a href="./article" class="info-block__source">
-                                    <div class="blog__image info-block__img">
-                                        <img src="../assets/img/blog/preview/blog-preview.png"
-                                            class="img-style preview__img">
-                                    </div>
-                                    <div class="blog__content info-block__content">
-                                        <div class="date-cell">
-                                            <div class="publication-date">12.02.21</div>
-                                        </div>
-                                        <h4 class="blog__title info-block__title">Давно выяснено, что при оценке дизайна
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="pagination"></div>
+      <main class="maincontent">
+        <section class="hero hero--inner">
+          <div class="container hero__container">{{> header}}</div>
+        </section>
+        <section class="headline">
+          <div class="container">
+            {{> breadcrumbs}}
+            <h1 class="section__title">Блог</h1>
+          </div>
+        </section>
+        <section class="section page-inner">
+          <div class="container">
+            <div class="blog__content">
+              <ul class="blog__list">
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
                     </div>
-                </div>
-            </section>
-        </main>
-        {{> footer}}
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+                <li class="blog__item info-block__item">
+                  <a href="./article" class="info-block__source">
+                    <div class="blog__image info-block__img">
+                      <img
+                        src="../assets/img/blog/preview/blog-preview.png"
+                        class="img-style preview__img"
+                        alt="Превью статьи"
+                      />
+                    </div>
+                    <div class="blog__content info-block__content">
+                      <div class="date-cell">
+                        <div class="publication-date">12.02.21</div>
+                      </div>
+                      <h4 class="blog__title info-block__title">
+                        Давно выяснено, что при оценке дизайна
+                      </h4>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="pagination"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
     </div>
 
     {{> mobile-menu}}
     <script type="module" src="../scripts/script.ts"></script>
-</body>
-
+  </body>
 </html>

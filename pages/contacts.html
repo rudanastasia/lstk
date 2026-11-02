@@ -1,103 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.scss" />
+    <title>Фабрика стальных каркасов - контакты</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/styles.scss">
-    <title>Фабрика стальных каркасов</title>
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <main class="maincontent">
-            <section class="hero hero--inner">
-                <div class="container hero__container">
-                    {{> header}}
-                </div>
-            </section>
-            <section class="headline">
-                <div class="container">
-                    {{> breadcrumbs}}
-                    <h1 class="section__title">Контакты</h1>
-                </div>
-            </section>
-            <section class="contacts contacts--dark">
-                <div class="container">
-                    <div class="contacts__row">
-                        <div class="contacts__content">
-                            <div class="contacts__address">
-                                <a href="https://maps.app.goo.gl/SZaS2mJhPDm7jqjv5" class="address">Краснодар, ул.
-                                    Рашпилевская, 267</a>
-                                <div class="contacts-text">Адрес</div>
-                            </div>
-                            <div class="contacts__phone">
-                                <a href="tel:+79184451324" class="contact-phone">+7 918 445 13 24</a>
-                                <div class="contacts-text">Телефон</div>
-                            </div>
-                            <div class="contacts__email">
-                                <a href="mailto:mail@pochta.ru" class="contact-email">mail@pochta.ru</a>
-                                <div class="contacts-text">Почта</div>
-                            </div>
-                        </div>
-                        <div class="socials">
-                            <a href="#no-scroll" class="socials__link">
-                                <svg class="socials__img">
-                                    <use href="../assets/sprite/sprite.svg#telegram-icon"></use>
-                                </svg>
-                            </a>
-                            <a href="#no-scroll" class="socials__link">
-
-                                <svg class="socials__img">
-                                    <use href="../assets/sprite/sprite.svg#whatsapp-icon"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <section class="section map-section">
-            <div id="map">
-            </div>
-            <div class="contacts-form">
-                <form class="form" action="https://formspree.io/f/xojgoeee" method="post" novalidate>
-                    <input type="hidden" name="form-type" value="Обратная связь в контактах">
-                    <h2 class="section__title form__title">
-                        Напишите нам
-                    </h2>
-                    <div class="form__row">
-                        <div class="form__block">
-                            <label for="name" class="visually-hidden">Ваше имя</label>
-                            <input id="name" class="form__input" type="text" name="name" placeholder="Ваше имя"
-                                required>
-                        </div>
-                        <div class="form__block">
-                            <label for="email" class="visually-hidden">Email</label>
-                            <input id="email" class="form__input" type="email" name="email" placeholder="Email"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form__bottom">
-                        <div class="form__block form__block--message">
-                            <label for="message" class="visually-hidden">Сообщение</label>
-                            <textarea id="message" class="form__textarea" name="message" placeholder="Сообщение"
-                                rows="3" required></textarea>
-                        </div>
-                        <button class="btn btn--form" type="submit">
-                            Отправить
-                        </button>
-                    </div>
-                </form>
-            </div>
+      <main class="maincontent">
+        <section class="hero hero--inner">
+          <div class="container hero__container">{{> header}}</div>
         </section>
-        {{> footer}}
+        <section class="headline">
+          <div class="container">
+            {{> breadcrumbs}}
+            <h1 class="section__title">Контакты</h1>
+          </div>
+        </section>
+        <section class="contacts contacts--dark">
+          <div class="container">
+            <div class="contacts__row">
+              <div class="contacts__content">
+                <div class="contacts__address">
+                  <a href="https://maps.app.goo.gl/SZaS2mJhPDm7jqjv5" class="address"
+                    >Краснодар, ул. Рашпилевская, 267</a
+                  >
+                  <div class="contacts-text">Адрес</div>
+                </div>
+                <div class="contacts__phone">
+                  <a href="tel:+79184451324" class="contact-phone"
+                    >+7&nbsp;918&nbsp;445&nbsp;13&nbsp;24</a
+                  >
+                  <div class="contacts-text">Телефон</div>
+                </div>
+                <div class="contacts__email">
+                  <a href="mailto:mail@pochta.ru" class="contact-email">mail@pochta.ru</a>
+                  <div class="contacts-text">Почта</div>
+                </div>
+              </div>
+              <div class="socials">
+                <a href="#no-scroll" class="socials__link" aria-label="Telegram">
+                  <svg class="socials__img" aria-hidden="true">
+                    <use href="../assets/sprite/sprite.svg#telegram-icon"></use>
+                  </svg>
+                </a>
+                <a href="#no-scroll" class="socials__link" aria-label="WhatsApp">
+                  <svg class="socials__img" aria-hidden="true">
+                    <use href="../assets/sprite/sprite.svg#whatsapp-icon"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="section map-section">
+          <div id="map"></div>
+          <div class="contacts-form">
+            <form class="form" action="https://formspree.io/f/xojgoeee" method="post" novalidate>
+              <input type="hidden" name="form-type" value="Обратная связь в контактах" />
+              <h2 class="section__title form__title">Напишите нам</h2>
+              <div class="form__row">
+                <div class="form__block">
+                  <label for="name" class="visually-hidden">Ваше имя</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </div>
+                <div class="form__block">
+                  <label for="email" class="visually-hidden">Email</label>
+                  <input
+                    id="email"
+                    class="form__input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form__bottom">
+                <div class="form__block form__block--message">
+                  <label for="message" class="visually-hidden">Сообщение</label>
+                  <textarea
+                    id="message"
+                    class="form__textarea"
+                    name="message"
+                    placeholder="Сообщение"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <button class="btn btn--form" type="submit" aria-label="Отправить">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      {{> footer}}
     </div>
     {{> mobile-menu}}
 
     <script src="https://api-maps.yandex.ru/v3/?apikey=08c5f0d6-8f9c-46dd-9597-0fa0e2a4efca&lang=ru_RU"></script>
     <script type="module" src="../scripts/script.ts"></script>
-</body>
-
+  </body>
 </html>

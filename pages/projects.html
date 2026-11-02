@@ -1,276 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.scss" />
+    <title>Наши проекты | Фабрика стальных каркасов</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/styles.scss">
-    <title>Фабрика стальных каркасов</title>
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <main class="maincontent">
-            <section class="hero hero--inner">
-                <div class="container hero__container">
-                    {{> header}}
-                </div>
-            </section>
-            <section class="headline">
-                <div class="container">
-                    <nav class="breadcrumbs">
-                        {{> breadcrumbs}}
-                        <h1 class="section__title">Наши проекты</h1>
-                </div>
-            </section>
-            <section class="section page-inner">
-                <div class="container">
-                    <div class="column-text">
-                        <div class="column-text__bold">
-                            <p>ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла,
-                                выполняющая проектные и строительно-монтажные работы, выполняет поставки оборудования и
-                                материалов для инженерных сетей.</p>
-                        </div>
-                        <div class="column-text__light">
-                            <p>Наше предприятие стабильно развивается с 2013 года
-                                и наращивает объёмы благодаря профессиональной работе высококвалифицированных инженеров
-                                – проектировщиков, руководителей проектов, строительно – монтажных бригад.</p>
-                            <p> При
-                                строительстве
-                                объектов мы руководствуемся принципами EPCM-подхода, что
-                                обеспечивает полный цикл управления проектом — от идеи до реализации</p>
-                        </div>
-                    </div>
-                    <div class="product__block">
-                        <ul class="product__list">
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-3.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-4.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-5.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product__item">
-                                <a href="./project" class="product-src">
-                                    <div class="product__image">
-                                        <img src="../assets/img/products/project-2.png" class="img-style product__img">
-                                        <div class="product__hidden">
-                                            <ul class="product-desc__list">
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Площадь</p>
-                                                    <p class="product-desc__value">72 м2</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Помещений</p>
-                                                    <p class="product-desc__value">8</p>
-                                                </li>
-                                                <li class="product-desc__item">
-                                                    <p class="product-desc__name">Этажей</p>
-                                                    <p class="product-desc__value">2</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <p class="item-name">ЛСТК Каркас 44м2</p>
-                                        <p class="item-price">от 1 893 000 руб.</p>
-                                    </div>
-                                </a>
-                            </li>
+      <main class="maincontent">
+        <section class="hero hero--inner">
+          <div class="container hero__container">{{> header}}</div>
+        </section>
+        <section class="headline">
+          <div class="container">
+            {{> breadcrumbs}}
+            <h1 class="section__title">Наши проекты</h1>
+          </div>
+        </section>
+        <section class="section page-inner">
+          <div class="container">
+            <div class="column-text">
+              <div class="column-text__bold">
+                <p>
+                  ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла, выполняющая проектные и
+                  строительно-монтажные работы, выполняет поставки оборудования и материалов для
+                  инженерных сетей.
+                </p>
+              </div>
+              <div class="column-text__light">
+                <p>
+                  Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                  профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                  руководителей проектов, строительно – монтажных бригад.
+                </p>
+                <p>
+                  При строительстве объектов мы руководствуемся принципами EPCM-подхода, что
+                  обеспечивает полный цикл управления проектом — от идеи до реализации
+                </p>
+              </div>
+            </div>
+            <div class="product__block">
+              <ul class="product__list">
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-2.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
                         </ul>
-                        <div class="pagination"></div>
+                      </div>
                     </div>
-                </div>
-            </section>
-        </main>
-        {{> footer}}
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-3.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-4.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-5.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-2.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-2.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-2.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 72м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product__item">
+                  <a href="./project" class="product-src">
+                    <div class="product__image">
+                      <img
+                        src="../assets/img/products/project-2.png"
+                        class="img-style product__img"
+                        alt="ЛСТК Каркас 44м2"
+                      />
+                      <div class="product__hidden">
+                        <ul class="product-desc__list">
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Площадь</p>
+                            <p class="product-desc__value">72 м2</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Помещений</p>
+                            <p class="product-desc__value">8</p>
+                          </li>
+                          <li class="product-desc__item">
+                            <p class="product-desc__name">Этажей</p>
+                            <p class="product-desc__value">2</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-item__title">
+                      <p class="item-name">ЛСТК Каркас 44м2</p>
+                      <p class="item-price">от 1 893 000 руб.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="pagination"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
     </div>
     {{> mobile-menu}}
 
     <script type="module" src="../scripts/script.ts"></script>
-</body>
-
+  </body>
 </html>

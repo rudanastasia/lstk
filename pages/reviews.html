@@ -1,185 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.scss" />
+    <title>Отзывы | Фабрика стальных каркасов</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/styles.scss">
-    <title>Фабрика стальных каркасов</title>
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <main class="maincontent">
-            <section class="hero hero--inner">
-                <div class="container hero__container">
-                    {{> header}}
-                </div>
-            </section>
-            <section class="headline">
-                <div class="container">
-                    {{> breadcrumbs}}
-                    <div class="section__head section__head-inner">
-                        <h2 class="section__title">Отзывы клиентов</h2>
-                        <button class="btn btn--section-more" id="open-review">Оставить отзыв</button>
+      <main class="maincontent">
+        <section class="hero hero--inner">
+          <div class="container hero__container">{{> header}}</div>
+        </section>
+        <section class="headline">
+          <div class="container">
+            {{> breadcrumbs}}
+            <div class="section__head section__head-inner">
+              <h2 class="section__title">Отзывы клиентов</h2>
+              <button type="button" class="btn btn--section-more" id="open-review">
+                Оставить отзыв
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="section page-inner">
+          <div class="container">
+            <div class="page-inner__description regular-text regular-text--bold">
+              <p>
+                ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла, выполняющая проектные и
+                строительно-монтажные работы, выполняет поставки оборудования и материалов для
+                инженерных сетей.
+              </p>
+            </div>
+            <div class="reviews__block">
+              <ul class="reviews__list reviews__list--grid">
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
                     </div>
-                </div>
-            </section>
-            <section class="section page-inner">
-                <div class="container">
-                    <div class="page-inner__description regular-text regular-text--bold">
-                        <p>ФАБРИКА СТАЛЬНЫХ КАРКАСОВ — компания полного цикла, выполняющая
-                            проектные и строительно-монтажные работы, выполняет поставки оборудования и материалов для
-                            инженерных сетей.</p>
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
                     </div>
-                    <div class="reviews__block">
-                        <ul class="reviews__list reviews__list--grid">
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                    Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                            <li class="reviews__item reviews__item--grid">
-                                <div class="reviews__display">
-                                    <div class="reviews__avatar">
-                                        <img src="../assets/img/common/avatar.png" alt="Автор отзыва" class="avatar">
-                                    </div>
-                                    <div class="reviews__content">
-                                        <div class="reviews__name">Ольга Н.</div>
-                                        <div class="reviews__object">ЛСТК каркас барн 76м2</div>
-                                    </div>
-                                </div>
-                                <div class="reviews__description">Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                    Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                    Наше предприятие стабильно развивается с 2013 года и
-                                    наращивает объёмы благодаря профессиональной работе высококвалифицированных
-                                    инженеров –
-                                    проектировщиков, руководителей проектов, строительно – монтажных бригад.
-                                </div>
-                                <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
-                            </li>
-                        </ul>
-                        <div class="pagination"></div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
                     </div>
-                </div>
-            </section>
-        </main>
-        {{> footer}}
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                    </div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                    </div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                    </div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                    </div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад. Наше предприятие
+                    стабильно развивается с 2013 года и наращивает объёмы благодаря профессиональной
+                    работе высококвалифицированных инженеров – проектировщиков, руководителей
+                    проектов, строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                    </div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+                <li class="reviews__item reviews__item--grid">
+                  <div class="reviews__display">
+                    <div class="reviews__avatar">
+                      <img
+                        src="../assets/img/common/avatar.png"
+                        alt="Автор отзыва"
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__name">Ольга Н.</div>
+                      <div class="reviews__object">ЛСТК каркас барн 76м2</div>
+                    </div>
+                  </div>
+                  <div class="reviews__description">
+                    Наше предприятие стабильно развивается с 2013 года и наращивает объёмы благодаря
+                    профессиональной работе высококвалифицированных инженеров – проектировщиков,
+                    руководителей проектов, строительно – монтажных бригад. Наше предприятие
+                    стабильно развивается с 2013 года и наращивает объёмы благодаря профессиональной
+                    работе высококвалифицированных инженеров – проектировщиков, руководителей
+                    проектов, строительно – монтажных бригад. Наше предприятие стабильно развивается
+                    с 2013 года и наращивает объёмы благодаря профессиональной работе
+                    высококвалифицированных инженеров – проектировщиков, руководителей проектов,
+                    строительно – монтажных бригад.
+                  </div>
+                  <a href="#no_scroll" class="reviews__src">Читать отзыв целиком</a>
+                </li>
+              </ul>
+              <div class="pagination"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
     </div>
 
-    {{> mobile-menu}}
-
-    {{> modal}}
+    {{> mobile-menu}} {{> modal}}
     <script type="module" src="../scripts/script.ts"></script>
-</body>
-
+  </body>
 </html>
