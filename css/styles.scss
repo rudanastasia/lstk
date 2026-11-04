@@ -1,4 +1,5 @@
-//setups
+// setups
+
 @use 'variables';
 @use 'placeholders';
 @use 'mixins';
@@ -23,6 +24,6 @@
 @use 'modal';
 
 // Внешние стили
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css';
+@import 'https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';

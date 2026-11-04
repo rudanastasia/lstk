@@ -36,6 +36,9 @@ jobs:
       - name: Format
         run: npm run format:check
 
+      - name: SCSS Lint
+        run: npm run lint:css
+
       - name: Build
         run: npm run build
 

@@ -1,5 +1,6 @@
-/////////-------Модальное окно-------/////////
+///////// -------Модальное окно------- /////////
 ///
+
 .modal {
   position: fixed;
   inset: 0;
@@ -15,7 +16,7 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(0 0 0 / 60%);
   }
 
   &__content {

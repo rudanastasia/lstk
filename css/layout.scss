@@ -2,10 +2,11 @@
 @use 'media' as *;
 @use 'placeholders';
 
-/////////-------hero-------/////////
+///////// -------hero------- /////////
 ///
+
 .hero {
-  background: url(../assets/img/covers/main-hero_cover.png) top center / cover no-repeat;
+  background: url('../assets/img/covers/main-hero_cover.png') top center / cover no-repeat;
   border-radius: 0 0 $radius-desk $radius-desk;
   position: relative;
 
@@ -15,7 +16,7 @@
 
   &--inner {
     background: none;
-    border-bottom: 1px solid rgb(217, 217, 217);
+    border-bottom: 1px solid rgb(217 217 217);
     border-radius: 0;
 
     @include tablets {
@@ -27,7 +28,7 @@
     @extend %flex-column;
     justify-content: space-between;
     height: 100%;
-    padding: 1.5rem 0 2.8125rem 0;
+    padding: 24px 0 45px;
   }
 
   &__title-section {
@@ -117,12 +118,13 @@
 .hero-picture {
   background:
     linear-gradient($gradient, $gradient),
-    url(../assets/img/products/project-example-3.png) top center / cover no-repeat;
+    url('../assets/img/products/project-example-3.png') top center / cover no-repeat;
   min-height: 700px;
 }
 
-/////////-------header-------/////////
+///////// -------header------- /////////
 ///
+
 .header {
   display: flex;
   align-items: flex-start;
@@ -237,8 +239,9 @@
   }
 }
 
-/////////-------Секции-------/////////
+///////// -------Секции------- /////////
 ///
+
 .section {
   padding: 50px 0;
 
@@ -259,8 +262,9 @@
   }
 }
 
-/////////-------Текстовый блок-------/////////
+///////// -------Текстовый блок------- /////////
 ///
+
 .page-inner__description {
   max-width: 50%;
   margin-bottom: 30px;
@@ -271,8 +275,9 @@
   }
 }
 
-/////////-------footer-------/////////
+///////// -------footer------- /////////
 ///
+
 .footer {
   background: $black;
   padding: 76px 0 40px;

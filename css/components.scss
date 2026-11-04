@@ -3,8 +3,9 @@
 @use 'mixins' as *;
 @use 'placeholders';
 
-/////////-------Блок с описанием-------/////////
+///////// -------Блок с описанием------- /////////
 ///
+
 .main-description {
   @include section-padding;
   font-family: $Unbounded;
@@ -16,7 +17,7 @@
   }
 
   &--inner {
-    padding: 0 0 90px 0;
+    padding: 0 0 90px;
   }
 
   &__image {
@@ -55,8 +56,9 @@
   }
 }
 
-/////////-------Внепотоковый блок с доп.контентом-------/////////
+///////// -------Внепотоковый блок с доп.контентом------- /////////
 ///
+
 .info {
   position: relative;
   background: $black;
@@ -154,7 +156,7 @@
   }
 }
 
-/////////-------навигационные стрелки-------/////////
+///////// -------навигационные стрелки------- /////////
 ///
 
 .directions {
@@ -219,8 +221,9 @@
   pointer-events: none;
 }
 
-/////////-------список карточек превью-------/////////
+///////// -------список карточек превью------- /////////
 ///
+
 .info-block {
   margin: 0 auto;
   position: relative;
@@ -312,8 +315,9 @@
   margin-bottom: 8px;
 }
 
-/////////-------аккордеон-------/////////
+///////// -------аккордеон------- /////////
 ///
+
 .accordion {
   &__list {
     display: flex;
@@ -321,12 +325,12 @@
   }
 
   &__item {
-    border-top: 1px solid rgba(217, 217, 217, 1);
+    border-top: 1px solid rgb(217 217 217);
     padding: 20px 0;
     padding-right: 35px;
 
     &:last-child {
-      border-bottom: 1px solid rgb(217, 217, 217);
+      border-bottom: 1px solid rgb(217 217 217);
     }
 
     &[open] {
@@ -364,12 +368,10 @@
     }
 
     &::before {
-      webkit-transform: rotate(45deg);
       transform: rotate(-90deg);
     }
 
     &::after {
-      webkit-transform: rotate(-45deg);
       transform: rotate(0deg);
     }
   }
@@ -419,8 +421,9 @@
   }
 }
 
-/////////-------Пагинация-------/////////
+///////// -------Пагинация------- /////////
 ///
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -447,8 +450,9 @@
   }
 }
 
-/////////-------социальные сети-------/////////
+///////// -------социальные сети------- /////////
 ///
+
 .socials {
   margin-left: auto;
   display: flex;

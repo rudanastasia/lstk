@@ -2,8 +2,9 @@
 @use 'media' as *;
 @use 'placeholders';
 
-/////////-------кнопки-------/////////
+///////// -------кнопки------- /////////
 ///
+
 .btn {
   @extend %btn-base-style;
 
@@ -27,12 +28,12 @@
   }
 
   &--arrow-down {
-    &:before {
+    &::before {
       width: 1px;
       height: 10px;
     }
 
-    &:after {
+    &::after {
       right: 38px;
       transform: translate(16px, -35%) rotate(133deg);
     }

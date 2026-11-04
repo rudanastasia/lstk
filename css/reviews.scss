@@ -3,8 +3,9 @@
 @use 'mixins' as *;
 @use 'placeholders';
 
-/////////-------отзывы на главной-------/////////
+///////// -------отзывы на главной------- /////////
 ///
+
 .reviews {
   display: flex;
   position: relative;
@@ -42,7 +43,6 @@
 
   &__item {
     @extend %flex-column;
-    flex-shrink: 0;
     position: relative;
     background: $white;
     padding: 40px;

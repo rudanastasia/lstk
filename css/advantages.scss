@@ -1,8 +1,9 @@
 @use 'variables' as *;
 @use 'media' as *;
 
-/////////-------преимущества на главной-------/////////
+///////// -------преимущества на главной------- /////////
 ///
+
 .advantages {
   position: relative;
   padding: 90px 0 0;
@@ -28,7 +29,7 @@
 
     @include tablets {
       position: static;
-      background: url(../assets/img/covers/advantages_cover.png) center center no-repeat;
+      background: url('../assets/img/covers/advantages_cover.png') center center no-repeat;
       background-size: cover;
       justify-content: center;
       min-height: 900px;
@@ -114,8 +115,7 @@
     }
 
     &--column {
-      flex-direction: column;
-      flex-wrap: nowrap;
+      flex-flow: column nowrap;
     }
   }
 

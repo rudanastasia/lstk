@@ -2,8 +2,9 @@
 @use 'media' as *;
 @use 'placeholders';
 
-/////////-------хлебные крошки-------/////////
+///////// -------хлебные крошки------- /////////
 ///
+
 .breadcrumbs {
   &__list {
     @extend %flex-center;
